@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    app:cardCornerRadius="@dimen/_5sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_8sdp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/billNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Update Schedule"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_14sdp" />
+
+            <ImageView
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:layout_margin="@dimen/_8sdp"
+                android:src="@drawable/ic_calendar_icon"
+                app:tint="@color/text_color_blue" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:background="@color/light_grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Repeat this invoice*"
+                android:textSize="@dimen/_10sdp" />
+
+            <RelativeLayout
+                android:id="@+id/repeat_this_invoice1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_dark_holo">
+
+                <com.skydoves.powerspinner.PowerSpinnerView
+                    android:id="@+id/repeat_this_invoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:background="@color/white"
+                    android:hint="Choose"
+                    android:padding="@dimen/_8sdp"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/text_color"
+                    android:textSize="@dimen/_12sdp"
+                    app:spinner_arrow_gravity="end"
+                    app:spinner_arrow_padding="8dp"
+                    app:spinner_arrow_tint="@color/teal_700"
+                    app:spinner_divider_color="@color/dark_grey"
+                    app:spinner_divider_show="true"
+                    app:spinner_divider_size="0.4dp"
+                    app:spinner_item_array="@array/recurringInvoiceRepeat"
+                    app:spinner_popup_animation="bounce"
+                    app:spinner_popup_background="@color/white"
+                    app:spinner_popup_elevation="14dp" />
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/repeatEveryLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/everySpinnerLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corner_dark_holo"
+                    app:layout_constraintEnd_toEndOf="@+id/everySpinnerText"
+                    app:layout_constraintStart_toStartOf="@+id/everySpinnerText"
+                    app:layout_constraintTop_toBottomOf="@+id/everySpinnerText">
+
+                    <com.skydoves.powerspinner.PowerSpinnerView
+                        android:id="@+id/everySpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_3sdp"
+                        android:background="@color/white"
+                        android:hint="Choose"
+                        android:padding="@dimen/_8sdp"
+                        android:textColor="@color/text_color"
+                        android:textColorHint="@color/text_color"
+                        android:textSize="@dimen/_12sdp"
+                        app:spinner_arrow_gravity="bottom"
+                        app:spinner_arrow_padding="8dp"
+                        app:spinner_arrow_tint="@color/teal_700"
+                        app:spinner_divider_color="@color/dark_grey"
+                        app:spinner_divider_show="true"
+                        app:spinner_divider_size="0.4dp"
+                        app:spinner_item_array="@array/merchant"
+                        app:spinner_popup_animation="bounce"
+                        app:spinner_popup_background="@color/white"
+                        app:spinner_popup_elevation="14dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/onTheDayLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corner_dark_holo"
+                    app:layout_constraintEnd_toEndOf="@+id/on_the_day_text"
+                    app:layout_constraintStart_toStartOf="@+id/on_the_day_text"
+                    app:layout_constraintTop_toBottomOf="@+id/on_the_day_text">
+
+                    <com.skydoves.powerspinner.PowerSpinnerView
+                        android:id="@+id/onTheDaySpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_3sdp"
+                        android:background="@color/white"
+                        android:hint="Choose"
+                        android:padding="@dimen/_8sdp"
+                        android:textColor="@color/text_color"
+                        android:textColorHint="@color/text_color"
+                        android:textSize="@dimen/_12sdp"
+                        app:spinner_arrow_gravity="start"
+                        app:spinner_arrow_padding="8dp"
+                        app:spinner_arrow_tint="@color/teal_700"
+                        app:spinner_divider_color="@color/dark_grey"
+                        app:spinner_divider_show="true"
+                        app:spinner_divider_size="0.4dp"
+                        app:spinner_item_array="@array/merchant"
+                        app:spinner_popup_animation="bounce"
+                        app:spinner_popup_background="@color/white"
+                        app:spinner_popup_elevation="14dp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/on_the_day_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="On the day*"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/everySpinnerText"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/everySpinnerText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Every*"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/on_the_day_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/groupEvery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:constraint_referenced_ids="everySpinnerText,everySpinnerLayout" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/groupDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:constraint_referenced_ids="onTheDayLayout,on_the_day_text" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/everyDayLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Every"
+                    android:textSize="@dimen/_10sdp" />
+
+                <RelativeLayout
+                    android:id="@+id/everyDayRL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/everyDayEt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_3sdp"
+                        android:background="@drawable/rounded_corner_dark_holo"
+                        android:minWidth="@dimen/_80sdp"
+                        android:padding="@dimen/_8sdp"
+                        android:text="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_3sdp"
+                        android:layout_toEndOf="@+id/everyDayEt"
+                        android:gravity="bottom"
+                        android:minWidth="@dimen/_80sdp"
+                        android:padding="@dimen/_8sdp"
+                        android:text="days"
+                        android:textColor="@color/text_color" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Agreement starts on"
+                android:textSize="@dimen/_10sdp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_dark_holo">
+
+                <EditText
+                    android:id="@+id/billnoEDTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:background="@color/white"
+                    android:padding="@dimen/_8sdp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Agreement ends"
+                android:textSize="@dimen/_10sdp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_dark_holo">
+
+                <com.skydoves.powerspinner.PowerSpinnerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:background="@color/white"
+                    android:hint="Choose"
+                    android:padding="@dimen/_8sdp"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/text_color"
+                    android:textSize="@dimen/_12sdp"
+                    app:spinner_arrow_gravity="end"
+                    app:spinner_arrow_padding="8dp"
+                    app:spinner_arrow_tint="@color/teal_700"
+                    app:spinner_divider_color="@color/dark_grey"
+                    app:spinner_divider_show="true"
+                    app:spinner_divider_size="0.4dp"
+                    app:spinner_item_array="@array/merchant"
+                    app:spinner_popup_animation="bounce"
+                    app:spinner_popup_background="@color/white"
+                    app:spinner_popup_elevation="14dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Invoices*"
+                android:textSize="@dimen/_10sdp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_dark_holo">
+
+                <EditText
+                    android:id="@+id/noOfInvoicesET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:background="@color/white"
+                    android:hint="#. of invoices"
+                    android:padding="@dimen/_8sdp"
+                    android:text="1" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Create in (time zone)"
+                android:textSize="@dimen/_10sdp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_dark_holo">
+
+                <com.skydoves.powerspinner.PowerSpinnerView
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:background="@color/white"
+                    android:hint="Choose"
+                    android:padding="@dimen/_8sdp"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/text_color"
+                    android:textSize="@dimen/_12sdp"
+                    app:spinner_arrow_gravity="bottom"
+                    app:spinner_arrow_padding="8dp"
+                    app:spinner_arrow_tint="@color/teal_700"
+                    app:spinner_divider_color="@color/dark_grey"
+                    app:spinner_divider_show="true"
+                    app:spinner_divider_size="0.4dp"
+                    app:spinner_item_array="@array/merchant"
+                    app:spinner_popup_animation="bounce"
+                    app:spinner_popup_background="@color/white"
+                    app:spinner_popup_elevation="14dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="@dimen/_3sdp"
+                android:text="Set a time zone based on recipient&apos;s time zone."
+                android:textColor="@color/text_color_blue" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Tick this checkbox to send automated email to the customer." />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="vertical" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

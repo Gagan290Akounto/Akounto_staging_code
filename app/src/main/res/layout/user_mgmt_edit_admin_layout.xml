@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_corner_white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_17sdp"
+        android:layout_marginRight="@dimen/_17sdp"
+        android:background="@drawable/rounded_corner_white"
+        android:padding="@dimen/_10sdp">
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="?actionBarSize"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginBottom="@dimen/_16ssp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/abc_ic_ab_back_material"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="  Edit User"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/nameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Name"
+            android:textColor="@color/blackTextColor"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/back" />
+
+        <EditText
+            android:id="@+id/et_fname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="@drawable/corner_tale_white_holo"
+            android:hint="Enter first name"
+            android:padding="@dimen/_8sdp"
+            android:imeOptions="actionNext"
+            android:textColor="@color/text_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameText" />
+
+        <TextView
+            android:id="@+id/fNameErrorTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Please enter first name"
+            android:textColor="@color/red_btn_bg_pressed_color"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/et_fname"
+            app:layout_constraintTop_toBottomOf="@+id/et_fname" />
+
+        <EditText
+            android:id="@+id/et_lname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@drawable/corner_tale_white_holo"
+            android:hint="Enter last name"
+            android:padding="@dimen/_8sdp"
+            android:imeOptions="actionNext"
+            android:textColor="@color/text_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fNameErrorTv" />
+
+        <TextView
+            android:id="@+id/lNameErrorTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Please enter last name"
+            android:textColor="@color/red_btn_bg_pressed_color"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/et_lname"
+            app:layout_constraintTop_toBottomOf="@+id/et_lname" />
+
+        <LinearLayout
+            android:id="@+id/idfg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lNameErrorTv">
+
+            <TextView
+                android:id="@+id/emailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Email"
+                android:textColor="@color/blackTextColor"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="*"
+                android:textColor="#ff2a2a"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!--        <TextView
+                    android:id="@+id/emailText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Email*"
+                    android:textColor="@color/blackTextColor"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lNameErrorTv" />-->
+
+        <com.akounto.accountingsoftware.util.NoMenuEditText
+            android:id="@+id/et_email"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="@drawable/corner_tale_white_holo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Enter email"
+            android:padding="@dimen/_8sdp"
+            android:textColor="@color/text_color"
+            android:inputType="textEmailAddress|textNoSuggestions"
+            android:singleLine="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/idfg" />
+
+        <EditText
+
+            android:layout_marginTop="@dimen/_4sdp"
+            android:visibility="gone"
+            android:background="@drawable/corner_tale_white_holo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Enter email"
+            android:padding="@dimen/_8sdp"
+            android:imeOptions="actionDone"
+            android:textColor="@color/text_color"
+            android:inputType="textFilter"
+            android:singleLine="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/idfg" />
+        <TextView
+            android:id="@+id/emailErrorTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Please enter an email"
+            android:textColor="@color/red_btn_bg_pressed_color"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/et_email"
+            app:layout_constraintTop_toBottomOf="@+id/et_email" />
+
+        <TextView
+            android:id="@+id/roleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Role"
+            android:textColor="#333333"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/radioGroup"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/radioGroup" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toEndOf="@+id/roleText"
+            app:layout_constraintTop_toBottomOf="@+id/emailErrorTv">
+
+            <RadioButton
+                android:id="@+id/adminRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:checked="true"
+                android:text="Admin"
+                android:textColor="#333333"
+                android:textSize="@dimen/_12sdp" />
+
+            <RadioButton
+                android:id="@+id/userRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:text="User"
+                android:textColor="#333333"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="invisible" />
+            <!--
+                        <RadioButton
+                            android:id="@+id/viewerRB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="@dimen/_8sdp"
+                            android:checked="true"
+                            android:text="Viewer"
+                            android:textColor="#333333"
+                            android:textSize="@dimen/_12sdp" />-->
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/sendInvoicesText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Send Invoices"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_14sdp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/sendInvoicesText1"
+            app:layout_constraintStart_toEndOf="@+id/sendInvoicesText1"
+            app:layout_constraintTop_toTopOf="@+id/sendInvoicesText1" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Able to send invoices from owner’s"
+            android:textColor="@color/blackTextColor"
+            android:textSize="@dimen/_10sdp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sendInvoicesText1" />
+
+        <TextView
+            android:id="@+id/connectEmailAccountsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="connected emails accounts ."
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/_10sdp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+        <TextView
+            android:id="@+id/sendInvoicesText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:alpha="0.4"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Send Invoices"
+            android:textColor="#333333"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/connectEmailAccountsTv" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:alpha="0.4"
+            app:layout_constraintBottom_toBottomOf="@+id/sendInvoicesText2"
+            app:layout_constraintStart_toEndOf="@+id/sendInvoicesText2"
+            app:layout_constraintTop_toTopOf="@+id/sendInvoicesText2" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:alpha="0.4"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Sent via owner's connected email account"
+            android:textColor="#333333"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sendInvoicesText2" />
+
+        <TextView
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:background="@drawable/rounded_corner_button"
+            android:fontFamily="@font/poppins_regular"
+            android:paddingLeft="@dimen/_30sdp"
+            android:paddingTop="@dimen/_6sdp"
+            android:paddingRight="@dimen/_30sdp"
+            android:paddingBottom="@dimen/_6sdp"
+            android:text="Invite user"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cancelButton"
+            app:layout_constraintTop_toBottomOf="@+id/tv2" />
+
+        <TextView
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:background="@drawable/rounded_corner_button"
+            android:fontFamily="@font/poppins_regular"
+            android:paddingLeft="@dimen/_30sdp"
+            android:paddingTop="@dimen/_6sdp"
+            android:paddingRight="@dimen/_30sdp"
+            android:paddingBottom="@dimen/_6sdp"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintEnd_toStartOf="@+id/saveButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

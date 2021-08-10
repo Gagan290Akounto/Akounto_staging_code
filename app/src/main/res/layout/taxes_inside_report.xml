@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" app:cardCornerRadius="@dimen/_5sdp" app:cardElevation="@dimen/_10sdp">
+        <LinearLayout android:orientation="vertical" android:id="@+id/linearLayout" android:padding="@dimen/_10sdp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/_14sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TAXES : Know your taxes" android:fontFamily="@font/poppins_bold"/>
+            <TextView android:textSize="@dimen/_12sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp" android:text="Know how much cash you need to settle your tax liability." android:fontFamily="@font/poppins_regular"/>
+            <RelativeLayout android:orientation="vertical" android:id="@+id/saleTaxRL" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <View android:background="@color/light_grey" android:layout_width="match_parent" android:layout_height="@dimen/_2sdp"/>
+                <TextView android:textSize="@dimen/_14sdp" android:textColor="@color/text_color_blue" android:paddingTop="@dimen/_10sdp" android:paddingBottom="@dimen/_10sdp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:layout_marginRight="@dimen/_5sdp" android:text="Sales Tax" android:layout_toLeftOf="@+id/goButton" android:fontFamily="@font/poppins_medium"/>
+                <ImageView android:id="@+id/goButton" android:padding="@dimen/_5sdp" android:layout_width="@dimen/_25sdp" android:layout_height="@dimen/_25sdp" android:src="@drawable/ic_baseline_arrow_forward" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

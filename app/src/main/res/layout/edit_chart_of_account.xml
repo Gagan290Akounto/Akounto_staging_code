@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="@dimen/_10sdp">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_backbutton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/light_grey" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/accountName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_black"
+                    android:text="Account Type*"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="12dp" />
+
+                <RelativeLayout
+                    android:id="@+id/accountNameRel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/accountName"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:background="@drawable/rounded_corner_dark_holo">
+
+                    <com.skydoves.powerspinner.PowerSpinnerView
+                        android:id="@+id/accountNameSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@color/white"
+                        android:hint="Choose"
+                        android:padding="10dp"
+                        android:textColor="@color/text_color"
+                        android:textColorHint="@color/text_color"
+                        android:textSize="@dimen/_12sdp"
+                        app:spinner_arrow_gravity="start"
+                        app:spinner_arrow_padding="8dp"
+                        app:spinner_arrow_tint="@color/teal_700"
+                        app:spinner_divider_color="@color/dark_grey"
+                        app:spinner_divider_show="true"
+                        app:spinner_divider_size="0.4dp"
+                        app:spinner_item_array="@array/merchant"
+                        app:spinner_popup_animation="bounce"
+                        app:spinner_popup_background="@color/white"
+                        app:spinner_popup_elevation="14dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/accountNameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_black"
+                    android:text="Account Name*"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="12dp" />
+
+                <RelativeLayout
+                    android:id="@+id/accountNameRel2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/accountNameTV"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:background="@drawable/rounded_corner_dark_holo">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@color/white"
+                        android:padding="@dimen/_10sdp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/accountCurrency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_black"
+                    android:text="Account Currency*"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="12dp" />
+
+                <RelativeLayout
+                    android:id="@+id/accountCurrencyRel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/accountCurrency"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:background="@drawable/rounded_corner_dark_holo">
+
+                    <com.skydoves.powerspinner.PowerSpinnerView
+                        android:id="@+id/accountCurrencySpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@color/white"
+                        android:hint="Choose"
+                        android:padding="10dp"
+                        android:textColor="@color/text_color"
+                        android:textColorHint="@color/text_color"
+                        android:textSize="@dimen/_12sdp"
+                        app:spinner_arrow_gravity="bottom"
+                        app:spinner_arrow_padding="8dp"
+                        app:spinner_arrow_tint="@color/teal_700"
+                        app:spinner_divider_color="@color/dark_grey"
+                        app:spinner_divider_show="true"
+                        app:spinner_divider_size="0.4dp"
+                        app:spinner_item_array="@array/merchant"
+                        app:spinner_popup_animation="bounce"
+                        app:spinner_popup_background="@color/white"
+                        app:spinner_popup_elevation="14dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/accountId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_black"
+                    android:text="Account Type*"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="12dp" />
+
+                <RelativeLayout
+                    android:id="@+id/accountIdRel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/accountId"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:background="@drawable/rounded_corner_dark_holo">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@color/white"
+                        android:padding="@dimen/_10sdp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_black"
+                    android:text="Account Type*"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="12dp" />
+
+                <RelativeLayout
+                    android:id="@+id/thirdCardInside"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/description"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:background="@drawable/rounded_corner_dark_holo">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@color/white"
+                        android:padding="@dimen/_10sdp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_toRightOf="@+id/saveButton"
+                    android:background="@drawable/rounded_corner_button_trans"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingStart="@dimen/_30sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_30sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="Cancel"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp" />
+
+                <TextView
+                    android:id="@+id/sendButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_toRightOf="@+id/saveButton"
+                    android:background="@drawable/rounded_corner_button"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingStart="@dimen/_30sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_30sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="Send"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

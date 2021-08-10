@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Are you sure ?"/>
+
+    <TextView
+        android:id="@+id/descp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="You want to import transactions"
+        />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:orientation="horizontal"
+    android:layout_weight="2">
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No, cancel"
+        android:layout_weight="1"
+        android:textSize="@dimen/_10sdp"
+        android:background="@drawable/fedded_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="@dimen/_8sdp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_import"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Yes, Contiune it!"
+        android:layout_weight="1"
+        android:textSize="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:textColor="@color/white"
+        android:background="@drawable/rounded_corner_button"/></LinearLayout>
+
+</LinearLayout>

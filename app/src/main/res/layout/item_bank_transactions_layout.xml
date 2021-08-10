@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+
+    <RelativeLayout
+        android:id="@+id/relBankTransaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:id="@+id/tvBankTransactionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/tvBankTransactionDate"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/grey_text"
+            android:textSize="16sp"
+            tools:text="Relay Financial" />
+
+        <TextView
+            android:id="@+id/tvBankTransactionDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/grey_text"
+            android:textSize="16sp"
+            tools:text="16 May 2021" />
+
+        <TextView
+            android:id="@+id/tvBankTransactionPaidBy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvBankTransactionTitle"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/tvBankTransactionAmount"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Ringba Paid By"
+            android:textColor="@color/heading_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvBankTransactionAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvBankTransactionDate"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/poppins_regular"
+            android:text="$16304.56"
+            android:textColor="@color/red_orange"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <!--<include
+        layout="@layout/include_divider_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relBankTransaction" />-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f3f3f3"
+        android:layout_below="@id/relBankTransaction"/>
+
+</RelativeLayout>

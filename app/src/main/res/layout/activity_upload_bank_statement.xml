@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.navigation.NavigationView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="start">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_backbutton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbar"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/_8sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:text="Upload a Bank Statement"
+                    android:textColor="@color/blackTextColor"
+                    android:textSize="@dimen/_18sdp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:text="Please select bank &amp; upload statement"
+                    android:textColor="@color/teal_700"
+                    android:textSize="@dimen/_12sdp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:background="@drawable/corner_tale_white_holo"
+                    android:orientation="horizontal">
+
+                    <com.skydoves.powerspinner.PowerSpinnerView
+                        android:id="@+id/accountSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_4sdp"
+                        android:layout_marginLeft="@dimen/_16sdp"
+                        android:background="@color/white"
+                        android:hint="Select Payment account"
+                        android:padding="10dp"
+                        android:textColor="@color/blackTextColor"
+                        android:textColorHint="@color/dark_grey"
+                        android:textSize="@dimen/_12sdp"
+                        app:spinner_arrow_gravity="end"
+                        app:spinner_arrow_padding="8dp"
+                        app:spinner_arrow_tint="@color/teal_700"
+                        app:spinner_divider_color="@color/dark_grey"
+                        app:spinner_divider_show="true"
+                        app:spinner_divider_size="0.4dp"
+                        app:spinner_popup_animation="bounce"
+                        app:spinner_popup_background="@color/white"
+                        app:spinner_popup_elevation="14dp" />
+                </RelativeLayout>
+                <EditText
+                    android:id="@+id/ed_opening_balance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/corner_tale_white_holo"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:visibility="gone"
+                    android:fontFamily="@font/poppins_regular"
+                    android:padding="@dimen/_10sdp"
+                    android:hint="Opening Balance" />
+                <TextView
+                    android:id="@+id/accountIdErrorTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Please select payment account!"
+                    android:textColor="@color/red_btn_bg_color"
+                    android:textSize="@dimen/_10sdp"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/add_file"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:background="@drawable/corner_tale_white_holo"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_24sdp">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@color/white"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/ic_upload_statement" />
+
+                    <TextView
+                        android:id="@+id/addAccount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_toRightOf="@+id/imageView"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Choose CSV File"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <TextView
+                        android:id="@+id/filename"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_toLeftOf="@+id/menuButton"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text=""
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/_14sdp"
+                        tools:ignore="UnknownId" />
+                </RelativeLayout>
+
+                <life.sabujak.roundedbutton.RoundedButton
+                    android:id="@+id/roundedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recyclerView"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/_48ssp"
+                    android:layout_marginRight="@dimen/_48ssp"
+                    android:gravity="center"
+                    android:padding="@dimen/_8ssp"
+                    android:text="Go to dashboard"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:visibility="gone"
+                    app:buttonCornerRadius="@dimen/_25sdp"
+                    app:buttonGradientEndColor="#1a8b8c"
+                    app:buttonGradientStartColor="#1a8b8c" />
+
+                <TextView
+                    android:id="@+id/proceedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/rounded_corner_button_blue"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingLeft="@dimen/_30sdp"
+                    android:paddingTop="@dimen/_6sdp"
+                    android:paddingRight="@dimen/_30sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:text="Proceed"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:drawablePadding="@dimen/_6sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="After uploading file, file will shown in the Home &gt; Transactions page."
+                    android:textColor="@color/teal_700"
+                    android:textSize="@dimen/_12sdp"
+                    app:drawableStartCompat="@drawable/ic_info_icon"
+                    app:drawableTint="@color/teal_200" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:drawablePadding="@dimen/_6sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Help ? \10Create an account using the instructions below:"
+                    android:textColor="@color/blackTextColor"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:drawablePadding="@dimen/_6sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:lineSpacingExtra="@dimen/_3sdp"
+                    android:text="• Find savings and checking accounts under Asset &gt; Bank &gt; Bank &amp; Cash; you may create a custom account by selecting Other Bank Account \10• Find credit cards and lines of credit under Liability/CreditCard &gt; Current Liability; you may create a custom account by selecting Other Current Bank Debt"
+                    android:textColor="@color/teal_700"
+                    android:textSize="@dimen/_12sdp" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</com.google.android.material.navigation.NavigationView>

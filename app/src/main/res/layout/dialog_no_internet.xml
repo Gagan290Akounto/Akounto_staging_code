@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/dialogParent" style="@style/df_dialog_layout">
+    <androidx.cardview.widget.CardView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" app:cardBackgroundColor="@color/whiteCardColor" app:cardCornerRadius="16dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20dp">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/no_internet_image2"/>
+            <TextView android:textSize="@dimen/headerTextSize" android:textColor="@color/blackTextColor" android:layout_gravity="center" android:layout_marginTop="20dp" android:layout_marginBottom="20dp" android:text="ଇଣ୍ଟେର୍ନେଟ ଉପଲବ୍ଧ ନାହିଁ" style="@style/homeHeading"/>
+            <TextView android:textSize="14dp" android:textStyle="normal" android:gravity="center_horizontal" android:layout_gravity="center" android:id="@+id/spinAndWinReward" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="କୃପାକରି ନିଜର କନେକ୍ସନ ର ସ୍ତିତି ପରଖନ୍ତୁ ଏବଂ  ପୁନଃ ପ୍ରୟାସ କରନ୍ତୁ " style="@style/learnhubTitleText"/>
+            <Button android:textColor="@color/whiteTextColor" android:layout_gravity="center" android:id="@+id/btnSpinAndWinRedeem" android:background="@drawable/onboarding_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25dp" android:text="Close"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

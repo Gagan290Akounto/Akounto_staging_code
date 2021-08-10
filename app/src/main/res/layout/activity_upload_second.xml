@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_backbutton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp" />
+
+    <ScrollView
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/background_color">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_color">
+
+            <RelativeLayout
+                android:id="@+id/fullUpload"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_marginLeft="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_50sdp"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:background="@color/light_grey"
+                        app:tint="@color/teal_700" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/estimationTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fullUpload"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_extrabold"
+                android:text="Receipt details"
+                android:textColor="@color/text_color"
+                android:textSize="12dp" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/estimationTitle"
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:baselineAligned="false" android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_black"
+                            android:text="Merchant"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/title"
+                            android:background="@color/transparent"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Merchant XYZ"
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/title21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_black"
+                            android:text="Date"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/content21"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/title21"
+                            android:background="@color/transparent"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="19/02/2020"
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:baselineAligned="false" android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/title11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_black"
+                            android:text="Merchant"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/content11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/title11"
+                            android:background="@color/transparent"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Merchant XYZ"
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/title211"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_black"
+                            android:text="Date"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/content211"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/title211"
+                            android:background="@color/transparent"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="19/02/2020"
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:baselineAligned="false" android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/title9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_black"
+                            android:text="Merchant"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/content9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/title9"
+                            android:background="@color/transparent"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Merchant XYZ"
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/title28"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_black"
+                            android:text="Date"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/content28"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/title28"
+                            android:background="@color/transparent"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="19/02/2020"
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:baselineAligned="false" android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/title7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_black"
+                            android:text="Merchant"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/content7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/title7"
+                            android:background="@color/transparent"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Merchant XYZ"
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/title26"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_black"
+                            android:text="Date"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/content26"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/title26"
+                            android:background="@color/transparent"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="19/02/2020"
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:baselineAligned="false" android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/title5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_black"
+                            android:text="Merchant"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/content5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/title5"
+                            android:background="@color/transparent"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Merchant XYZ"
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/title2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_black"
+                            android:text="Date"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/content2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/title2"
+                            android:background="@color/transparent"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="19/02/2020"
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayoutUp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Back"
+                android:textColor="@color/dark_grey" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

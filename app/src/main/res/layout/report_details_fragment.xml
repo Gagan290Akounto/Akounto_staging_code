@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:orientation="horizontal" android:padding="@dimen/_10sdp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/_14sdp" android:textColor="@color/text_color" android:id="@+id/tv_customerName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Accounts" android:layout_centerVertical="true" android:fontFamily="@font/poppins_bold"/>
+        <TextView android:textSize="@dimen/_10sdp" android:textColor="@color/text_color" android:id="@+id/invoiceNo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Jan 28, 2021" android:layout_centerVertical="true" android:fontFamily="@font/poppins_medium" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/_14sdp" android:textColor="@color/text_color" android:id="@+id/tv_total_income" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total Income" android:layout_centerVertical="true" android:fontFamily="@font/poppins_regular"/>
+        <TextView android:textSize="@dimen/_14sdp" android:textColor="@color/text_color" android:id="@+id/tv_total_income_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$ 0.00" android:layout_centerVertical="true" android:fontFamily="@font/poppins_regular" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_8ssp">
+        <TextView android:textSize="@dimen/_14sdp" android:textColor="@color/text_color" android:id="@+id/tv_total_cost" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total cost of goods sold" android:layout_centerVertical="true" android:fontFamily="@font/poppins_regular"/>
+        <TextView android:textSize="@dimen/_14sdp" android:textColor="@color/text_color" android:id="@+id/tv_total_cost_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$ 0.00" android:layout_centerVertical="true" android:fontFamily="@font/poppins_regular" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_8ssp">
+        <TextView android:textSize="@dimen/_14sdp" android:textColor="@color/main_blue_color" android:id="@+id/tv_gross_profit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gross Profit" android:fontFamily="@font/poppins_regular"/>
+        <TextView android:textSize="@dimen/_14sdp" android:textColor="@color/main_blue_color" android:id="@+id/tv_gross_profit_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$ 0.00" android:layout_centerVertical="true" android:fontFamily="@font/poppins_regular" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_8ssp">
+        <TextView android:textSize="@dimen/_14sdp" android:textColor="@color/text_color" android:id="@+id/tv_total_expenses" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total Expenses" android:layout_centerVertical="true" android:fontFamily="@font/poppins_regular"/>
+        <TextView android:textSize="@dimen/_14sdp" android:textColor="@color/text_color" android:id="@+id/tv_total_expenses_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$ 0.00" android:layout_centerVertical="true" android:fontFamily="@font/poppins_regular" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_8ssp">
+        <TextView android:textSize="@dimen/_14sdp" android:textColor="@color/main_blue_color" android:id="@+id/tv_net_profit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Net Profit" android:layout_centerVertical="true" android:fontFamily="@font/poppins_regular"/>
+        <TextView android:textSize="@dimen/_14sdp" android:textColor="@color/main_blue_color" android:id="@+id/tv_net_profit_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$ 0.00" android:layout_centerVertical="true" android:fontFamily="@font/poppins_regular" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</LinearLayout>

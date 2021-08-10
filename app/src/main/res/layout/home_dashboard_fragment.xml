@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:fillViewport="true"
+        android:focusable="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/home_tabs"
+                android:layout_width="match_parent"
+                android:layout_height="45sp"
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:layout_marginRight="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:background="@drawable/home_dash"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints">
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_corner_button"
+                    android:text="Home"
+                    android:textColor="#ffffff" />
+
+                <LinearLayout
+                    android:id="@+id/goActivities"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:text="Activities"
+                        android:textAllCaps="true"
+                        android:textColor="#5a53fd" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cashFlowCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:background="@drawable/menu_bg"
+                app:cardCornerRadius="@dimen/_6sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/home_tabs">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_12sdp"
+                    android:paddingTop="@dimen/_16sdp"
+                    android:paddingEnd="@dimen/_12sdp"
+                    android:paddingBottom="@dimen/_4sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/cashFlowTv"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Cash Flow"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/_16sdp" />
+
+                        <LinearLayout
+                            android:id="@+id/cashFlowFromToDate"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/rounded_corner_button_grey_holo"
+                            android:gravity="center"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_2sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:paddingBottom="2dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <Spinner
+                                android:id="@+id/sp_filter"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_corner_button_grey_holo"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingBottom="2dp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:padding="@dimen/_4sdp"
+                            android:src="@drawable/ic_calendar_icon"
+                            app:tint="@color/dark_grey" />
+
+                        <TextView
+                            android:id="@+id/cashFlowFromDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_marginStart="@dimen/_2sdp"
+                            android:layout_marginEnd="@dimen/_2sdp"
+                            android:gravity="center"
+                            android:text="From"
+                            android:textColor="@color/blackTextColor" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_2sdp"
+                            android:text=" - "
+                            android:textColor="@color/blackTextColor" />
+
+                        <TextView
+                            android:id="@+id/cashFlowToDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_margin="@dimen/_2sdp"
+                            android:gravity="center"
+                            android:text="To Date"
+                            android:textColor="@color/blackTextColor" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/cashFlowDivider"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        app:layout_constraintStart_toStartOf="@+id/ll_date"
+                        app:layout_constraintTop_toBottomOf="@+id/ll_date" />
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/cashFlowChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_200sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:visibility="visible"
+                        app:layout_constraintTop_toBottomOf="@+id/cashFlowDivider" />
+
+                    <LinearLayout
+                        android:id="@+id/noCashFlowChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_200sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/cashFlowDivider">
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/cash_flow" />
+
+                        <TextView
+                            android:id="@+id/barchNoData"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_16ssp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:text="Cash inflow/outflow not found." />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/cashFlowReport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="View Report"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_10sdp"
+                        android:visibility="invisible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cashFlowChart" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/expenseBreakdownCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:background="@drawable/menu_bg"
+                app:cardCornerRadius="@dimen/_6sdp"
+                app:layout_constraintTop_toBottomOf="@+id/cashFlowCardView">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_12sdp"
+                    android:paddingTop="@dimen/_16sdp"
+                    android:paddingEnd="@dimen/_12sdp"
+                    android:paddingBottom="@dimen/_4sdp">
+
+                    <TextView
+                        android:id="@+id/expenseBreakdownTv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Expense Breakdown"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_16sdp"
+                        app:layout_constraintEnd_toStartOf="@+id/expenseBreakdownFromToDate"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/expenseBreakdownFromToDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_corner_button_grey_holo"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingBottom="2dp"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="@+id/expenseBreakdownTv"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/expenseBreakdownTv">
+
+                        <ImageView
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:padding="@dimen/_4sdp"
+                            android:src="@drawable/ic_calendar_icon"
+                            app:tint="@color/dark_grey" />
+
+                        <TextView
+                            android:id="@+id/expenseBreakdownFromDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_marginStart="@dimen/_2sdp"
+                            android:layout_marginEnd="@dimen/_2sdp"
+                            android:gravity="center"
+                            android:text="From"
+                            android:textColor="@color/blackTextColor" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_2sdp"
+                            android:text=" - "
+                            android:textColor="@color/blackTextColor" />
+
+                        <TextView
+                            android:id="@+id/expenseBreakdownToDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_24sdp"
+                            android:gravity="center"
+                            android:text="To Date"
+                            android:textColor="@color/blackTextColor" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/expenseBreakdownDivider"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:background="@color/light_grey"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/expenseBreakdownTv" />
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/expenseBreakdownChart"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_200sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/expenseBreakdownDivider" />
+
+                    <LinearLayout
+                        android:id="@+id/noExpenseBreakdownChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_200sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/expenseBreakdownDivider">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/pia_chart" />
+
+                        <TextView
+                            android:id="@+id/peiChartNoData"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_16ssp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:text="Transaction not found." />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/expenseBreakdownReport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="View Report"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_10sdp"
+                        android:visibility="invisible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/expenseBreakdownChart" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/hint_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingLeft="@dimen/_17sdp"
+                android:text="Upgrade to accrual basis accounting to view results."
+                android:textColor="#212529"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@+id/expenseBreakdownCardView"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_invoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="7dp"
+                android:orientation="horizontal"
+                app:cardBackgroundColor="#ffe4cf"
+                app:cardCornerRadius="@dimen/_6sdp"
+                app:layout_constraintTop_toBottomOf="@+id/hint_text">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Sale Invoices"
+                        android:textColor="#212529"
+                        android:textSize="17sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Not due"
+                        android:textColor="#212529" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/invoice_not_due_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="NA"
+                        android:textColor="#212529"
+                        android:textSize="16sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Overdue"
+                        android:textColor="#212529" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/invoice_overdue_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="NA"
+                        android:textColor="#212529"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/circle_invoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom|right"
+                    android:padding="7dp">
+
+                    <LinearLayout
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/circle"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/icon_arrow_right" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/no_card_invoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="7dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:cardBackgroundColor="#ffe4cf"
+                app:cardCornerRadius="@dimen/_6sdp"
+                app:layout_constraintTop_toBottomOf="@+id/card_invoice">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_17sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Sale Invoices"
+                    android:textColor="#212529"
+                    android:textSize="17sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="130dp"
+                        android:alpha="0.2"
+                        android:paddingTop="@dimen/_17sdp"
+                        android:paddingBottom="@dimen/_17sdp"
+                        android:src="@drawable/invoice" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardBill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                app:cardBackgroundColor="#cfedff"
+                app:layout_constraintTop_toBottomOf="@+id/no_card_invoice">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Purchase Invoices"
+                        android:textColor="#212529"
+                        android:textSize="17sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Not due"
+                        android:textColor="#212529" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/bill_not_due_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="NA"
+                        android:textColor="#212529"
+                        android:textSize="16sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Overdue"
+                        android:textColor="#212529" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/bill_overdue_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="NA"
+                        android:textColor="#212529"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/circle_bill"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom|right"
+                    android:padding="7dp">
+
+                    <LinearLayout
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/circle"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/icon_arrow_right" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/no_cardBill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:cardBackgroundColor="#cfedff"
+                app:layout_constraintTop_toBottomOf="@+id/cardBill">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_17sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Purchase Invoices"
+                    android:textColor="#212529"
+                    android:textSize="17sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="130dp"
+                        android:alpha="0.2"
+                        android:paddingTop="@dimen/_17sdp"
+                        android:paddingBottom="@dimen/_17sdp"
+                        android:src="@drawable/bill_no" />
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/no_cardBill" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

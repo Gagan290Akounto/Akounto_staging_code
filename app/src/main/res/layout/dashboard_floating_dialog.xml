@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@drawable/rounded_corner_white" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/_10sdp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/estimateLL" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:padding="@dimen/_5sdp" android:layout_width="@dimen/_30sdp" android:layout_height="@dimen/_30sdp" android:src="@drawable/ic_sales_icon" app:tint="@color/teal_700"/>
+            <TextView android:textSize="@dimen/_12sdp" android:padding="@dimen/_10sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_10sdp" android:text="Estimate" android:fontFamily="@font/poppins_regular"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/invoiceLL" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:padding="@dimen/_5sdp" android:layout_width="@dimen/_30sdp" android:layout_height="@dimen/_30sdp" android:src="@drawable/ic_report_icon" app:tint="@color/teal_700"/>
+            <TextView android:textSize="@dimen/_12sdp" android:padding="@dimen/_10sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_10sdp" android:text="Invoice" android:fontFamily="@font/poppins_regular"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/billLL" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:padding="@dimen/_5sdp" android:layout_width="@dimen/_30sdp" android:layout_height="@dimen/_30sdp" android:src="@drawable/ic_sales_icon" app:tint="@color/teal_700"/>
+            <TextView android:textSize="@dimen/_12sdp" android:padding="@dimen/_10sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_10sdp" android:text="Bill" android:fontFamily="@font/poppins_regular"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/customerLL" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:padding="@dimen/_5sdp" android:layout_width="@dimen/_30sdp" android:layout_height="@dimen/_30sdp" android:src="@drawable/ic_headphones_support" app:tint="@color/teal_700"/>
+            <TextView android:textSize="@dimen/_12sdp" android:padding="@dimen/_10sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_10sdp" android:text="Customer" android:fontFamily="@font/poppins_regular"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/vendorLL" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:padding="@dimen/_5sdp" android:layout_width="@dimen/_30sdp" android:layout_height="@dimen/_30sdp" android:src="@drawable/ic_purchase_icon" app:tint="@color/teal_700"/>
+            <TextView android:textSize="@dimen/_12sdp" android:padding="@dimen/_10sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_10sdp" android:text="Vendor" android:fontFamily="@font/poppins_regular"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/productLL" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:padding="@dimen/_5sdp" android:layout_width="@dimen/_30sdp" android:layout_height="@dimen/_30sdp" android:src="@drawable/ic_accounting_icon" app:tint="@color/teal_700"/>
+            <TextView android:textSize="@dimen/_12sdp" android:padding="@dimen/_10sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_10sdp" android:text="Product / Services" android:fontFamily="@font/poppins_regular"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

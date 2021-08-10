@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/_10sdp" app:cardCornerRadius="@dimen/_5sdp">
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/_8sdp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/_12sdp" android:textColor="@color/black" android:layout_gravity="center_vertical" android:id="@+id/billNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Agreement Details" android:layout_centerVertical="true" android:fontFamily="@font/poppins_bold"/>
+        </RelativeLayout>
+        <View android:background="@color/light_grey" android:layout_width="match_parent" android:layout_height="@dimen/_2sdp"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:visibility="gone" android:layout_width="@dimen/_50sdp" android:layout_height="@dimen/_50sdp" android:layout_margin="@dimen/_8sdp"/>
+            <TextView android:textSize="@dimen/_10sdp" android:layout_gravity="center" android:id="@+id/createAnotherBillButton" android:background="@drawable/rounded_corner_edit_draft" android:paddingLeft="@dimen/_15sdp" android:paddingTop="@dimen/_6sdp" android:paddingRight="@dimen/_15sdp" android:paddingBottom="@dimen/_6sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_12sdp" android:text="Upload Agreement" android:fontFamily="@font/poppins_regular"/>
+            <TextView android:textSize="@dimen/_10sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp" android:text="Agreement amount" android:fontFamily="@font/poppins_regular"/>
+            <RelativeLayout android:background="@drawable/rounded_corner_dark_holo" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/billnoEDTV" android:background="@color/white" android:padding="@dimen/_8sdp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/_3sdp"/>
+            </RelativeLayout>
+            <TextView android:textSize="@dimen/_10sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp" android:text="Terms / Notes" android:fontFamily="@font/poppins_regular"/>
+            <RelativeLayout android:background="@drawable/rounded_corner_dark_holo" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:background="@color/white" android:padding="@dimen/_8sdp" android:layout_width="match_parent" android:layout_height="@dimen/_80sdp" android:layout_margin="@dimen/_3sdp"/>
+            </RelativeLayout>
+            <TextView android:textSize="@dimen/_12sdp" android:textColor="@color/white" android:layout_gravity="center" android:id="@+id/addScheduler" android:background="@drawable/rounded_corner_button" android:paddingLeft="@dimen/_30sdp" android:paddingTop="@dimen/_6sdp" android:paddingRight="@dimen/_30sdp" android:paddingBottom="@dimen/_6sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/_10sdp" android:text="Add scheduler" android:fontFamily="@font/poppins_regular"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

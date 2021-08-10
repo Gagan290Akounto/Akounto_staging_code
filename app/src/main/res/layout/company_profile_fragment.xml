@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15sdp">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_menu_arrow_down_black_24dp"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_toRightOf="@+id/imageView"
+                android:fontFamily="@font/poppins_extrabold"
+                android:text="Bank01"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_16sdp" />
+
+            <TextView
+                android:id="@+id/where"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_toRightOf="@+id/imageView"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Last updated 2 days ago"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12sdp" />
+
+            <ImageView
+                android:id="@+id/imageViewDelete"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/delete_tax"
+                app:tint="@color/red_btn_bg_pressed_color" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/dark_grey" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:padding="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:fontFamily="@font/poppins_extrabold"
+                android:text="Cash on Hand"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_16sdp" />
+
+            <TextView
+                android:id="@+id/amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:fontFamily="@font/poppins_extrabold"
+                android:text="$25,500.55"
+                android:textColor="@color/teal_700"
+                android:textSize="@dimen/_16sdp" />
+
+            <TextView
+                android:id="@+id/notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title2"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Automatically import transaction into accounting"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/notice"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="Off" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/goButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_corner_button_blue"
+        android:fontFamily="@font/poppins_regular"
+        android:paddingLeft="30dp"
+        android:paddingTop="12dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="12dp"
+        android:text="Create account"
+        android:textColor="@color/white"
+        android:textSize="14dp" />
+</RelativeLayout>

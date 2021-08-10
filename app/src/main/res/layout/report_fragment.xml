@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/background_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView android:id="@+id/financialCard" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" app:cardCornerRadius="@dimen/_5sdp" app:cardElevation="@dimen/_10sdp">
+                <LinearLayout android:orientation="vertical" android:id="@+id/linearLayout" android:padding="@dimen/_10sdp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/_14sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FINANCIAL STATEMENTS : Track your financial position" android:fontFamily="@font/poppins_bold"/>
+                    <TextView android:textSize="@dimen/_12sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp" android:text="This helps you to gain better understanding of your business so that you can make the right decision. Know the areas in which you are performing well and which sectors are lagging behind." android:fontFamily="@font/poppins_regular"/>
+                    <RelativeLayout android:orientation="vertical" android:id="@+id/profitAndLossRel" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <View android:background="@color/light_grey" android:layout_width="match_parent" android:layout_height="@dimen/_2sdp"/>
+                        <TextView android:textSize="@dimen/_14sdp" android:textColor="@color/text_color_blue" android:paddingTop="@dimen/_10sdp" android:paddingBottom="@dimen/_10sdp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:layout_marginRight="@dimen/_5sdp" android:text="Profit and Loss (Income Statement)" android:layout_toLeftOf="@+id/goButton" android:fontFamily="@font/poppins_medium"/>
+                        <ImageView android:id="@+id/goButton" android:padding="@dimen/_5sdp" android:layout_width="@dimen/_25sdp" android:layout_height="@dimen/_25sdp" android:src="@drawable/ic_baseline_arrow_forward" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:orientation="vertical" android:id="@+id/balanceSheetRL" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <View android:background="@color/light_grey" android:layout_width="match_parent" android:layout_height="@dimen/_2sdp"/>
+                        <TextView android:textSize="@dimen/_14sdp" android:textColor="@color/text_color_blue" android:paddingTop="@dimen/_10sdp" android:paddingBottom="@dimen/_10sdp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:layout_marginRight="@dimen/_5sdp" android:text="Balance Sheet" android:layout_toLeftOf="@+id/goButton2" android:layout_centerVertical="true" android:fontFamily="@font/poppins_medium"/>
+                        <ImageView android:id="@+id/goButton2" android:padding="@dimen/_5sdp" android:layout_width="@dimen/_25sdp" android:layout_height="@dimen/_25sdp" android:src="@drawable/ic_baseline_arrow_forward" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:orientation="vertical" android:id="@+id/cashFlowRL" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <View android:background="@color/light_grey" android:layout_width="match_parent" android:layout_height="@dimen/_2sdp"/>
+                        <TextView android:textSize="@dimen/_14sdp" android:textColor="@color/text_color_blue" android:paddingTop="@dimen/_10sdp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:layout_marginRight="@dimen/_5sdp" android:text="Cash Flow" android:layout_toLeftOf="@+id/goButton3" android:layout_centerVertical="true" android:fontFamily="@font/poppins_medium"/>
+                        <ImageView android:id="@+id/goButton3" android:padding="@dimen/_5sdp" android:layout_width="@dimen/_25sdp" android:layout_height="@dimen/_25sdp" android:src="@drawable/ic_baseline_arrow_forward" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <include android:id="@+id/taxesCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/financialCard" layout="@layout/taxes_inside_report"/>
+            <include android:id="@+id/impReportsCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/taxesCard" layout="@layout/imp_reports_inside_report"/>
+            <include android:id="@+id/accontsRecievableCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/impReportsCard" layout="@layout/accounts_recievable_inside_report"/>
+            <include android:id="@+id/accontsPayableCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/accontsRecievableCard" layout="@layout/account_payable_inside_report"/>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

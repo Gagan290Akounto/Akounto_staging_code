@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.kaushikthedeveloper:squarelayout:0.0.3@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4c34edf884fb21e6515a964c25b03996/jetified-squarelayout-0.0.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4c34edf884fb21e6515a964c25b03996/jetified-squarelayout-0.0.3/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4c34edf884fb21e6515a964c25b03996/jetified-squarelayout-0.0.3/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.kaushikthedeveloper/squarelayout/0.0.3/915440b6c757682e118c3fc5ccd1d24628c71c1a/squarelayout-0.0.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.kaushikthedeveloper/squarelayout/0.0.3/7a019f719c28e5680d61dc6a37732cf0986dbace/squarelayout-0.0.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

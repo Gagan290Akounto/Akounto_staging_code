@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/_40sdp"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/background_color">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:fontFamily="@font/poppins_extrabold"
+        android:text="Lorem ipsum dolor sitamet, consectet."
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/_20sdp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Lorem ipsum dolor sitamet, consectet."
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/_14sdp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_220sdp"
+        android:layout_below="@+id/textView"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:src="@drawable/ic_receipts_logo" />
+
+    <TextView
+        android:id="@+id/uploadReceipt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:background="@drawable/rounded_corner_button"
+        android:fontFamily="@font/poppins_regular"
+        android:paddingLeft="30dp"
+        android:paddingTop="12dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="12dp"
+        android:text="Upload a receipt"
+        android:textColor="@color/white"
+        android:textSize="14dp" />
+</RelativeLayout>

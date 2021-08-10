@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/_8sdp">
+
+    <TextView
+        android:id="@+id/availableBalanceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Available Balance"
+        android:textColor="@color/blackTextColor"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/balanceAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="$00"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintStart_toStartOf="@+id/availableBalanceText"
+        app:layout_constraintTop_toBottomOf="@+id/availableBalanceText" />
+
+    <TextView
+        android:id="@+id/bankName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="HDFC Bank"
+        android:textColor="@color/blackTextColor"
+        android:textSize="@dimen/_13sdp"
+        app:layout_constraintStart_toStartOf="@+id/balanceAmount"
+        app:layout_constraintTop_toBottomOf="@+id/balanceAmount" />
+
+    <TextView
+        android:id="@+id/accountNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="1234 1241 ****"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintStart_toStartOf="@+id/bankName"
+        app:layout_constraintTop_toBottomOf="@+id/bankName" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@color/light_grey"
+        app:layout_constraintTop_toBottomOf="@+id/accountNumber" />
+</androidx.constraintlayout.widget.ConstraintLayout>

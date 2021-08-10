@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/_16sdp"
+    android:paddingTop="@dimen/_8sdp"
+    android:paddingEnd="@dimen/_16sdp"
+    android:paddingBottom="@dimen/_8sdp">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/blackTextColor"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintEnd_toStartOf="@+id/deleteItem"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/deleteItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_name"
+        app:layout_constraintTop_toTopOf="@+id/tv_name"
+        app:tint="@color/dark_grey" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Price"
+        android:textColor="@color/dark_grey"
+        app:layout_constraintEnd_toStartOf="@+id/tax"
+        app:layout_constraintStart_toEndOf="@+id/quantity"
+        app:layout_constraintTop_toTopOf="@+id/quantity" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="$0.00"
+        android:textColor="@color/blackTextColor"
+        app:layout_constraintEnd_toEndOf="@+id/price"
+        app:layout_constraintStart_toStartOf="@+id/price"
+        app:layout_constraintTop_toBottomOf="@+id/price" />
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Quantity"
+        android:textColor="@color/dark_grey"
+        app:layout_constraintStart_toStartOf="@+id/tv_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+    <TextView
+        android:id="@+id/tv_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="1"
+        android:textColor="@color/blackTextColor"
+        app:layout_constraintEnd_toEndOf="@+id/quantity"
+        app:layout_constraintStart_toStartOf="@+id/quantity"
+        app:layout_constraintTop_toBottomOf="@+id/quantity" />
+
+    <TextView
+        android:id="@+id/tax"
+        android:layout_width="15dp"
+        android:layout_height="26dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Tax"
+        android:textColor="@color/dark_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/quantity" />
+
+    <com.akounto.accountingsoftware.util.TaxSummaryListView
+        android:id="@+id/tv_taxList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        app:layout_constraintEnd_toEndOf="@+id/tax"
+        app:layout_constraintStart_toEndOf="@+id/tv_price"
+        app:layout_constraintTop_toBottomOf="@+id/tax" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="tv_quantity,tv_taxList" />
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Amount:"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/barrier" />
+
+    <TextView
+        android:id="@+id/tv_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/blackTextColor"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/amount"
+        app:layout_constraintStart_toEndOf="@+id/amount"
+        app:layout_constraintTop_toTopOf="@+id/amount"
+        app:layout_constraintVertical_bias="0" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@color/text_color"
+        app:layout_constraintTop_toBottomOf="@+id/tv_amount" />
+</androidx.constraintlayout.widget.ConstraintLayout>

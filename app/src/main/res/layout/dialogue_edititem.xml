@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:layout_marginTop="@dimen/_2sdp" app:cardCornerRadius="3dp" app:cardElevation="10dp">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/_10sdp" android:layout_marginTop="@dimen/_10sdp">
+            <TextView android:textSize="@dimen/_8sdp" android:textColor="@color/dark_grey" android:id="@+id/textViewName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" Quantity*" android:fontFamily="@font/poppins_regular"/>
+            <RelativeLayout android:background="@drawable/corner_tale_white_holo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/textViewName">
+                <EditText android:textSize="@dimen/_16sdp" android:textColor="@color/text_color" android:gravity="center" android:id="@+id/editQuantity" android:background="@color/transparent" android:padding="@dimen/_4sdp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="1" android:inputType="number"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/_14sdp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@+id/sendButton" android:background="@drawable/rounded_corner_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_20sdp" android:layout_marginTop="@dimen/_4sdp" android:layout_marginRight="@dimen/_20sdp" android:layout_marginBottom="10dp" android:text="Submit" android:layout_toRightOf="@+id/saveButton" android:fontFamily="@font/poppins_regular" android:paddingStart="@dimen/_20sdp" android:paddingEnd="@dimen/_20sdp"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

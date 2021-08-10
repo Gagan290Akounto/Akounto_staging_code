@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_color"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/include_stepper_dashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical" />
+
+        <!--Add Business Profile Template-->
+        <LinearLayout
+            android:id="@+id/linBusinessProfileTemplate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_steps"
+            android:orientation="vertical"
+            android:paddingBottom="100dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="Hey John, let’s get you started!"
+                android:textColor="@color/heading_color"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Tell us about you so we can customise Akounto for you."
+                android:textColor="#757D8A"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/ic_bookkeeping" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_regular"
+                android:lineHeight="24dp"
+                android:text="Bookkeeping and accounting managed in a snap. Complete your profile to unlock the magic of Akounto."
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnCompleteBusinessProfile"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/action_primary_btn"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="Complete Business Profile"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!--Add Business Profile Details-->
+        <LinearLayout
+            android:id="@+id/linBusinessProfileDetails"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_steps"
+            android:orientation="vertical"
+            android:paddingBottom="100dp"
+            android:visibility="gone">
+
+            <include layout="@layout/include_add_business_details" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

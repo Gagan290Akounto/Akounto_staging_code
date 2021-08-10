@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="Add new customer"
+                android:textColor="@color/heading_color"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Tell us about your new customer by filling out their information below."
+                android:textColor="#757D8A"
+                android:textSize="14sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/input_bg_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Client Name"
+                android:textColor="#333333"
+                android:textColorHint="#9C9C9C"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_bg_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Business Name"
+                android:textColor="#333333"
+                android:textColorHint="#9C9C9C"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_bg_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Business Phone"
+                android:textColor="#333333"
+                android:textColorHint="#9C9C9C"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_bg_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Mobile phone"
+                android:textColor="#333333"
+                android:textColorHint="#9C9C9C"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_bg_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Email address"
+                android:textColor="#333333"
+                android:textColorHint="#9C9C9C"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="Business Address"
+                android:textColor="@color/heading_color"
+                android:textSize="14sp" />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Address 1"
+                android:textColor="#333333"
+                android:textColorHint="#9C9C9C"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_bg_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Address 2"
+                android:textColor="#333333"
+                android:textColorHint="#9C9C9C"
+                android:textSize="16sp" />
+
+            <!--spinner-->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_bg_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Country"
+                android:textColor="#333333"
+                android:textColorHint="#9C9C9C"
+                android:textSize="16sp" />
+
+            <!--spinner-->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_bg_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="City"
+                android:textColor="#333333"
+                android:textColorHint="#9C9C9C"
+                android:textSize="16sp" />
+
+            <!--spinner-->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_bg_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="State"
+                android:textColor="#333333"
+                android:textColorHint="#9C9C9C"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_bg_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Postcode"
+                android:textColor="#333333"
+                android:textColorHint="#9C9C9C"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:buttonTint="@color/primary_color"
+                android:checked="true"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Same shipping address"
+                android:textColor="@color/heading_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="Business Info"
+                android:textColor="@color/heading_color"
+                android:textSize="14sp" />
+
+            <!--spinner-->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_bg_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Contact Number"
+                android:textColor="#333333"
+                android:textColorHint="#9C9C9C"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="**Number must contain 10 digit without prefixing 0 and 1."
+                android:textColor="@color/grey_text"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="**Landline number must need area code."
+                android:textColor="@color/grey_text"
+                android:textSize="12sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_bg_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Mobile Number"
+                android:textColorHint="#9C9C9C"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_bg_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Fax"
+                android:textColorHint="#9C9C9C"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_bg_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Toll free"
+                android:textColorHint="#9C9C9C"
+                android:textSize="16sp" />
+
+            <!--spinner-->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_bg_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Currency"
+                android:textColorHint="#9C9C9C"
+                android:textSize="16sp" />
+
+            <!--spinner-->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_bg_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Fiscal year"
+                android:textColorHint="#9C9C9C"
+                android:textSize="16sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/action_primary_btn"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <ProgressBar
+                android:id="@+id/pBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="200dp"
+                android:indeterminate="false"
+                android:max="100"
+                android:minWidth="200dp"
+                android:minHeight="50dp"
+                android:progress="0" />
+
+            <TextView
+                android:id="@+id/tView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pBar"
+                android:layout_alignLeft="@+id/pBar" />
+
+            <Button
+                android:id="@+id/btnShow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tView"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="20dp"
+                android:text="Start Progress" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

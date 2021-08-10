@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@color/background_color"
+        android:orientation="horizontal"
+        android:padding="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/help_group_indicator"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_down_arrow_circular" />
+
+        <TextView
+            android:id="@+id/pnameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/help_group_indicator"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:maxEms="22"
+            android:maxLength="22"
+            android:paddingLeft="@dimen/_10sdp"
+            android:singleLine="true"
+            android:text="Hindi"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/pDescTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pnameTV"
+            android:layout_toRightOf="@+id/help_group_indicator"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:maxEms="26"
+            android:maxLength="26"
+            android:paddingLeft="@dimen/_10sdp"
+            android:singleLine="true"
+            android:text="Details"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pNmae"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:text="8"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <ImageView
+            android:id="@+id/deleteProduct"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_below="@+id/pNmae"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_delete_icon"
+            android:padding="@dimen/_10sdp"
+            android:textSize="@dimen/_20sdp"
+            app:tint="@color/teal_700" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/light_grey" />
+</LinearLayout>

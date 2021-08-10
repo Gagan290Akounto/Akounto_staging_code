@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="#fff" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/_2sdp">
+    <LinearLayout android:orientation="horizontal" android:background="#fff" android:paddingTop="@dimen/_8sdp" android:paddingBottom="@dimen/_8sdp" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="4">
+        <TextView android:textColor="@color/black" android:gravity="center" android:id="@+id/accountId" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Account id" android:layout_weight="0.8" android:fontFamily="@font/poppins_regular"/>
+        <TextView android:textColor="@color/black" android:gravity="center" android:id="@+id/accountName" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Account Name" android:layout_weight="1.35" android:fontFamily="@font/poppins_semibold"/>
+        <TextView android:textColor="@color/black" android:gravity="center" android:id="@+id/accountDesc" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Description" android:layout_weight="1.35" android:fontFamily="@font/poppins_regular"/>
+        <ImageView android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/accountAction" android:layout_width="0dp" android:layout_height="@dimen/_16sdp" android:src="@drawable/ic_edit" android:layout_weight="0.5"/>
+    </LinearLayout>
+    <View android:background="@color/light_grey" android:layout_width="match_parent" android:layout_height="1dp"/>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.levitnudi:LegacyTableView:1.4@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1162d01cad62af09bdc3c3fddd485215/jetified-LegacyTableView-1.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1162d01cad62af09bdc3c3fddd485215/jetified-LegacyTableView-1.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1162d01cad62af09bdc3c3fddd485215/jetified-LegacyTableView-1.4/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.levitnudi/LegacyTableView/1.4/fb9285160e85875f023c686489848f8c4e1d853c/LegacyTableView-1.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

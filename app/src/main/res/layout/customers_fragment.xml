@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background_color"
+    android:clickable="true"
+    android:focusable="true">
+    <LinearLayout
+        android:id="@+id/hedar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginBottom="@dimen/_16ssp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/abc_ic_ab_back_material" />
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:lineSpacingExtra="6.7sp"
+            android:text="Customers"
+            android:layout_marginLeft="@dimen/_16ssp"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical|right">
+            <TextView
+                android:id="@+id/addCustomerButton"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/ic_only_plus_icon"/>
+        </LinearLayout>
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/noDataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hedar"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_centerInParent="true"
+            android:padding="16dp"
+            android:src="@drawable/create_customers"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="Add your Customers &amp; start invoicing."
+            android:textColor="#333333"
+            android:layout_marginTop="@dimen/_17sdp"
+            android:textSize="@dimen/_18sdp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            tools:layout_editor_absoluteX="0dp"
+            tools:ignore="MissingConstraints,SpUsage" />
+        <Button
+            android:id="@+id/btn_create_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner_button"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginTop="@dimen/_17sdp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:text="Add a customer"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/withDataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/hedar"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/searchLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/rounded_corner_tale_white_holo"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/searchIcon"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:src="@drawable/ic_search_icon"
+                app:tint="@color/teal_700" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="1dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toRightOf="@+id/searchIcon"
+                android:background="@color/dark_grey" />
+
+            <EditText
+                android:id="@+id/searchET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toRightOf="@+id/view"
+                android:background="@color/transparent"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Search Customers"
+                android:padding="10dp"
+                android:textSize="@dimen/_12sdp" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/customersRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchLayout" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="#f1f4f8" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="30dp" android:layout_centerInParent="true">
+        <lal.adhish.gifprogressbar.GifView android:layout_gravity="center" android:id="@+id/progressGif" android:layout_width="match_parent" android:layout_height="@dimen/_200sdp" android:layout_margin="@dimen/_5sdp" android:layout_centerHorizontal="true"/>
+        <TextView android:textSize="@dimen/_22sdp" android:textColor="@color/text_color_blue" android:id="@+id/textViewHangTight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_15sdp" android:layout_marginTop="@dimen/_15ssp" android:text="Hang tight!" android:layout_below="@+id/progressGif" android:fontFamily="@font/poppins_extrabold"/>
+        <TextView android:textSize="@dimen/_22sdp" android:textColor="@color/text_color" android:id="@+id/textViewSettingThings" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_15sdp" android:layout_marginTop="10dp" android:layout_marginRight="70dp" android:text="We&apos;re setting things up for you." android:layout_below="@+id/textViewHangTight" android:fontFamily="@font/poppins_extrabold"/>
+    </RelativeLayout>
+</RelativeLayout>

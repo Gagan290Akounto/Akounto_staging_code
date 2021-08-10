@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_corner"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="Invoice Setting"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:textColor="@color/text_clor"
+            android:textSize="18sp" />
+
+
+        <EditText
+            android:id="@+id/set_invoice_prefix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:inputType="textPersonName"
+            android:maxLength="10"
+            android:digits="ABCDEFGHIJKLMNOPQRST_/abcdefghijklmnopqrstuvwxyz 0123456789"
+            android:hint="Set invoice prefix"
+            android:textSize="@dimen/_13sdp" />
+
+
+        <EditText
+            android:id="@+id/set_invoice_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:inputType="number"
+            android:hint="Set invoice number*"
+            android:maxLength="5"
+            android:textSize="@dimen/_13sdp" />
+
+
+        <EditText
+            android:id="@+id/set_invoice_suffix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:inputType="textPersonName"
+            android:maxLength="10"
+            android:digits="ABCDEFGHIJKLMNOPQRST_/abcdefghijklmnopqrstuvwxyz 0123456789"
+            android:hint="Set invoice suffix"
+            android:textSize="@dimen/_13sdp" />
+
+        <TextView
+            android:id="@+id/final_invoice_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Final Invoice No:-"
+            android:textColor="@color/text_blue"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_19sdp"
+            android:layout_marginBottom="@dimen/_13sdp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:layout_marginRight="@dimen/_7sdp"
+                android:background="@drawable/rounded_corner_button"
+                android:text="Cancel" />
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:textColor="#ffffff"
+                android:background="@drawable/rounded_corner_button"
+                android:text="Save" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

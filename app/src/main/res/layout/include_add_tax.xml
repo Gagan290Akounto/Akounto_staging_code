@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:text="Add Tax"
+            android:textColor="@color/heading_color"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Aliquam massa ullamcorper dui id."
+            android:textColor="#757D8A"
+            android:textSize="14sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/input_bg_grey"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Enter tax name"
+            android:textColor="#333333"
+            android:textColorHint="#9C9C9C"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="9"
+                android:background="@drawable/input_bg_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Tax rate"
+                android:textColor="#333333"
+                android:textColorHint="#9C9C9C"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="-4dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="#f6f6f6"
+                android:scaleType="fitEnd"
+                android:src="@drawable/ic_percentage" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/input_bg_grey"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Tax number(Optional)"
+            android:textColor="#333333"
+            android:textColorHint="#9C9C9C"
+            android:textSize="16sp" />
+
+        <!--active buttons-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/action_primary_btn"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="Save Tax"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_color"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

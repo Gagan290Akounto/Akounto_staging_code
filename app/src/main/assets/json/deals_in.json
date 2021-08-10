@@ -1,0 +1,16 @@
+[
+    { "Id": 0, "Name": "Select your industry" },
+    { "Id": 1, "Name": "Accounting Services" },
+    { "Id": 2, "Name": "Consultants, Doctors, Lawyers and Similar" },
+    { "Id": 3, "Name": "Information Technology Services" },
+    { "Id": 4, "Name": "Manufacturing" },
+    { "Id": 5, "Name": "Professional, Scientific and Technical Services" },
+    { "Id": 6, "Name": "Restaurants, Bars and Similar" },
+    { "Id": 7, "Name": "Retail and Similar" },
+    { "Id": 8, "Name": "Other Financial Services" },
+    { "Id": 9, "Name": "Tour and Travels / Hospitality" },
+    { "Id": 10, "Name": "Wholesale Trade" },
+    { "Id": 11, "Name": "Logistics and Transportation" },
+    { "Id": 12, "Name": "Other Services" },
+    { "Id": 13, "Name": "Others" }
+]

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/light_grey" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <include android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="@dimen/_50sdp" layout="@layout/toolbar_backbutton"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/_10sdp">
+        <LinearLayout android:orientation="vertical" android:background="@color/light_grey" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/_10sdp" app:cardCornerRadius="@dimen/_5sdp">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/_8sdp">
+                    <TextView android:textSize="@dimen/_10sdp" android:layout_gravity="center_vertical" android:id="@+id/billNumber" android:padding="@dimen/_8sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Recurring Invoice" android:fontFamily="@font/poppins_bold"/>
+                    <TextView android:textSize="@dimen/_10sdp" android:layout_gravity="center_vertical" android:id="@+id/createAnotherBillButton" android:background="@drawable/rounded_corner_edit_draft" android:paddingLeft="@dimen/_15sdp" android:paddingTop="@dimen/_6sdp" android:paddingRight="@dimen/_15sdp" android:paddingBottom="@dimen/_6sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_2sdp" android:text="Create Another Invoice" android:fontFamily="@font/poppins_regular"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" app:cardCornerRadius="@dimen/_3sdp">
+                <LinearLayout android:orientation="vertical" android:padding="@dimen/_12sdp" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="100">
+                    <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="100">
+                        <TextView android:textStyle="bold" android:textColor="@color/text_color" android:id="@+id/statusTV" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Status" android:layout_weight="25"/>
+                        <TextView android:textColor="@color/white" android:id="@+id/draftStatusTV" android:paddingLeft="@dimen/_6sdp" android:paddingTop="@dimen/_1sdp" android:paddingRight="@dimen/_6sdp" android:paddingBottom="@dimen/_2sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_1sdp" android:text="Draft" android:layout_below="@+id/statusTV"/>
+                        <TextView android:textStyle="bold" android:textColor="@color/text_color" android:id="@+id/custometTTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_20sdp" android:text="Customer" android:layout_below="@+id/draftStatusTV"/>
+                        <TextView android:textStyle="bold" android:textColor="@color/teal_700" android:id="@+id/vNamePTV" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Go Daddy" android:layout_weight="25" android:layout_below="@+id/custometTTv"/>
+                        <LinearLayout android:orientation="vertical" android:id="@+id/amountLL" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+                            <TextView android:textStyle="bold" android:textColor="@color/text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Estimated Amount"/>
+                            <TextView android:textStyle="bold" android:textColor="@color/teal_700" android:id="@+id/amountPTV" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$ 1234123.00"/>
+                            <TextView android:textStyle="bold" android:textColor="@color/text_color" android:gravity="right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_30sdp" android:text="Expires on" android:layout_weight="25"/>
+                            <TextView android:textStyle="bold" android:textColor="@color/teal_700" android:gravity="right" android:id="@+id/dueOnPTV" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Feb 1,2021"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:id="@+id/parentRL" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" app:cardCornerRadius="@dimen/_3sdp">
+                <LinearLayout android:orientation="vertical" android:padding="@dimen/_8sdp" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="100">
+                    <LinearLayout android:baselineAligned="false" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="3">
+                        <LinearLayout android:orientation="vertical" android:id="@+id/createdOn" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_toLeftOf="@+id/approve" android:layout_alignParentLeft="true">
+                            <TextView android:textSize="@dimen/_14sdp" android:textColor="@color/text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Created on" android:layout_weight="25"/>
+                            <TextView android:textColor="@color/teal_700" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Jan 26, 2021, 12:00:00 AM" android:layout_weight="25"/>
+                        </LinearLayout>
+                        <RelativeLayout android:orientation="horizontal" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2">
+                            <TextView android:textSize="@dimen/_10sdp" android:id="@+id/approve" android:background="@drawable/rounded_corner_approve_draft" android:paddingLeft="@dimen/_10sdp" android:paddingTop="@dimen/_5sdp" android:paddingRight="@dimen/_10sdp" android:paddingBottom="@dimen/_5sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/_4sdp" android:text="Approve draft" android:layout_toLeftOf="@+id/editDraft" android:fontFamily="@font/poppins_regular"/>
+                            <TextView android:textSize="@dimen/_10sdp" android:gravity="right" android:layout_gravity="right" android:id="@+id/editDraft" android:background="@drawable/rounded_corner_edit_draft" android:paddingLeft="@dimen/_10sdp" android:paddingTop="@dimen/_5sdp" android:paddingRight="@dimen/_10sdp" android:paddingBottom="@dimen/_5sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/_4sdp" android:text="Edit Draft" android:layout_alignParentRight="true" android:fontFamily="@font/poppins_regular"/>
+                            <TextView android:textSize="@dimen/_10sdp" android:id="@+id/rollbackToDraft" android:background="@drawable/rounded_corner_approve_draft" android:paddingLeft="@dimen/_10sdp" android:paddingTop="@dimen/_5sdp" android:paddingRight="@dimen/_10sdp" android:paddingBottom="@dimen/_5sdp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/_4sdp" android:text="Rollback to draft status" android:fontFamily="@font/poppins_regular" android:layout_alignParentEnd="true"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <TextView android:textColor="@color/black" android:id="@+id/statusDesc" android:background="@color/light_grey" android:padding="@dimen/_5sdp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_12sdp" android:text="This is a Draft invoice. You can take further actions once you approve it." android:fontFamily="@font/poppins_medium"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <include android:id="@+id/layoutItem" android:visibility="visible" layout="@layout/recurring_invoice_card3"/>
+            <include android:id="@+id/layoutItem" android:visibility="visible" layout="@layout/recurring_invoice_card4"/>
+            <include android:id="@+id/layoutItem" android:visibility="visible" layout="@layout/recurring_invoice_card2"/>
+            <include android:visibility="visible" layout="@layout/layout_billlist"/>
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" app:cardCornerRadius="@dimen/_5sdp">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:id="@+id/subTotal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_8sdp" android:layout_marginTop="@dimen/_8sdp" android:layout_marginRight="@dimen/_8sdp">
+                        <TextView android:textSize="@dimen/_14sdp" android:textColor="@color/teal_700" android:id="@+id/subTotalPaid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Subtotal" android:fontFamily="@font/poppins_black"/>
+                        <TextView android:textSize="@dimen/_16sdp" android:textColor="@color/teal_700" android:id="@+id/subTotalTv" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$ 0.0" android:fontFamily="@font/poppins_bold" android:layout_alignParentEnd="true"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@+id/paidLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_8sdp" android:layout_marginRight="@dimen/_8sdp" android:layout_marginBottom="@dimen/_12sdp">
+                        <TextView android:textSize="@dimen/_12sdp" android:id="@+id/subTotalPaidText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total amount paid : " android:fontFamily="@font/poppins_regular"/>
+                        <TextView android:textSize="@dimen/_12sdp" android:id="@+id/totalPaidTV" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$ 0.0" android:fontFamily="@font/poppins_regular" android:layout_alignParentEnd="true"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <TextView android:textColor="@color/black" android:background="@color/light_grey" android:padding="@dimen/_5sdp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/_10sdp" android:layout_marginTop="@dimen/_5sdp" android:text="Notes : This is a Draft Bill. You can take further actions once you approve it. " android:fontFamily="@font/poppins_medium"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

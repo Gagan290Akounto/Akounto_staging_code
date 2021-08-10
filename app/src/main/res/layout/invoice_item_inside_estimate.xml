@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    android:background="@drawable/rounded_corner_white"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp">
+
+    <TextView
+        android:id="@+id/invoiceItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Invoice Item"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/_12sdp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/productRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+<!--productExpandable/-->
+    <ExpandableListView
+        android:id="@+id/productExpandable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:groupIndicator="@null" />
+
+    <TextView
+        android:id="@+id/noOfItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/invoiceItem"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="You have 0 items"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/_14sdp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/corner_tale_white_holo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productExpandable">
+
+        <TextView
+            android:id="@+id/addItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toLeftOf="@+id/viewDummy2"
+            android:fontFamily="@font/poppins_regular"
+            android:paddingStart="@dimen/_25sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_25sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:text="Add Item"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <View
+            android:id="@+id/viewDummy2"
+            android:layout_width="1dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_toLeftOf="@+id/addProductButton"
+            android:background="@color/dark_grey" />
+
+        <ImageView
+            android:id="@+id/addProductButton"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:src="@drawable/ic_only_plus_icon"
+            app:tint="@color/teal_700" />
+    </RelativeLayout>
+</LinearLayout>

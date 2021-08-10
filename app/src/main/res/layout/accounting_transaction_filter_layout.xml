@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:layout_marginEnd="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:background="@drawable/bottom_rounded_corner_white"
+    android:paddingBottom="@dimen/_10sdp">
+
+    <RelativeLayout
+        android:id="@+id/categoriesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/corner_tale_white_holo"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/categoriesSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@color/white"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="All categories"
+            android:padding="10dp"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_color"
+            android:textSize="@dimen/_12sdp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/statusLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/corner_tale_white_holo"
+        app:layout_constraintEnd_toStartOf="@+id/typesLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categoriesLayout">
+
+        <com.skydoves.powerspinner.PowerSpinnerView
+            android:id="@+id/statusSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@color/white"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="All Status"
+            android:padding="10dp"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_color"
+            android:textSize="@dimen/_12sdp"
+            app:spinner_arrow_gravity="start"
+            app:spinner_arrow_padding="8dp"
+            app:spinner_arrow_tint="@color/teal_700"
+            app:spinner_divider_color="@color/dark_grey"
+            app:spinner_divider_show="true"
+            app:spinner_divider_size="0.4dp"
+            app:spinner_item_array="@array/transactionFilterStatus"
+            app:spinner_popup_animation="normal"
+            app:spinner_popup_background="@color/white"
+            app:spinner_popup_elevation="14dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/typesLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/corner_tale_white_holo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/statusLayout"
+        app:layout_constraintTop_toBottomOf="@+id/categoriesLayout">
+
+        <com.skydoves.powerspinner.PowerSpinnerView
+            android:id="@+id/typesSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@color/white"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="All types"
+            android:padding="10dp"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_color"
+            android:textSize="@dimen/_12sdp"
+            app:spinner_arrow_gravity="start"
+            app:spinner_arrow_padding="8dp"
+            app:spinner_arrow_tint="@color/teal_700"
+            app:spinner_divider_color="@color/dark_grey"
+            app:spinner_divider_show="true"
+            app:spinner_divider_size="0.4dp"
+            app:spinner_item_array="@array/transactionFilterTypes"
+            app:spinner_popup_animation="normal"
+            app:spinner_popup_background="@color/white"
+            app:spinner_popup_elevation="14dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutDateRange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@+id/statusLayout">
+
+        <TextView
+            android:id="@+id/textViewDateRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Date Range"
+            android:textColor="@color/dark_grey" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewDateRange"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="@dimen/_4sdp"
+                    android:background="@drawable/corner_tale_white_holo"
+                    android:weightSum="1.5">
+
+                    <TextView
+                        android:id="@+id/fromDateTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.3"
+                        android:background="@color/transparent"
+                        android:padding="@dimen/_10sdp"
+                        android:text="From" />
+
+                    <ImageView
+                        android:id="@+id/fromDateButton"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight="0.2"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/ic_calendar_icon"
+                        app:tint="@color/dark_grey" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:background="@drawable/corner_tale_white_holo"
+                    android:weightSum="1.5">
+
+                    <TextView
+                        android:id="@+id/toDateTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.3"
+                        android:background="@color/transparent"
+                        android:padding="@dimen/_10sdp"
+                        android:text="To" />
+
+                    <ImageView
+                        android:id="@+id/toDateButton"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight="0.2"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/ic_calendar_icon"
+                        app:tint="@color/dark_grey" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayoutDateRange">
+
+        <TextView
+            android:id="@+id/resetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner_button"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:paddingLeft="@dimen/_30sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingRight="@dimen/_30sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:text="Reset"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/applyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner_button"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:paddingLeft="@dimen/_30sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingRight="@dimen/_30sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:text="Apply"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

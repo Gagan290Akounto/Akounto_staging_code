@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <TextView
+        android:id="@+id/textViewSublist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/_35sdp"
+        android:layout_toRightOf="@+id/imageView1"
+        android:fontFamily="@font/poppins_regular"
+        android:padding="@dimen/_10sdp"
+        android:text="Team"
+        android:textColor="@color/text_blue" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/textViewSublist"
+        android:layout_marginLeft="@dimen/_35sdp"
+        android:background="@color/light_grey" />
+</RelativeLayout>

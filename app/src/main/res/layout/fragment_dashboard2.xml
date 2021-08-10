@@ -1,0 +1,1079 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/svDashboard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/body_grey_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <!--CardView-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <!--Dashboard Initial Screen-->
+            <include layout="@layout/include_dashboard_setup_screen_start" />
+
+            <!--Dashboard Final Screen-->
+            <include layout="@layout/include_dashboard_setup_screen_create_invoice" />
+
+        </LinearLayout>
+
+        <!--Dashboard-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvDashboardTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/linYearSpinner"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/page_title2"
+                android:textColor="@color/heading_color"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tvDashboardSubTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDashboardTitle"
+                android:layout_marginEnd="100dp"
+                android:text="@string/dash_desc"
+                android:textColor="@color/black" />
+            <!--android:autoSizeTextType="uniform"-->
+
+            <RelativeLayout
+                android:id="@+id/linYearSpinner"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true">
+
+                <Spinner
+                    android:id="@+id/spYearFilter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/imgYear"
+                    android:background="@null" />
+
+                <ImageView
+                    android:id="@+id/imgYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_dropdown"
+                    android:visibility="visible" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!--Cash Flow-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shadow_card2"
+            android:visibility="visible"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
+            <!--app:cardBackgroundColor="@color/white"-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/tvCashflow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/imgCashflow"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    tools:text="Cashflow" />
+                <!--android:text="@string/card_title_2"-->
+
+                <TextView
+                    android:id="@+id/tvCashflowDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgCashflow"
+                    android:layout_toStartOf="@+id/imgCashflow"
+                    android:text="@string/card_title_2_desc"
+                    android:textColor="@color/grey_text"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:id="@+id/imgCashflow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_arrow_right" />
+
+                <!--Cash flow bar chart-->
+                <LinearLayout
+                    android:id="@+id/linBarChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvCashflowDescription"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/bg_graph"
+                    android:minHeight="@dimen/_200sdp"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/linCashflowNoDataFound"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_no_data_graph_1" />
+                    </LinearLayout>
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/barChartCashFlowChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:minHeight="@dimen/_200sdp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <!--Indicator details-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linBarChart"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/linIncome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:background="@drawable/bg_green_circle_layout" />
+
+                        <TextView
+                            android:id="@+id/tvIncome"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/heading_color"
+                            android:textSize="12dp"
+                            tools:text="Income" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linExpense"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:background="@drawable/bg_red_circle_layout" />
+
+                        <TextView
+                            android:id="@+id/tvExpense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/heading_color"
+                            android:textSize="12dp"
+                            tools:text="Expense" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!--Cash Flow Breakdown-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shadow_card2"
+            android:visibility="visible"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/tvCashflowBreakdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/imgCashflowBreakdown"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    tools:text="Cash flow breakdown" />
+                <!--android:text="@string/card_title_2"-->
+
+                <TextView
+                    android:id="@+id/tvCashflowBreakdownDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgCashflowBreakdown"
+                    android:layout_toStartOf="@+id/imgCashflowBreakdown"
+                    android:text="@string/card_title_3_desc"
+                    android:textColor="@color/grey_text"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:id="@+id/imgCashflowBreakdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_arrow_right" />
+
+                <LinearLayout
+                    android:id="@+id/linPieGraph"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvCashflowBreakdownDescription"
+                    android:layout_marginTop="15dp"
+                    android:minHeight="@dimen/_200sdp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/linCashflowBreakdownNoDataFound"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_graph"
+                        android:padding="10dp"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_pie_data_no_data" />
+                    </LinearLayout>
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/pieChartCashFlowBreakdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:minHeight="@dimen/_200sdp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <!--Total Amount-->
+                <RelativeLayout
+                    android:id="@+id/relTotalAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linPieGraph"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvPieTotalAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Total amount:"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <!--Categories-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relTotalAmount"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvCategories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Categories"
+                        android:textColor="@color/heading_color"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/linBreakDownCategories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!--Project Profit-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvProjectedProfit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shadow_card2"
+            android:visibility="visible"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/tvProjectedProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/imgProjectedProfile"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/card_title_4"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+                <!--android:text="@string/card_title_2"-->
+
+                <TextView
+                    android:id="@+id/tvProjectedProfileDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgProjectedProfile"
+                    android:layout_toStartOf="@+id/imgProjectedProfile"
+                    android:text="@string/card_title_4_desc"
+                    android:textColor="@color/grey_text"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:id="@+id/imgProjectedProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_arrow_right" />
+
+                <LinearLayout
+                    android:id="@+id/linProfitGraph"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvProjectedProfileDescription"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/bg_graph"
+                    android:minHeight="@dimen/_200sdp"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/linProjectedProfileNoDataFound"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_graph_2_no_data" />
+                    </LinearLayout>
+
+                    <!--<com.github.mikephil.charting.charts.HorizontalBarChart
+                        android:id="@+id/barChartProjectedProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/_200sdp"
+                        android:visibility="gone" />-->
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/barChartProjectedProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/_200sdp"
+                        android:visibility="gone" />
+
+                    <!--<com.github.mikephil.charting.charts.CombinedChart
+                        android:id="@+id/barChartProjectedProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/_200sdp"
+                        android:visibility="gone" />-->
+                </LinearLayout>
+
+                <!--Categories Indicator-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linProfitGraph"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvProjectedProfit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Categories"
+                        android:textColor="@color/heading_color"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:id="@+id/linProjectedProfit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </LinearLayout>
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linProfitGraph"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    &lt;!&ndash;Actual&ndash;&gt;
+                    <LinearLayout
+                        android:id="@+id/linActual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:background="@drawable/bg_green_circle_layout" />
+
+                        <TextView
+                            android:id="@+id/tvActual"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/heading_color"
+                            android:textSize="12dp"
+                            tools:text="Actual" />
+                    </LinearLayout>
+
+                    &lt;!&ndash;Projected&ndash;&gt;
+                    <LinearLayout
+                        android:id="@+id/linProjected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:background="@drawable/bg_red_circle_layout" />
+
+                        <TextView
+                            android:id="@+id/tvProjected"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/heading_color"
+                            android:textSize="12dp"
+                            tools:text="Projected" />
+                    </LinearLayout>
+
+                    &lt;!&ndash;Goal&ndash;&gt;
+                    <LinearLayout
+                        android:id="@+id/linGoal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="2dp"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tvGoal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/heading_color"
+                            android:textSize="12dp"
+                            tools:text="Goal" />
+                    </LinearLayout>
+
+                </LinearLayout>-->
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!--Sales Invoices-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shadow_card2"
+            android:visibility="visible"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/imgSalesArrow"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/card_title_5"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tvSalesInvoiceDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imgSalesArrow"
+                        android:layout_toStartOf="@+id/imgSalesArrow"
+                        android:text="@string/card_title_5_desc"
+                        android:textColor="@color/grey_text"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:id="@+id/imgSalesArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/ic_arrow_right" />
+                </RelativeLayout>
+
+                <!--Sales Not Due and Sales OverDue-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/linSaleInvoice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="2">
+
+                        <!--Sales Not Due-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="#FAFAFA"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="0dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="@string/card_sub_heading"
+                                    android:textColor="@color/heading_color"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/tvSaleNotDue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:textColor="@color/green"
+                                    android:textSize="20sp"
+                                    tools:text="CAD 1.34k" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <!--Sales Over Due-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1"
+                            android:padding="10dp"
+                            app:cardBackgroundColor="#FAFAFA"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="0dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="@string/card_sub_heading2"
+                                    android:textColor="@color/heading_color"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/tvSaleOverDue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:textColor="@color/red_orange"
+                                    android:textSize="20sp"
+                                    tools:text="CAD 1.34k" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <!--No Data Found-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvSalesNoDataFound"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible"
+                        app:cardBackgroundColor="#FAFAFA"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true">
+
+                        <TextView
+                            android:id="@+id/overdue_txt2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="20dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="No Data Found"
+                            android:textColor="@color/heading_color"
+                            android:textSize="15sp" />
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Purchase invoices-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shadow_card2"
+            android:visibility="visible"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/imgPurchaseArrow"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/card_title_6"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tvPurchaseInvoiceDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imgPurchaseArrow"
+                        android:layout_toStartOf="@+id/imgPurchaseArrow"
+                        android:text="@string/card_title_5_desc"
+                        android:textColor="@color/grey_text"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:id="@+id/imgPurchaseArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/ic_arrow_right" />
+                </RelativeLayout>
+
+                <!--Purchase Not Due and Purchase OverDue-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/linPurchaseInvoice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="2">
+
+                        <!--Purchase Not Due-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="#FAFAFA"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="0dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="@string/card_sub_heading"
+                                    android:textColor="@color/heading_color"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/tvPurchaseNotDue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:textColor="@color/green"
+                                    android:textSize="20sp"
+                                    tools:text="CAD 1.34k" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <!--Purchase Over Due-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1"
+                            android:padding="10dp"
+                            app:cardBackgroundColor="#FAFAFA"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="0dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="@string/card_sub_heading2"
+                                    android:textColor="@color/heading_color"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/tvPurchaseOverDue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:textColor="@color/red_orange"
+                                    android:textSize="20sp"
+                                    tools:text="CAD 1.34k" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <!--No Data Found-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvPurchaseNoDataFound"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible"
+                        app:cardBackgroundColor="#FAFAFA"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="20dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="No Data Found"
+                            android:textColor="@color/heading_color"
+                            android:textSize="15sp" />
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!--Others list layout-->
+        <LinearLayout
+            android:id="@+id/linOthers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/heading_2"
+                android:textColor="@color/heading_color"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/heading_2_sub"
+                android:textColor="@color/grey_text"
+                android:textSize="14sp" />
+
+            <!--Connected Accounts-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvConnectedAccounts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/other_list_bg"
+                android:visibility="visible"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="false">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tvConnectedAccounts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/imgConnectedAccounts"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:text="@string/heading_3"
+                        android:textColor="@color/heading_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvConnectedAccounts"
+                        android:layout_marginTop="5dp"
+                        android:layout_toStartOf="@+id/imgConnectedAccounts"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/heading_3_sub"
+                        android:textColor="@color/grey_text"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/imgConnectedAccounts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/ic_chevron_right" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--Bank Transactions-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvBankTransactions"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/other_list_bg"
+                android:visibility="visible"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="false">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tvBankTransaction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/imgBankTransaction"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:text="Bank Transactions"
+                        android:textColor="@color/heading_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvBankTransaction"
+                        android:layout_marginTop="5dp"
+                        android:layout_toStartOf="@+id/imgBankTransaction"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="List of recent bank transactions"
+                        android:textColor="@color/grey_text"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/imgBankTransaction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/ic_chevron_right" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--Recent Activities-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvRecentActivity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/other_list_bg"
+                android:visibility="visible"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="false">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tvRecentActivity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/imgRecentActivity"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:text="Recent Activities"
+                        android:textColor="@color/heading_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvRecentActivity"
+                        android:layout_marginTop="5dp"
+                        android:layout_toStartOf="@+id/imgRecentActivity"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="List of recent activities in your account"
+                        android:textColor="@color/grey_text"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/imgRecentActivity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/ic_chevron_right" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

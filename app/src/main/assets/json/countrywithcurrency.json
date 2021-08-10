@@ -1,0 +1,359 @@
+﻿[
+  {
+    "Id": 231,
+    "Name": "United States",
+    "Currency": "USD",
+    "PhoneCode": 1,
+    "CountryCode": "US"
+  },
+  {
+    "Id": 38,
+    "Name": "Canada",
+    "Currency": "CAD",
+    "PhoneCode": 1,
+    "CountryCode": "CA"
+  },
+  {
+    "Id": 101,
+    "Name": "India",
+    "Currency": "INR",
+    "PhoneCode": 91,
+    "CountryCode": "IN"
+  },
+  {
+    "Id": 2,
+    "Name": "Albania",
+    "Currency": "ALL",
+    "PhoneCode": 355,
+    "CountryCode": "AL"
+  },
+  {
+    "Id": 5,
+    "Name": "Andorra",
+    "Currency": "EUR",
+    "PhoneCode": 376,
+    "CountryCode": "AD"
+  },
+  {
+    "Id": 11,
+    "Name": "Armenia",
+    "Currency": "AMD",
+    "PhoneCode": 374,
+    "CountryCode": "AM"
+  },
+  {
+    "Id": 14,
+    "Name": "Austria",
+    "Currency": "EUR",
+    "PhoneCode": 43,
+    "CountryCode": "AT"
+  },
+  {
+    "Id": 15,
+    "Name": "Azerbaijan",
+    "Currency": "AZN",
+    "PhoneCode": 994,
+    "CountryCode": "AZ"
+  },
+  {
+    "Id": 20,
+    "Name": "Belarus",
+    "Currency": "BYN",
+    "PhoneCode": 375,
+    "CountryCode": "BY"
+  },
+  {
+    "Id": 21,
+    "Name": "Belgium",
+    "Currency": "EUR",
+    "PhoneCode": 32,
+    "CountryCode": "BE"
+  },
+  {
+    "Id": 27,
+    "Name": "Bosnia and Herzegovina",
+    "Currency": "BAM",
+    "PhoneCode": 387,
+    "CountryCode": "BA"
+  },
+  {
+    "Id": 33,
+    "Name": "Bulgaria",
+    "Currency": "BGN",
+    "PhoneCode": 359,
+    "CountryCode": "BG"
+  },
+  {
+    "Id": 54,
+    "Name": "Croatia (Hrvatska)",
+    "Currency": "HRK",
+    "PhoneCode": 385,
+    "CountryCode": "HR"
+  },
+  {
+    "Id": 56,
+    "Name": "Cyprus",
+    "Currency": "EUR",
+    "PhoneCode": 357,
+    "CountryCode": "CY"
+  },
+  {
+    "Id": 57,
+    "Name": "Czech Republic",
+    "Currency": "CZK",
+    "PhoneCode": 420,
+    "CountryCode": "CZ"
+  },
+  {
+    "Id": 58,
+    "Name": "Denmark",
+    "Currency": "DKK",
+    "PhoneCode": 45,
+    "CountryCode": "DK"
+  },
+  {
+    "Id": 68,
+    "Name": "Estonia",
+    "Currency": "EUR",
+    "PhoneCode": 372,
+    "CountryCode": "EE"
+  },
+  {
+    "Id": 74,
+    "Name": "Finland",
+    "Currency": "EUR",
+    "PhoneCode": 358,
+    "CountryCode": "FI"
+  },
+  {
+    "Id": 75,
+    "Name": "France",
+    "Currency": "EUR",
+    "PhoneCode": 33,
+    "CountryCode": "FR"
+  },
+  {
+    "Id": 81,
+    "Name": "Georgia",
+    "Currency": "GEL",
+    "PhoneCode": 995,
+    "CountryCode": "GE"
+  },
+  {
+    "Id": 82,
+    "Name": "Germany",
+    "Currency": "EUR",
+    "PhoneCode": 49,
+    "CountryCode": "DE"
+  },
+  {
+    "Id": 85,
+    "Name": "Greece",
+    "Currency": "EUR",
+    "PhoneCode": 30,
+    "CountryCode": "GR"
+  },
+  {
+    "Id": 99,
+    "Name": "Hungary",
+    "Currency": "HUF",
+    "PhoneCode": 36,
+    "CountryCode": "HU"
+  },
+  {
+    "Id": 100,
+    "Name": "Iceland",
+    "Currency": "ISK",
+    "PhoneCode": 354,
+    "CountryCode": "IS"
+  },
+  {
+    "Id": 105,
+    "Name": "Ireland",
+    "Currency": "EUR",
+    "PhoneCode": 353,
+    "CountryCode": "IE"
+  },
+  {
+    "Id": 107,
+    "Name": "Italy",
+    "Currency": "EUR",
+    "PhoneCode": 39,
+    "CountryCode": "IT"
+  },
+  {
+    "Id": 120,
+    "Name": "Latvia",
+    "Currency": "EUR",
+    "PhoneCode": 371,
+    "CountryCode": "LV"
+  },
+  {
+    "Id": 125,
+    "Name": "Liechtenstein",
+    "Currency": "CHF",
+    "PhoneCode": 423,
+    "CountryCode": "LI"
+  },
+  {
+    "Id": 126,
+    "Name": "Lithuania",
+    "Currency": "EUR",
+    "PhoneCode": 370,
+    "CountryCode": "LT"
+  },
+  {
+    "Id": 127,
+    "Name": "Luxembourg",
+    "Currency": "EUR",
+    "PhoneCode": 352,
+    "CountryCode": "LU"
+  },
+  {
+    "Id": 135,
+    "Name": "Malta",
+    "Currency": "EUR",
+    "PhoneCode": 356,
+    "CountryCode": "MT"
+  },
+  {
+    "Id": 144,
+    "Name": "Moldova",
+    "Currency": "MDL",
+    "PhoneCode": 373,
+    "CountryCode": "MD"
+  },
+  {
+    "Id": 145,
+    "Name": "Monaco",
+    "Currency": "EUR",
+    "PhoneCode": 377,
+    "CountryCode": "MC"
+  },
+  {
+    "Id": 155,
+    "Name": "Netherlands The",
+    "Currency": "EUR",
+    "PhoneCode": 31,
+    "CountryCode": "NL"
+  },
+  {
+    "Id": 129,
+    "Name": "Macedonia",
+    "Currency": "MKD",
+    "PhoneCode": 389,
+    "CountryCode": "MK"
+  },
+  {
+    "Id": 164,
+    "Name": "Norway",
+    "Currency": "NOK",
+    "PhoneCode": 47,
+    "CountryCode": "NO"
+  },
+  {
+    "Id": 175,
+    "Name": "Poland",
+    "Currency": "PLN",
+    "PhoneCode": 48,
+    "CountryCode": "PL"
+  },
+  {
+    "Id": 176,
+    "Name": "Portugal",
+    "Currency": "EUR",
+    "PhoneCode": 351,
+    "CountryCode": "PT"
+  },
+  {
+    "Id": 180,
+    "Name": "Romania",
+    "Currency": "RON",
+    "PhoneCode": 40,
+    "CountryCode": "RO"
+  },
+  {
+    "Id": 181,
+    "Name": "Russia",
+    "Currency": "RUB",
+    "PhoneCode": 70,
+    "CountryCode": "RU"
+  },
+  {
+    "Id": 189,
+    "Name": "San Marino",
+    "Currency": "EUR",
+    "PhoneCode": 378,
+    "CountryCode": "SM"
+  },
+  {
+    "Id": 193,
+    "Name": "Serbia",
+    "Currency": "RSD",
+    "PhoneCode": 381,
+    "CountryCode": "RS"
+  },
+  {
+    "Id": 197,
+    "Name": "Slovakia",
+    "Currency": "EUR",
+    "PhoneCode": 421,
+    "CountryCode": "SK"
+  },
+  {
+    "Id": 198,
+    "Name": "Slovenia",
+    "Currency": "EUR",
+    "PhoneCode": 386,
+    "CountryCode": "SI"
+  },
+  {
+    "Id": 205,
+    "Name": "Spain",
+    "Currency": "EUR",
+    "PhoneCode": 34,
+    "CountryCode": "ES"
+  },
+  {
+    "Id": 211,
+    "Name": "Sweden",
+    "Currency": "SEK",
+    "PhoneCode": 46,
+    "CountryCode": "SE"
+  },
+  {
+    "Id": 212,
+    "Name": "Switzerland",
+    "Currency": "CHF",
+    "PhoneCode": 41,
+    "CountryCode": "CH"
+  },
+  {
+    "Id": 223,
+    "Name": "Turkey",
+    "Currency": "TRY",
+    "PhoneCode": 90,
+    "CountryCode": "TR"
+  },
+  {
+    "Id": 228,
+    "Name": "Ukraine",
+    "Currency": "UAH",
+    "PhoneCode": 380,
+    "CountryCode": "UA"
+  },
+  {
+    "Id": 230,
+    "Name": "United Kingdom",
+    "Currency": "GBP",
+    "PhoneCode": 44,
+    "CountryCode": "GB"
+  },
+  {
+    "Id": 236,
+    "Name": "Vatican City State (Holy See)",
+    "Currency": "EUR",
+    "PhoneCode": 39,
+    "CountryCode": "VA"
+  }
+]

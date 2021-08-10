@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_backbutton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/background_color">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fullUploadCV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:background="@color/white"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:layout_constraintEnd_toStartOf="@+id/billedFromLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:background="@drawable/corner_tale_white_holo"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_4sdp">
+
+                    <ImageView
+                        android:id="@+id/uploadedLogoDisplay"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/logoUpload"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:src="@drawable/ic_rounded_plus"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/textLogoUpload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Upload Logo"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_24sdp"
+                app:layout_constraintTop_toBottomOf="@+id/fullUploadCV" />
+
+            <TextView
+                android:id="@+id/estimateNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Estimate No."
+                android:textColor="@color/text_color"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+            <TextView
+                android:id="@+id/et_estimateNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:fontFamily="@font/poppins_regular"
+                android:text="auto-generated"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/estimateNo"
+                app:layout_constraintStart_toStartOf="@+id/billedFromLayout" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/estimateGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="estimateNo,et_estimateNo" />
+
+            <TextView
+                android:id="@+id/invoiceNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Invoice No."
+                android:textColor="@color/text_color"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/estimateNo" />
+
+            <EditText
+                android:id="@+id/et_invoiceNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:fontFamily="@font/poppins_regular"
+                android:text="auto-generated"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/dark_grey"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="@+id/billedFromLayout"
+                app:layout_constraintTop_toTopOf="@+id/invoiceNo" />
+
+            <TextView
+                android:id="@+id/invoiceDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Invoice Date"
+                android:textColor="@color/text_color"
+                app:layout_constraintStart_toStartOf="@+id/invoiceNo"
+                app:layout_constraintTop_toBottomOf="@+id/invoiceNo" />
+
+            <TextView
+                android:id="@+id/tv_invoiceDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="auto-generated"
+                android:textColor="@color/text_color"
+                app:layout_constraintStart_toStartOf="@+id/et_invoiceNo"
+                android:background="@drawable/ic_calendar_icon"
+                app:layout_constraintTop_toTopOf="@+id/invoiceDate" />
+
+            <TextView
+                android:id="@+id/paymentDue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Payment Due"
+                android:textColor="@color/text_color"
+                app:layout_constraintStart_toStartOf="@+id/invoiceDate"
+                app:layout_constraintTop_toBottomOf="@+id/invoiceDate" />
+
+            <com.skydoves.powerspinner.PowerSpinnerView
+                android:id="@+id/paymentDueSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:background="@color/background_color"
+                android:fontFamily="@font/poppins_regular"
+                android:text="On Receipt"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/text_color"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/billedFromLayout"
+                app:layout_constraintTop_toTopOf="@+id/paymentDue"
+                app:spinner_arrow_gravity="end"
+                app:spinner_arrow_padding="8dp"
+                app:spinner_arrow_tint="@color/teal_700"
+                app:spinner_divider_color="@color/dark_grey"
+                app:spinner_divider_show="true"
+                app:spinner_divider_size="0.4dp"
+                app:spinner_item_array="@array/paymentDue"
+                app:spinner_popup_animation="normal"
+                app:spinner_popup_background="@color/white"
+                app:spinner_popup_elevation="14dp" />
+
+            <TextView
+                android:id="@+id/paymentDueDatePicker"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:textColor="@color/text_color"
+                android:visibility="gone"
+                app:drawableEndCompat="@drawable/ic_calendar_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/billedFromLayout"
+                app:layout_constraintTop_toTopOf="@+id/paymentDue" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/billedFromLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:background="@drawable/rounded_corner"
+                app:layout_constraintBottom_toBottomOf="@+id/fullUploadCV"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintStart_toEndOf="@+id/fullUploadCV"
+                app:layout_constraintTop_toTopOf="@+id/fullUploadCV">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_12sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Billed from"
+                        android:textColor="@color/text_color" />
+
+                    <TextView
+                        android:id="@+id/billedCOmpanyNmTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="R system"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Afghanistan"
+                        android:textColor="@color/text_color" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/billedToLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:background="@drawable/rounded_corner_white"
+                android:orientation="vertical"
+                android:padding="@dimen/_14sdp"
+                app:layout_constraintEnd_toEndOf="@+id/billedFromLayout"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintStart_toStartOf="@+id/paymentDue"
+                app:layout_constraintTop_toBottomOf="@+id/paymentDue">
+
+                <TextView
+                    android:id="@+id/billedTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Billed to"
+                    android:textColor="@color/text_color"
+                    app:layout_constraintBottom_toBottomOf="@+id/selectCustomerSpinnerRel"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/selectCustomerSpinnerRel" />
+
+                <RelativeLayout
+                    android:id="@+id/selectCustomerSpinnerRel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/corner_tale_white_holo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.157"
+                    app:layout_constraintStart_toEndOf="@+id/billedTo"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.skydoves.powerspinner.PowerSpinnerView
+                        android:id="@+id/selectCustomerSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/viewDummy"
+                        android:fontFamily="@font/poppins_regular"
+                        android:padding="@dimen/_8sdp"
+                        android:text="Select a customer"
+                        android:textColor="@color/blackTextColor"
+                        android:textColorHint="@color/blackTextColor"
+                        android:textSize="@dimen/_12sdp"
+                        app:spinner_arrow_gravity="end"
+                        app:spinner_arrow_padding="8dp"
+                        app:spinner_arrow_tint="@color/teal_700"
+                        app:spinner_divider_color="@color/dark_grey"
+                        app:spinner_divider_show="true"
+                        app:spinner_divider_size="0.4dp"
+                        app:spinner_popup_animation="normal"
+                        app:spinner_popup_background="@color/white"
+                        app:spinner_popup_elevation="14dp" />
+
+                    <View
+                        android:id="@+id/viewDummy"
+                        android:layout_width="1dp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_toLeftOf="@+id/addCustomerButton"
+                        android:background="@color/dark_grey" />
+
+                    <ImageView
+                        android:id="@+id/addCustomerButton"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:src="@drawable/ic_only_plus_icon"
+                        app:tint="@color/teal_700" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_customerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Name"
+                    android:textColor="@color/dark_grey"
+                    app:layout_constraintStart_toStartOf="@+id/billedTo"
+                    app:layout_constraintTop_toBottomOf="@+id/selectCustomerSpinnerRel" />
+
+                <TextView
+                    android:id="@+id/tv_customeraddres"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Addres"
+                    android:textColor="@color/text_color"
+                    app:layout_constraintStart_toStartOf="@+id/tv_customerName"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_customerName" />
+
+                <TextView
+                    android:id="@+id/tv_customeraddres2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Addres2"
+                    android:textColor="@color/text_color"
+                    app:layout_constraintStart_toStartOf="@+id/tv_customeraddres"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_customeraddres" />
+
+                <TextView
+                    android:id="@+id/tv_customerEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Email"
+                    android:textColor="@color/text_color"
+                    app:layout_constraintStart_toStartOf="@+id/tv_customeraddres2"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_customeraddres2" />
+
+                <TextView
+                    android:id="@+id/tv_customerPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Phone"
+                    android:textColor="@color/text_color"
+                    app:layout_constraintStart_toStartOf="@+id/tv_customerEmail"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_customerEmail" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/invoiceAmountLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:background="@drawable/rounded_corner_white"
+                android:orientation="vertical"
+                android:padding="@dimen/_14sdp"
+                app:layout_constraintEnd_toEndOf="@+id/billedToLayout"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintStart_toStartOf="@+id/billedToLayout"
+                app:layout_constraintTop_toBottomOf="@+id/billedToLayout">
+
+                <TextView
+                    android:id="@+id/invoiceAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Invoice Amount"
+                    android:textColor="@color/text_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@drawable/corner_tale_white_holo"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/invoiceAmount">
+
+                    <TextView
+                        android:id="@+id/tv_invoiceAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="3"
+                        android:background="@color/transparent"
+                        android:fontFamily="@font/poppins_bold"
+                        android:paddingStart="@dimen/_16sdp"
+                        android:text="0.00"
+                        android:textColor="@color/dark_grey" />
+
+                    <com.skydoves.powerspinner.PowerSpinnerView
+                        android:id="@+id/currencySpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical|center_horizontal|center|end"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:padding="10dp"
+                        android:text="Currency"
+                        android:textColor="@color/text_color"
+                        android:textColorHint="@color/text_color"
+                        android:textSize="@dimen/_12sdp"
+                        app:spinner_arrow_gravity="end"
+                        app:spinner_arrow_padding="8dp"
+                        app:spinner_arrow_tint="@color/teal_700"
+                        app:spinner_divider_color="@color/dark_grey"
+                        app:spinner_divider_show="true"
+                        app:spinner_divider_size="0.4dp"
+                        app:spinner_popup_animation="normal"
+                        app:spinner_popup_background="@color/white"
+                        app:spinner_popup_elevation="14dp" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/itemListLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_16sdp"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_corner_white"
+                app:layout_constraintTop_toBottomOf="@+id/invoiceAmountLayout">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/item_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <ExpandableListView
+                    android:id="@+id/productExpandable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:groupIndicator="@null" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:background="@drawable/corner_tale_white_holo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/productExpandable">
+
+                    <com.skydoves.powerspinner.PowerSpinnerView
+                        android:id="@+id/addItemSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical|center_horizontal|center|end"
+                        android:layout_toLeftOf="@+id/viewDummy2"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Add an item"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:spinner_arrow_show="false"
+                        app:spinner_divider_color="@color/dark_grey"
+                        app:spinner_divider_show="true"
+                        app:spinner_divider_size="0.4dp"
+                        app:spinner_item_array="@array/paymentDue"
+                        app:spinner_popup_animation="normal"
+                        app:spinner_popup_background="@color/white"
+                        app:spinner_popup_elevation="14dp" />
+
+                    <View
+                        android:id="@+id/viewDummy2"
+                        android:layout_width="1dp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_toLeftOf="@+id/addProductButton"
+                        android:background="@color/dark_grey" />
+
+                    <ImageView
+                        android:id="@+id/addProductButton"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:src="@drawable/ic_only_plus_icon"
+                        app:tint="@color/teal_700" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/subTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Subtotal:"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintStart_toStartOf="@+id/invoiceAmountLayout"
+                app:layout_constraintTop_toBottomOf="@+id/itemListLayout" />
+
+            <TextView
+                android:id="@+id/tv_subTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="0.0"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintStart_toEndOf="@+id/totalinvoiceAmount"
+                app:layout_constraintTop_toTopOf="@+id/subTotal" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/tax_list_rv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="@+id/itemListLayout"
+                app:layout_constraintStart_toStartOf="@+id/itemListLayout"
+                app:layout_constraintTop_toBottomOf="@+id/subTotal" />
+
+            <TextView
+                android:id="@+id/totalinvoiceAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Total Invoice Amount:"
+                android:textColor="@color/blackTextColor"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintStart_toStartOf="@+id/subTotal"
+                app:layout_constraintTop_toBottomOf="@+id/tax_list_rv" />
+
+            <TextView
+                android:id="@+id/tv_totalincoiceamount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="0.0"
+                android:textColor="@color/blackTextColor"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_subTotal"
+                app:layout_constraintTop_toTopOf="@+id/totalinvoiceAmount" />
+
+            <TextView
+                android:id="@+id/notes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Notes"
+                android:textColor="@color/text_color"
+                app:layout_constraintStart_toStartOf="@+id/totalinvoiceAmount"
+                app:layout_constraintTop_toBottomOf="@+id/totalinvoiceAmount" />
+
+            <EditText
+                android:id="@+id/et_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:background="@null"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Enter Notes"
+                android:textColor="@color/dark_grey"
+                android:textColorHint="@color/dark_grey"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@+id/notes" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/notesGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:constraint_referenced_ids="notes,et_notes" />
+
+            <TextView
+                android:id="@+id/cancel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:background="@drawable/extra_rounded_corner_light_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingLeft="@dimen/_30sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingRight="@dimen/_30sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:text="Cancel"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/saveButton"
+                app:layout_constraintStart_toStartOf="@+id/et_notes"
+                app:layout_constraintTop_toBottomOf="@+id/et_notes" />
+
+            <TextView
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_button"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingLeft="@dimen/_30sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingRight="@dimen/_30sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:text="Save"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="@+id/et_notes"
+                app:layout_constraintStart_toEndOf="@+id/cancel_button"
+                app:layout_constraintTop_toTopOf="@+id/cancel_button" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

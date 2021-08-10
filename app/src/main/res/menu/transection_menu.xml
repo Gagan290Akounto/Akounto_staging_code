@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:id="@+id/one" android:orderInCategory="1" android:title="Cut"/>
+    <item android:id="@+id/two" android:orderInCategory="2" android:title="Copy"/>
+    <item android:id="@+id/three" android:orderInCategory="3" android:title="Paste"/>
+</menu>

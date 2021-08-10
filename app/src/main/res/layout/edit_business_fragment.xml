@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Edit a Business"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/companyNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Company Name*"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title" />
+
+            <EditText
+                android:id="@+id/et_companyName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/corner_tale_white_holo"
+                android:imeOptions="actionNext"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/companyNameText" />
+
+            <TextView
+                android:id="@+id/companyNameErrorTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Company Name can&apos;t be blank!."
+                android:textColor="@color/red_btn_bg_color"
+                android:textSize="@dimen/_10sdp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/et_companyName" />
+
+            <TextView
+                android:id="@+id/address1Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Address 1"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/companyNameErrorTv" />
+
+            <EditText
+                android:id="@+id/et_address1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/corner_tale_white_holo"
+                android:hint="Address 1"
+                android:imeOptions="actionNext"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/address1Text" />
+
+            <TextView
+                android:id="@+id/address2Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Address 2"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_address1" />
+
+            <EditText
+                android:id="@+id/et_address2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/corner_tale_white_holo"
+                android:hint="Address 2"
+                android:imeOptions="actionNext"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/address2Text" />
+
+            <TextView
+                android:id="@+id/cityText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="City"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_address2" />
+
+            <EditText
+                android:id="@+id/et_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/corner_tale_white_holo"
+                android:hint="City"
+                android:imeOptions="actionNext"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/cityText" />
+
+            <TextView
+                android:id="@+id/countryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Country*"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_city" />
+
+            <com.skydoves.powerspinner.PowerSpinnerView
+                android:id="@+id/countrySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/rounded_corner_grey_light"
+                android:hint="Choose your country"
+                android:padding="10dp"
+                android:textColor="@color/blackTextColor"
+                android:textColorHint="@color/blackTextColor"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@+id/countryText"
+                app:spinner_arrow_gravity="end"
+                app:spinner_arrow_padding="8dp"
+                app:spinner_arrow_tint="@color/teal_700"
+                app:spinner_divider_color="@color/dark_grey"
+                app:spinner_divider_show="true"
+                app:spinner_divider_size="0.4dp"
+                app:spinner_item_array="@array/merchant"
+                app:spinner_popup_animation="normal"
+                app:spinner_popup_background="@color/white"
+                app:spinner_popup_elevation="14dp" />
+
+            <TextView
+                android:id="@+id/countryErrorTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="This field is required."
+                android:textColor="@color/red_btn_bg_color"
+                android:textSize="@dimen/_10sdp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/countrySpinner" />
+
+            <TextView
+                android:id="@+id/countryNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="If you do business in one country but are based in another, choose the country where you file your taxes, or where your business is incorporated. Once you start using Payroll or Payments, you won&apos;t be able to change your business country."
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/countryErrorTv" />
+
+            <TextView
+                android:id="@+id/stateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="State"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/countryNote" />
+
+            <EditText
+                android:id="@+id/et_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/corner_tale_white_holo"
+                android:hint="State"
+                android:imeOptions="actionNext"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/stateText" />
+
+            <TextView
+                android:id="@+id/postCodeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Post code"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_state" />
+
+            <EditText
+                android:id="@+id/et_postCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/corner_tale_white_holo"
+                android:hint="post code"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/postCodeText" />
+
+            <TextView
+                android:id="@+id/timeZoneText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Time Zone"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_postCode" />
+
+            <com.skydoves.powerspinner.PowerSpinnerView
+                android:id="@+id/timeZoneSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/rounded_corner_grey_light"
+                android:hint="Select your time zone"
+                android:padding="10dp"
+                android:textColor="@color/blackTextColor"
+                android:textColorHint="@color/blackTextColor"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@+id/timeZoneText"
+                app:spinner_arrow_gravity="end"
+                app:spinner_arrow_padding="8dp"
+                app:spinner_arrow_tint="@color/teal_700"
+                app:spinner_divider_color="@color/dark_grey"
+                app:spinner_divider_show="true"
+                app:spinner_divider_size="0.4dp"
+                app:spinner_item_array="@array/merchant"
+                app:spinner_popup_animation="bounce"
+                app:spinner_popup_background="@color/white"
+                app:spinner_popup_elevation="14dp" />
+
+            <TextView
+                android:id="@+id/phoneText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Phone"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/timeZoneSpinner" />
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/corner_tale_white_holo"
+                android:hint="phone"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/phoneText" />
+
+            <TextView
+                android:id="@+id/faxText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Fax"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_phone" />
+
+            <EditText
+                android:id="@+id/et_fax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/corner_tale_white_holo"
+                android:hint="fax"
+                android:imeOptions="actionNext"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/faxText" />
+
+            <TextView
+                android:id="@+id/mobileText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Mobile"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_fax" />
+
+            <EditText
+                android:id="@+id/et_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/corner_tale_white_holo"
+                android:hint="mobile"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/mobileText" />
+
+            <TextView
+                android:id="@+id/tollFreeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Toll free"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_mobile" />
+
+            <EditText
+                android:id="@+id/et_tollFree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/corner_tale_white_holo"
+                android:hint="tollFree"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tollFreeText" />
+
+            <TextView
+                android:id="@+id/currencyTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Business Currency"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_tollFree" />
+
+            <TextView
+                android:id="@+id/currencyTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="USD"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toEndOf="@+id/currencyTitleText"
+                app:layout_constraintTop_toTopOf="@+id/currencyTitleText" />
+
+            <TextView
+                android:id="@+id/currencyNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="This is your reporting currency and cannot be changed. You can still send invoices, track expenses and enter transactions in any currency and an exchange rate is applied for you."
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/currencyTv" />
+
+            <TextView
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:background="@drawable/rounded_corner_green_button"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingLeft="@dimen/_30sdp"
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingRight="@dimen/_30sdp"
+                android:paddingBottom="@dimen/_6sdp"
+                android:text="Save"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cancelButton"
+                app:layout_constraintTop_toBottomOf="@+id/currencyNote" />
+
+            <TextView
+                android:id="@+id/cancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:background="@drawable/rounded_holo_blue_button"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingLeft="@dimen/_30sdp"
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingRight="@dimen/_30sdp"
+                android:paddingBottom="@dimen/_6sdp"
+                android:text="Cancel"
+                android:textColor="@color/text_color_blue"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toStartOf="@+id/saveButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/saveButton" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

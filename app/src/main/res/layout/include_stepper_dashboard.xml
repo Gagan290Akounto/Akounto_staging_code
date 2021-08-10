@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?><!--profile_steps-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relDashboardStepper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--One-->
+    <RelativeLayout
+        android:id="@+id/relStepperOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvStepperOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic__one"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/primary_color"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvStepperAddBusiness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_toStartOf="@+id/imgStepperDropdown"
+            android:layout_toEndOf="@+id/tvStepperOne"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:gravity="center_vertical"
+            android:text="Add Business details"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imgStepperDropdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_toggle_view" />
+    </RelativeLayout>
+
+    <!--Two,Three and Four-->
+    <RelativeLayout
+        android:id="@+id/relSteppers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relStepperOne"
+        android:visibility="visible">
+
+        <!--Two-->
+        <RelativeLayout
+            android:id="@+id/relStepperTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/line_1"
+                android:layout_width="1dp"
+                android:layout_height="14dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:background="#99ffffff" />
+
+            <TextView
+                android:id="@+id/tvStepperTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_1"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/ic_two"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvStepperAddItemAndServices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_toEndOf="@+id/tvStepperTwo"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_vertical"
+                android:text="Add Items and Services"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <!--Three-->
+        <RelativeLayout
+            android:id="@+id/relStepperThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relStepperTwo">
+
+            <View
+                android:id="@+id/line_2"
+                android:layout_width="1dp"
+                android:layout_height="14dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:background="#99ffffff" />
+
+            <TextView
+                android:id="@+id/tvStepperThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_2"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/ic_two"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvStepperAddCustomer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="29dp"
+                android:layout_toEndOf="@+id/tvStepperThree"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_vertical"
+                android:text="Add your customer"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <!--Four-->
+        <RelativeLayout
+            android:id="@+id/relStepperFour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relStepperThree">
+
+            <View
+                android:id="@+id/line_3"
+                android:layout_width="1dp"
+                android:layout_height="14dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:background="#99ffffff" />
+
+            <TextView
+                android:id="@+id/tvStepperFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_3"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/ic_star"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tvStepperStartInvoice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="29dp"
+                android:layout_toEndOf="@+id/tvStepperFour"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_vertical"
+                android:text="Start Invoicing"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

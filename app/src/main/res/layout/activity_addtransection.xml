@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_backbutton"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Description*"
+                        android:textColor="@color/blackTextColor"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewName"
+                        android:background="@drawable/corner_tale_white_holo">
+
+                        <EditText
+                            android:id="@+id/et_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent"
+                            android:hint="Enter a description"
+                            android:padding="@dimen/_8sdp"
+                            android:textColor="@color/text_color" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:layout_weight="100"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Account"
+                        android:textColor="@color/blackTextColor"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_weight="50"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Date"
+                        android:textColor="@color/blackTextColor"
+                        android:textSize="@dimen/_12sdp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/_2sdp">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/corner_tale_white_holo">
+
+                        <com.skydoves.powerspinner.PowerSpinnerView
+                            android:id="@+id/accountSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_2sdp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="Select Accounts"
+                            android:padding="10dp"
+                            android:textColor="@color/blackTextColor"
+                            android:textColorHint="@color/blackTextColor"
+                            android:textSize="@dimen/_12sdp"
+                            app:spinner_arrow_gravity="end"
+                            app:spinner_arrow_padding="8dp"
+                            app:spinner_arrow_tint="@color/teal_700"
+                            app:spinner_divider_color="@color/dark_grey"
+                            app:spinner_divider_show="true"
+                            app:spinner_divider_size="0.4dp"
+                            app:spinner_popup_animation="bounce"
+                            app:spinner_popup_background="@color/white"
+                            app:spinner_popup_elevation="14dp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/corner_tale_white_holo"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:gravity="center"
+                        android:text="Select Date"
+                        android:textSize="@dimen/_14sdp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:layout_weight="100"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Deposit or Withdrawal"
+                        android:textColor="@color/blackTextColor"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_weight="50"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Total Amount"
+                        android:textColor="@color/blackTextColor"
+                        android:textSize="@dimen/_12sdp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="100"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:layout_weight="50"
+                        android:background="@drawable/corner_tale_white_holo">
+
+                        <com.skydoves.powerspinner.PowerSpinnerView
+                            android:id="@+id/depositOrWithdrawalSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.4"
+                            android:background="@color/transparent"
+                            android:enabled="false"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="Withdrawal"
+                            android:padding="10dp"
+                            android:textColor="@color/blackTextColor"
+                            android:textColorHint="@color/blackTextColor"
+                            android:textSize="@dimen/_12sdp"
+                            app:spinner_arrow_gravity="end"
+                            app:spinner_arrow_padding="8dp"
+                            app:spinner_arrow_tint="@color/teal_700"
+                            app:spinner_divider_color="@color/dark_grey"
+                            app:spinner_divider_show="true"
+                            app:spinner_divider_size="0.4dp"
+                            app:spinner_item_array="@array/merchant"
+                            app:spinner_popup_animation="bounce"
+                            app:spinner_popup_background="@color/white"
+                            app:spinner_popup_elevation="14dp" />
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/totalAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:background="@drawable/corner_tale_white_holo"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                        android:hint="0.00"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@color/gray_btn_bg_color" />
+
+                <LinearLayout
+                    android:id="@+id/categoriesList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:gravity="center_vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/dark_grey"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/addCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/split_this_deposit_bg"
+                        android:fontFamily="@font/poppins_regular"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_4sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_4sdp"
+                        android:text="Split this deposit"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/errorNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@drawable/rounded_corner_grey_light"
+                    android:fontFamily="@font/poppins_regular"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Error"
+                    android:textColor="#fd4545"
+                    android:textSize="@dimen/_12sdp"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/corner_tale_white_holo"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="note"
+                    android:minHeight="@dimen/_60sdp"
+                    android:padding="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/applyButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:background="@drawable/rounded_corner_green_button"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingLeft="@dimen/_40sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_40sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="Save"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

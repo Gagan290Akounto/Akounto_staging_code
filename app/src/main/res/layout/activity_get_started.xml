@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/dot2" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#e8e8e8" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/dot1" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:baselineAligned="false" android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8"
+                        android:gravity="center">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#e8e8e8" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/dot1" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/relMainLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toRightOf="@+id/view"
+                    android:fontFamily="@font/poppins_extrabold"
+                    android:text="Welcome to Akounto!"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/_19sdp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relMyNameIs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp">
+
+                <TextView
+                    android:id="@+id/myNameIsTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Name"
+                    android:textColor="@color/text_blue" />
+
+                <EditText
+                    android:id="@+id/myNameIsET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/myNameIsTV"
+                    android:background="@color/white"
+                    android:fontFamily="@font/poppins_extrabold"
+                    android:imeOptions="actionNext"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+
+                <View
+                    android:id="@+id/viewPaswordET"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/myNameIsET"
+                    android:background="@drawable/bg_color" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutBusiness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp">
+
+                <TextView
+                    android:id="@+id/runABusiness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Business name"
+                    android:textColor="@color/text_blue" />
+
+                <EditText
+                    android:id="@+id/runABusinessET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/runABusiness"
+                    android:background="@color/white"
+                    android:fontFamily="@font/poppins_extrabold"
+                    android:imeOptions="actionNext"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/runABusinessET"
+                    android:background="@drawable/bg_color" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeTypeBusiness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp">
+
+                <TextView
+                    android:id="@+id/typeBusiness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Type of business"
+                    android:textColor="@color/text_blue" />
+
+                <EditText
+                    android:id="@+id/typeBusinessET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/typeBusiness"
+                    android:background="@color/white"
+                    android:fontFamily="@font/poppins_extrabold"
+                    android:imeOptions="actionNext"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+
+                <Spinner
+                    android:id="@+id/typeBusinessSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/typeBusiness" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/typeBusinessSpinner"
+                    android:background="@drawable/bg_color" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dealsWithRL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp">
+
+                <TextView
+                    android:id="@+id/dealsWith"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Deals with"
+                    android:textColor="@color/text_blue" />
+
+                <Spinner
+                    android:id="@+id/dealsWithBusinessSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dealsWith" />
+
+                <EditText
+                    android:id="@+id/dealsWithET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dealsWith"
+                    android:background="@color/white"
+                    android:fontFamily="@font/poppins_extrabold"
+                    android:imeOptions="actionNext"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/dealsWithBusinessSpinner"
+                    android:background="@drawable/bg_color" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/continueButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/rounded_corner_button_blue"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:paddingLeft="30dp"
+                android:paddingTop="12dp"
+                android:paddingRight="30dp"
+                android:paddingBottom="12dp"
+                android:text="Continue"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

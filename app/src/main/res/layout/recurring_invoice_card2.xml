@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/_10sdp" app:cardCornerRadius="@dimen/_5sdp">
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/_8sdp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/_16sdp" android:textColor="@color/black" android:layout_gravity="center_vertical" android:id="@+id/billNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Invoice" android:layout_centerVertical="true" android:fontFamily="@font/poppins_bold"/>
+            <ImageView android:layout_gravity="end" android:layout_width="@dimen/_40sdp" android:layout_height="@dimen/_40sdp" android:layout_margin="@dimen/_8sdp" android:src="@drawable/ic_akounto_only_logo" android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        <View android:background="@color/light_grey" android:layout_width="match_parent" android:layout_height="@dimen/_2sdp"/>
+        <include android:id="@+id/layoutItem" android:visibility="visible" layout="@layout/layout_billsinfo"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

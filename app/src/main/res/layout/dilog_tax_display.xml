@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/_24ssp"
+    android:paddingRight="@dimen/_24ssp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center_vertical"
+                android:text="Select applicable tax"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical|right"
+                >
+
+                <ImageView
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_baseline_close_24"
+                    app:tint="@color/black" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_tax"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_weight="7" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_24ssp"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:padding="@dimen/_7sdp">
+
+            <Button
+                android:id="@+id/btn_create_new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/_16ssp"
+                android:paddingBottom="@dimen/_16ssp"
+                android:fontFamily="@font/poppins_regular"
+                android:background="@drawable/rounded_corner_button"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:text="Create New"
+                android:textAllCaps="true" />
+
+            <Button
+                android:id="@+id/btn_apply_tax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="@dimen/_16ssp"
+                android:paddingBottom="@dimen/_16ssp"
+                android:fontFamily="@font/poppins_regular"
+                android:background="@drawable/rounded_corner_button"
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/_7ssp"
+                android:text="Apply Tax"
+                android:textAllCaps="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

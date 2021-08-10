@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:layout_marginTop="@dimen/_2sdp" android:minWidth="@dimen/_400sdp" app:cardCornerRadius="3dp" app:cardElevation="10dp">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textSize="@dimen/_20sdp" android:textStyle="bold" android:padding="@dimen/_5sdp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minWidth="@dimen/_300sdp" android:text="Add new item"/>
+        <View android:background="@color/teal_700" android:layout_width="match_parent" android:layout_height="1dp"/>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp">
+            <TextView android:textSize="@dimen/_8sdp" android:textColor="@color/dark_grey" android:id="@+id/textViewName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" Name*" android:fontFamily="@font/poppins_regular"/>
+            <RelativeLayout android:background="@drawable/corner_tale_white_holo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/_10sdp" android:layout_below="@+id/textViewName">
+                <EditText android:textColor="@color/text_color" android:id="@+id/et_name" android:background="@color/transparent" android:padding="@dimen/_8sdp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/relativeLayoutName" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp">
+            <TextView android:textSize="@dimen/_8sdp" android:textColor="@color/dark_grey" android:id="@+id/textViewDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Vendor Name*" android:fontFamily="@font/poppins_regular"/>
+            <RelativeLayout android:background="@drawable/corner_tale_white_holo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/_10sdp" android:layout_below="@+id/textViewDesc">
+                <EditText android:textColor="@color/text_color" android:id="@+id/et_desc" android:background="@color/transparent" android:padding="@dimen/_8sdp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="@dimen/_80sdp"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp">
+            <TextView android:textSize="@dimen/_8sdp" android:textColor="@color/dark_grey" android:id="@+id/priceDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Price*" android:fontFamily="@font/poppins_regular"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/_10sdp" android:layout_below="@+id/priceDesc">
+                <EditText android:textColor="@color/text_color" android:id="@+id/et_price" android:background="@drawable/corner_tale_white_holo" android:padding="@dimen/_8sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/_70sdp" android:inputType="number"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp">
+            <TextView android:textSize="@dimen/_14sdp" android:textColor="@color/white" android:id="@+id/cancel" android:background="@drawable/rounded_corner_button_trans" android:paddingTop="@dimen/_10sdp" android:paddingBottom="@dimen/_10sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_20sdp" android:text="Cancel" android:layout_toRightOf="@+id/saveButton" android:fontFamily="@font/poppins_regular" android:paddingStart="@dimen/_30sdp" android:paddingEnd="@dimen/_30sdp"/>
+            <TextView android:textSize="@dimen/_14sdp" android:textColor="@color/white" android:id="@+id/sendButton" android:background="@drawable/rounded_corner_button" android:paddingTop="@dimen/_10sdp" android:paddingBottom="@dimen/_10sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_20sdp" android:text="Send" android:layout_toRightOf="@+id/saveButton" android:fontFamily="@font/poppins_regular" android:paddingStart="@dimen/_30sdp" android:paddingEnd="@dimen/_30sdp"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

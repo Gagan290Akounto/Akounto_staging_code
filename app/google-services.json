@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "601708062210",
+    "project_id": "akounto-a5bb8",
+    "storage_bucket": "akounto-a5bb8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:601708062210:android:af4b076102c812b879691b",
+        "android_client_info": {
+          "package_name": "com.akounto.accountingsoftware"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "601708062210-j04jblai2mpjipgissstheh984qd2i10.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4YFKvcHcq6S7cPxDagk35YB5oaU4xygo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "601708062210-j04jblai2mpjipgissstheh984qd2i10.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

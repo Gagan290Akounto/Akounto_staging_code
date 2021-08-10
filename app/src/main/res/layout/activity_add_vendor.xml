@@ -1,0 +1,910 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_backbutton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15sdp"
+                android:background="@drawable/rounded_corner_white"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Vendor Name*"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewName"
+                        android:layout_marginRight="@dimen/_10sdp">
+
+                        <EditText
+                            android:id="@+id/et_vname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/general"
+                            android:padding="@dimen/_8sdp"
+                            android:textColor="@color/text_color" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Vendor Email"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewDescription"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        >
+
+                        <EditText
+                            android:id="@+id/et_vemail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/general"
+                            android:inputType="textEmailAddress"
+                            android:padding="@dimen/_8sdp"
+                            android:textColor="@color/blackTextColor" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="First Name"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewPrice"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        >
+
+                        <EditText
+                            android:id="@+id/et_fname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/general"
+                            android:padding="@dimen/_8sdp"
+                            android:textColor="@color/text_color" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textlastname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Last Name"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textlastname"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        >
+
+                        <EditText
+                            android:id="@+id/et_lname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/general"
+                            android:padding="@dimen/_8sdp"
+                            android:textColor="@color/text_color" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutNameBDADiffOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewAddressDiffOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Currency"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewAddressDiffOther"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        >
+
+                        <com.skydoves.powerspinner.PowerSpinnerView
+                            android:id="@+id/currencySpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/general"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="Please select currency"
+                            android:padding="10dp"
+                            android:textColor="@color/blackTextColor"
+                            android:textColorHint="@color/blackTextColor"
+                            android:textSize="@dimen/_12sdp"
+                            app:spinner_arrow_gravity="end"
+                            app:spinner_arrow_padding="8dp"
+                            app:spinner_arrow_tint="@color/teal_700"
+                            app:spinner_divider_color="@color/dark_grey"
+                            app:spinner_divider_show="true"
+                            app:spinner_divider_size="0.4dp"
+                            app:spinner_item_array="@array/merchant"
+                            app:spinner_popup_animation="normal"
+                            app:spinner_popup_background="@color/white"
+                            app:spinner_popup_elevation="14dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutNameBDCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewNameBDCountry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Country"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewNameBDCountry"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        >
+
+                        <com.skydoves.powerspinner.PowerSpinnerView
+                            android:id="@+id/billCountrySpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/general"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="Please select country"
+                            android:padding="10dp"
+                            android:textColor="@color/blackTextColor"
+                            android:textColorHint="@color/blackTextColor"
+                            android:textSize="@dimen/_12sdp"
+                            app:spinner_arrow_gravity="end"
+                            app:spinner_arrow_padding="8dp"
+                            app:spinner_arrow_tint="@color/teal_700"
+                            app:spinner_divider_color="@color/dark_grey"
+                            app:spinner_divider_show="true"
+                            app:spinner_divider_size="0.4dp"
+                            app:spinner_item_array="@array/merchant"
+                            app:spinner_popup_animation="normal"
+                            app:spinner_popup_background="@color/white"
+                            app:spinner_popup_elevation="14dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutNameBD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewNameBD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Province / State"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewNameBD"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        >
+
+                        <com.skydoves.powerspinner.PowerSpinnerView
+                            android:id="@+id/billStateSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/general"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="--------"
+                            android:padding="10dp"
+                            android:textColor="@color/blackTextColor"
+                            android:textColorHint="@color/blackTextColor"
+                            android:textSize="@dimen/_12sdp"
+                            app:spinner_arrow_gravity="end"
+                            app:spinner_arrow_padding="8dp"
+                            app:spinner_arrow_tint="@color/teal_700"
+                            app:spinner_divider_color="@color/dark_grey"
+                            app:spinner_divider_show="true"
+                            app:spinner_divider_size="0.4dp"
+                            app:spinner_item_array="@array/merchant"
+                            app:spinner_popup_animation="normal"
+                            app:spinner_popup_background="@color/white"
+                            app:spinner_popup_elevation="14dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutNameBDA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp" />
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutDescriptionad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewDescriptionBDs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Address Line 1"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewDescriptionBDs"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        >
+
+                        <EditText
+                            android:id="@+id/et_billAddr1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/general"
+                            android:padding="@dimen/_8sdp"
+                            android:textColor="@color/text_color" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutDescriptionBD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewDescriptionBD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Address Line 2"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewDescriptionBD"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        >
+
+                        <EditText
+                            android:id="@+id/et_billAddr2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/general"
+                            android:padding="@dimen/_8sdp"
+                            android:textColor="@color/text_color" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutPriceBD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewPriceBD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="City"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewPriceBD"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        >
+
+                        <EditText
+                            android:id="@+id/et_billCity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/general"
+                            android:padding="@dimen/_8sdp"
+                            android:textColor="@color/text_color" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutNamePostal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewNameBDPostal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Postal Zip Code"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewNameBDPostal"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        >
+
+                        <EditText
+                            android:id="@+id/et_billPostCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/general"
+                            android:inputType="number"
+                            android:padding="@dimen/_8sdp"
+                            android:textColor="@color/text_color" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/shipAddrLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15sdp"
+                android:background="@drawable/rounded_corner_white"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textViewTitleBDDiff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Shipping Details"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutNameBDADiff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewAddressDiff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Address Line 1"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewAddressDiff"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        >
+
+                        <EditText
+                            android:id="@+id/et_shipAddr1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/general"
+                            android:padding="@dimen/_8sdp"
+                            android:textColor="@color/text_color" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutDescriptionBDDiff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewDescriptionBDDiff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Address Line 2"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewDescriptionBDDiff"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        >
+
+                        <EditText
+                            android:id="@+id/et_shipAddr2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/general"
+                            android:padding="@dimen/_8sdp"
+                            android:textColor="@color/text_color" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutPriceBDDiff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewPriceBDDiff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="City"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewPriceBDDiff"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        >
+
+                        <EditText
+                            android:id="@+id/et_shipCity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/general"
+                            android:inputType="number"
+                            android:padding="@dimen/_8sdp"
+                            android:textColor="@color/text_color" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutNamePostalDiff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewNameBDPostalDiff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Postal Zip Code"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewNameBDPostalDiff"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        >
+
+                        <EditText
+                            android:id="@+id/et_shipPostCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/general"
+                            android:padding="@dimen/_8sdp"
+                            android:textColor="@color/text_color" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutNameBDCountryDiff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewNameBDCountryDiff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Country"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewNameBDCountryDiff"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        >
+
+                        <com.skydoves.powerspinner.PowerSpinnerView
+                            android:id="@+id/shipCountrySpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/general"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="Please select country"
+                            android:padding="10dp"
+                            android:textColor="@color/blackTextColor"
+                            android:textColorHint="@color/blackTextColor"
+                            android:textSize="@dimen/_12sdp"
+                            app:spinner_arrow_gravity="end"
+                            app:spinner_arrow_padding="8dp"
+                            app:spinner_arrow_tint="@color/teal_700"
+                            app:spinner_divider_color="@color/dark_grey"
+                            app:spinner_divider_show="true"
+                            app:spinner_divider_size="0.4dp"
+                            app:spinner_item_array="@array/merchant"
+                            app:spinner_popup_animation="normal"
+                            app:spinner_popup_background="@color/white"
+                            app:spinner_popup_elevation="14dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutNameBDDiff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewNameBDDiff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Province / State"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewNameBDDiff"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        >
+
+                        <com.skydoves.powerspinner.PowerSpinnerView
+                            android:id="@+id/shipStateSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/general"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="--------"
+                            android:padding="10dp"
+                            android:textColor="@color/blackTextColor"
+                            android:textColorHint="@color/blackTextColor"
+                            android:textSize="@dimen/_12sdp"
+                            app:spinner_arrow_gravity="end"
+                            app:spinner_arrow_padding="8dp"
+                            app:spinner_arrow_tint="@color/teal_700"
+                            app:spinner_divider_color="@color/dark_grey"
+                            app:spinner_divider_show="true"
+                            app:spinner_divider_size="0.4dp"
+                            app:spinner_item_array="@array/merchant"
+                            app:spinner_popup_animation="normal"
+                            app:spinner_popup_background="@color/white"
+                            app:spinner_popup_elevation="14dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15sdp"
+                android:background="@drawable/rounded_corner_white"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/textViewTitleBDOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Optional"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutPriceBDDiffOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewPriceBDDiffOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Account Number"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewPriceBDDiffOther"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        >
+
+                        <EditText
+                            android:id="@+id/et_acno"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/general"
+                            android:inputType="number"
+                            android:padding="@dimen/_8sdp"
+                            android:textColor="@color/text_color" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutNamePostalDiffOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewNameBDPostalDiffOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Phone"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewNameBDPostalDiffOther"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        >
+
+                        <EditText
+                            android:id="@+id/et_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/general"
+                            android:inputType="phone"
+                            android:padding="@dimen/_8sdp"
+                            android:textColor="@color/text_color" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutNamePostalDiffOthermob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewNameBDPostalDiffOthermob"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Mobile"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewNameBDPostalDiffOthermob"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        >
+
+                        <EditText
+                            android:id="@+id/et_mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/general"
+                            android:inputType="phone"
+                            android:maxEms="10"
+                            android:padding="@dimen/_8sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/text_color" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutNameBDCountryDiffOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewNameBDCountryDiffOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Fax"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewNameBDCountryDiffOther"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        >
+
+                        <EditText
+                            android:id="@+id/et_Fax"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/general"
+                            android:inputType="phone"
+                            android:padding="@dimen/_8sdp"
+                            android:textColor="@color/text_color" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutNameBDDiffOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewNameBDDiffOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Toll free"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewNameBDDiffOther"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        >
+
+                        <EditText
+                            android:id="@+id/et_tollfree"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/general"
+                            android:padding="@dimen/_8sdp"
+                            android:textColor="@color/text_color" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutNameBDDiffOther2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewNameBDDiffOther2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Website"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewNameBDDiffOther2"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        >
+
+                        <EditText
+                            android:id="@+id/et_website"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/general"
+                            android:padding="@dimen/_8sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/text_color" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/rounded_corner_button"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingLeft="@dimen/_30sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingRight="@dimen/_30sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:text="Save"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

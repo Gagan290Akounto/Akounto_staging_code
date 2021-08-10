@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/background_color">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/rounded_corner_tale_white_holo"
+        android:padding="@dimen/_5sdp">
+
+        <ImageView
+            android:id="@+id/searchIcon"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:src="@drawable/ic_search_icon"
+            app:tint="@color/teal_700" />
+
+        <EditText
+            android:id="@+id/searchET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/view"
+            android:layout_toRightOf="@+id/searchIcon"
+            android:background="@color/transparent"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Search"
+            android:padding="10dp"
+            android:textSize="@dimen/_14sdp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_toLeftOf="@+id/filterIcon"
+            android:background="@color/teal_700" />
+
+        <ImageView
+            android:id="@+id/filterIcon"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:src="@drawable/ic_filter_icon"
+            app:tint="@color/teal_700" />
+    </RelativeLayout>
+</RelativeLayout>

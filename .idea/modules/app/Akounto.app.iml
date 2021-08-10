@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":app" external.linked.project.path="$MODULE_DIR$/../../../app" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="Akounto" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="android-gradle" name="Android-Gradle">
+      <configuration>
+        <option name="GRADLE_PROJECT_PATH" value=":app" />
+        <option name="LAST_SUCCESSFUL_SYNC_AGP_VERSION" value="4.1.2" />
+        <option name="LAST_KNOWN_AGP_VERSION" value="4.1.2" />
+      </configuration>
+    </facet>
+    <facet type="android" name="Android">
+      <configuration>
+        <option name="SELECTED_BUILD_VARIANT" value="debug" />
+        <option name="ASSEMBLE_TASK_NAME" value="assembleDebug" />
+        <option name="COMPILE_JAVA_TASK_NAME" value="compileDebugSources" />
+        <afterSyncTasks>
+          <task>generateDebugSources</task>
+        </afterSyncTasks>
+        <option name="ALLOW_USER_CONFIGURATION" value="false" />
+        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
+        <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
+        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../app/src/main/res;file://$MODULE_DIR$/../../../app/src/debug/res;file://$MODULE_DIR$/../../../app/build/generated/res/google-services/debug;file://$MODULE_DIR$/../../../app/build/generated/crashlytics/res/debug;file://$MODULE_DIR$/../../../app/build/generated/res/rs/debug;file://$MODULE_DIR$/../../../app/build/generated/res/resValues/debug" />
+        <option name="TEST_RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../app/src/androidTest/res;file://$MODULE_DIR$/../../../app/src/androidTestDebug/res;file://$MODULE_DIR$/../../../app/build/generated/res/rs/androidTest/debug;file://$MODULE_DIR$/../../../app/build/generated/res/resValues/androidTest/debug" />
+        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
+      </configuration>
+    </facet>
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="4" platform="JVM 1.8" allPlatforms="JVM [1.8]" useProjectSettings="false">
+        <compilerSettings>
+          <option name="additionalArguments" value="-Xallow-no-source-files" />
+        </compilerSettings>
+        <compilerArguments>
+          <option name="destination" value="$MODULE_DIR$/../../../app/build/tmp/kotlin-classes/debug" />
+          <option name="classpath" value="$MODULE_DIR$/../../../app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/4d32c80318957da6bd94944e250b0e6e/databinding-adapters-4.1.2-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/b2bec760556b6cc590c8d86adc15fe84/databinding-runtime-4.1.2-api.jar:/Users/gagangoel/.gradle/caches/modules-2/files-2.1/androidx.databinding/databinding-common/4.1.2/c0c244ac411c918b83a9dc54adad33493a1bc52c/databinding-common-4.1.2.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/52e5a14d590b8406e55941d5d18d4cb2/jetified-powerspinner-1.1.7-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/c2368df19643579128db0d543f65f7a5/jetified-viewbinding-4.1.2-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/c2506cfc55207658e2e5bacceca93efe/jetified-dexter-6.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/75cd7e7450e4310326a1ac8fab32be5c/jetified-sdk-core-3.2.4-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/24f96f55711856162ce7a633e5adc7f2/material-1.4.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/026365636cfe3e5494625adb8fffa127/constraintlayout-2.0.4-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/da5d59d3c68efd523e564ebb872586b6/jetified-library-1.1.2-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/284576f01b07be8af0fa868612b098db/jetified-squarelayout-0.0.3-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/bfb9012e0e5c47c687116175dd87bf33/jetified-gifloader-1.1-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/8caf45939bc7039893658aac3ef932a5/jetified-firebase-perf-19.1.1-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/492791dd09e998670c78f655343409cd/appcompat-1.3.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/6b795f9da419e2522e699d0bceab8743/jetified-firebase-dynamic-links-ktx-20.1.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/bd75e24c5410d3711e57ce0b80593267/legacy-support-v4-1.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/d74c1a67e09536d4edb166e193e2dfe4/jetified-firebase-messaging-21.0.1-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/c318616927637c9a20f3e7dc5e1d41a8/legacy-support-core-ui-1.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/3998669a51bd2a445fe49b36db6ef341/coordinatorlayout-1.1.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/c1e4e156af23b1ded9bf02f205818cc0/dynamicanimation-1.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/9da1d2a396cd10bf1b35e4b3e31e042d/jetified-firebase-auth-20.0.3-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/2987120ac9177aeb2fa8b66469695c19/jetified-play-services-auth-19.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/b36fb4f5a37ce5754b9e0ef5fb1acfc9/jetified-glide-4.8.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/05e18c3fc4ff35f7855e9c64399359bd/jetified-viewpager2-1.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/3decad4fd2a54bf8f929e511d9d0740b/jetified-play-services-analytics-17.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/f877aff7a663dd669ecf83a0e6805139/jetified-play-services-tagmanager-17.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/37415a485d94fe7a6276c6fdbd95b3f4/jetified-play-services-tagmanager-v4-impl-17.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/f8448b9f92f6f9c533174b105a08b287/jetified-play-services-tagmanager-api-17.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/f846b9492f1f498965d3df60a8fc80c8/jetified-play-services-analytics-impl-17.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/f57eed720d0f5330a283a832eff32fc2/jetified-firebase-dynamic-links-20.1.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/774e9a0e15c89bf23c63ed8943fe94e9/jetified-play-services-auth-api-phone-17.4.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/86b3da06b9de38b3c7114639429127db/jetified-play-services-safetynet-17.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/bade4ab6de3bf209ac812e0e01e6c003/jetified-firebase-auth-interop-19.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/355e78ae791c8eab49d9adadb073c989/jetified-play-services-auth-base-17.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/f4033c68e45b8e3e32a73a408d675158/jetified-firebase-iid-21.0.1-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/e8212c778f0e21fd0e97d388f39b8fd9/jetified-firebase-iid-interop-17.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/115100eb07b635e5c48c15a772027d60/jetified-play-services-base-17.5.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/39014b6a510ccba5d0aba9a357b4a5cc/jetified-firebase-core-19.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/fccded40f7aae5c6f2367dd897b50840/jetified-firebase-analytics-19.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/4ab369e104303e211cf2084895925a08/jetified-play-services-measurement-19.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/c6b575752421818a6b93513dfae6e0de/jetified-play-services-measurement-api-19.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/6b562c4e82dd0410a26327021bdb5d7a/jetified-play-services-measurement-sdk-19.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/ddc3e39052d91fbbb450b2fbb1cb654b/jetified-play-services-measurement-impl-19.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/db9957171a83efa5f97bf5af2144c6c0/jetified-play-services-ads-identifier-17.0.1-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/20344e468b9e0028b3351b7e62ab90b2/jetified-play-services-stats-17.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/5a7373e2a3eb6b2babff05efb90076e5/jetified-firebase-crashlytics-17.3.1-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/244ba46217f604945514270828d2abdc/jetified-firebase-common-ktx-20.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/519e96e5aeaeae0decc64b6e8977bf4f/jetified-firebase-config-20.0.4-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/7b7567ce39ea2548c975f5368dc130be/jetified-firebase-installations-17.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/9166bdf0780fcba555625f5bdc41eb86/jetified-firebase-datatransport-17.0.11-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/a5366f332a468360e6a1bc75e6a022cb/jetified-firebase-abt-20.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/06aa427c0993fa38c3fb3688fa750883/jetified-firebase-common-20.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/ac7ac1e8946881a215acd9af32fb4344/jetified-firebase-installations-interop-17.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/e126b7c8bb7494d6b8b6d2b4af12e3ce/jetified-play-services-cloud-messaging-16.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/7607d82f2c257c0547b49700bba48886/jetified-play-services-tasks-17.2.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/cbc213b830511f6158ce0adbcd4106ec/jetified-firebase-measurement-connector-19.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/dbfd78ba19aca59f0e123e9cb9b58188/jetified-play-services-measurement-sdk-api-19.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/07d589a332d18ce74c993bb219da4711/jetified-play-services-measurement-base-19.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/8c8d266a156e9383e0aefeea3b22b5b0/jetified-play-services-basement-17.5.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/2f41c073986cd7c2d5db87ff1c516f03/jetified-fragment-ktx-1.3.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/b1491d90d438fa336cb2e2a43bf8f32a/lifecycle-extensions-2.2.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/d1ec28743d2ef0337fb8ecd312039832/fragment-1.3.4-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/32d6cf71b5329a90489240d00b6c4cbe/recyclerview-1.1.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/e769bcc21a86b6cebe4482547046fe93/transition-1.2.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/7042369dbccb6791f6007c81b933e3da/jetified-appcompat-resources-1.3.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/040935d23ecc7eae5aa4433d82b5125f/vectordrawable-animated-1.1.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/f0a68af7225ec77e667cda993eb5ee52/vectordrawable-1.1.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/7b71dc88851b4e36a0802c1f6c70cd77/jetified-activity-ktx-1.2.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/a1e49df26cc29ae43cca10a6be57f2f2/jetified-activity-1.2.3-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/5a953d505708a0163019232311dbd214/drawerlayout-1.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/04a1baba4acdafdbe8daee1d8463cf92/media-1.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/f15491e5bfa68299a7feaa508aec1705/legacy-support-core-utils-1.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/189df41fadba2508a25b2653dd9f5c67/percentlayout-1.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/8c00f3896e4aa50f7b78cf987a9d7603/loader-1.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/5db1bcb9a527c3f3ca9fc8e49646bbe5/viewpager-1.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/d4b5f58fa455c421c20b4684c659aff6/slidingpanelayout-1.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/9201d42d6e15a7ca629332ff5ecdedf3/customview-1.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/4d0ec2133f0b6b9dde53809abae6d278/swiperefreshlayout-1.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/c24f3d638c1e8fb95fab91b62b5a253c/asynclayoutinflater-1.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/9d5c55792ddc21ad4589666562d412a3/jetified-core-ktx-1.1.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/cb8b91842ce1f51cbe9264108a7becac/core-1.5.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/2f036b287431c37caa1553a7463cb892/jetified-lifecycle-process-2.2.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/82d70cc3f4946d255d19132568445800/jetified-lifecycle-service-2.2.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/842f7b4fd59ae2c62fe2ef0ef1ce761c/jetified-lifecycle-runtime-ktx-2.3.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/2c7b624b84e8593a59a9ccba5619e8ca/lifecycle-runtime-2.3.1-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/6c5529eb459c6d16afce0b7573b6a5d9/versionedparcelable-1.1.1-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/d28eba12eefed9ebe4043ffb4ceb8ea0/jetified-collection-ktx-1.1.0.jar:/Users/gagangoel/.gradle/caches/modules-2/files-2.1/androidx.collection/collection/1.1.0/1f27220b47669781457de0d600849a5de0e89909/collection-1.1.0.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/d0a2848a0c5a06e9b1b051c4ad444b29/cardview-1.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/a7737a03c2082a4655b51a760dc8943b/cursoradapter-1.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/b782f45fca924328f584f9a83129e8fa/jetified-lifecycle-viewmodel-savedstate-2.3.1-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/b25c2be966e1101b4d4ca17e53974882/jetified-savedstate-ktx-1.1.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/7176d044316d1480616391c53176894d/jetified-savedstate-1.1.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/f45cf86493a40d2505d7d19195d6f47f/jetified-firebase-components-17.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/73db0af564e5417d216c4f518479ad26/jetified-dagger-android-2.29.1-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/e73512cc66e44819c542dfc58ec0bb74/jetified-transport-backend-cct-2.3.3-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/3a151bcfa5495f6e6332e6840d3933d3/jetified-firebase-encoders-json-17.1.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/4fe81011ac4b1bd1b07504f12976592c/jetified-firebase-encoders-16.1.0.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/f197e2036464b3ac0c425051a730dd59/jetified-transport-runtime-2.2.6-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/523cb63ff9e78e42bf67bb7b3431ad45/jetified-transport-api-2.2.1-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/d6c9d599936b2ad94367e45c01f10491/localbroadcastmanager-1.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/bafe670f9833b65f0d4bebe1646eb95b/jetified-gifdecoder-4.8.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/1adbf5de85827ec1973534c98bb0c196/jetified-lifecycle-livedata-core-ktx-2.3.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/34fddfd8cba7ea60097ac264c9330e37/work-runtime-ktx-2.4.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/9db7d1d0d974f27d64c40223fc06f30d/work-rxjava2-2.4.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/c569fb9423c09727bd5d364a20047a53/work-runtime-2.4.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/7c2dc605dbbb3295256c38a01410ce62/lifecycle-livedata-2.2.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/b450f1edd298ceb1764e2ad8f0041b8c/lifecycle-livedata-core-2.3.1-api.jar:/Users/gagangoel/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.3.1/fc466261d52f4433863642fb40d12441ae274a98/lifecycle-common-2.3.1.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/87b9b44f09baf81f74abec3e67f5924b/jetified-room-ktx-2.2.5-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/c5a455c7257d3281965b787a5d9c7938/room-runtime-2.2.5-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/a2dae03989dae2c38d537e155bb774a6/core-runtime-2.1.0-api.jar:/Users/gagangoel/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.1.0/b3152fc64428c9354344bd89848ecddc09b6f07e/core-common-2.1.0.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/f2847f6f9daa2a724e0ff3b9a46e30ec/jetified-lifecycle-viewmodel-ktx-2.3.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/083bfbda51399110cabd5122cf38eb1b/lifecycle-viewmodel-2.3.1-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/bec9b4f403eb30093eec28728b126913/documentfile-1.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/ac942f126397c17011d5b87f9fd76792/print-1.0.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/d13a1e38c53a474aa8569ee105c7b0a5/interpolator-1.0.0-api.jar:/Users/gagangoel/.gradle/caches/modules-2/files-2.1/androidx.room/room-common/2.2.5/f5e3b73a0c2ab5e276e26868e4ce3542baede207/room-common-2.2.5.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/931627ea3c46743273c7d47d41491721/sqlite-framework-2.1.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/60343a661f33948cbeb42a32435d88f7/sqlite-2.1.0-api.jar:/Users/gagangoel/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation/1.2.0/57136ff68ee784c6e19db34ed4a175338fadfde1/annotation-1.2.0.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/0bfbf21dba12890ee78319dd40872969/jetified-annotation-experimental-1.0.0-api.jar:/Users/gagangoel/.gradle/caches/modules-2/files-2.1/androidx.constraintlayout/constraintlayout-solver/2.0.4/1f001d7db280a89a6c26b26a66eb064bb6d5efeb/constraintlayout-solver-2.0.4.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/c3df1f04debe1c9b470e1d1100deba47/jetified-converter-gson-2.9.0.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/b5dab63eb9c365aa201ff38203ff50c0/jetified-adapter-rxjava2-2.9.0.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/23200370b9e438f2bc36cb35559aad7a/jetified-retrofit-2.9.0.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/49e4adc585893307e988c442b40d942c/jetified-logging-interceptor-4.6.0.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/519fae8ba0dd21d6e755c837a8ff4008/jetified-okhttp-urlconnection-4.6.0.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/9c13b2e02262db954dd458a8e5c22f8f/jetified-okhttp-4.6.0.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/9398aac7d242f813446170ff7c7e0ba4/jetified-kotlinx-coroutines-jdk8-1.0.1.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/dae2a57f23165aaf5dce77c2c6565d47/jetified-kotlin-stdlib-jdk8-1.4.30.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/5fdb6900382387775f9deddd08045551/jetified-kotlin-stdlib-jdk7-1.4.30.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/10153ffec9cf1b6ed0d2ea855f27ee1e/jetified-okio-jvm-2.6.0.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/08023d1eec509369fe974685901e8924/jetified-kotlin-android-extensions-runtime-1.4.30.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/fa75c657ffd4a9a72799c0e6c9e89f34/jetified-kotlin-reflect-1.4.30.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/e03f33f5688bf336a7e55511d1be0859/jetified-kotlinx-coroutines-android-1.4.1.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/0f0d1b58ffa382550c15a961e8d43473/jetified-kotlinx-coroutines-core-jvm-1.4.1.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/2a864cdf8c524ec24fecd5a977e23071/jetified-kotlin-stdlib-1.5.10.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/b06aab951800538f8b5d79bd7f97b967/jetified-annotations-13.0.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/e64e0750e2a49f0ab974835dcc80fcc4/jetified-kotlin-stdlib-common-1.5.10.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/2b0d7b56477e01a5de073fedad6bbb28/jetified-fab-1.6.4-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/1650c59530dfb454bc448ee65ae26215/jetified-picasso-2.5.2.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/6ab89e312c6c9a96b7baeae947d9dee9/jetified-RoundedButton-v0.1.1-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/db86b837f233cf65779fc853a5254216/jetified-library-1.6.2-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/a5ea60ef3ce83b572757e9d34ca109b8/jetified-materialish-progress-1.7-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/61181c65624eaa55aeede8ced96a62e8/jetified-firebase-annotations-16.0.0.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/58813131bd3afc144605791f39b40142/jetified-passwordview-1.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/94fc2a8f7dbdce2227eb4ab4c7867057/jetified-MPAndroidChart-v3.1.0-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/14dd5814d0bff5e0e8a6080b415d4663/jetified-gson-2.8.6.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/e36b448833a54cd7e73250ea13b7e0dc/jetified-rxandroid-2.1.1-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/eead9eda322767bd25527688b9e329b1/jetified-autodispose-lifecycle-1.4.0.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/a039bb5ad018ef1a04a4c6fc47154196/jetified-autodispose-1.4.0.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/743803e45e1a51e7176adf5a42d432d4/jetified-rxkotlin-2.4.0.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/36d887016ae24600610e1afca392f9c4/jetified-rxrelay-2.1.1.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/40fd2886997b55b858eac2bd55586f5c/jetified-rxjava-2.2.10.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/e5e6007913b42a68c1b7bd20d09cbf05/jetified-reactive-streams-1.0.3.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/f666a52485f6ca1d5221bc545fd7fce4/jetified-LegacyTableView-1.4-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/7d05c933b96d6068c8efb443131e1641/jetified-dagger-2.29.1.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/527d4e4d183e662d9c955b66e6ae77b4/jetified-javax.inject-1.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/fcc3ec0d1dad8a31afdaa75f9b9db92c/jetified-dagger-lint-aar-2.29.1-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/7b2d398fe66c91603fbce4ac95874408/jetified-listenablefuture-1.0.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/e4306b65ce7b0d2cabc25b912a57a7bd/jetified-protolite-well-known-types-17.1.1-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/4ba2b348f84b0ac2ae07fbff14729584/jetified-protobuf-javalite-3.14.0.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/c44ba3b7d3581d31a926bda2e3d7d9bf/jetified-imagepicker-support-1.7.1-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/a17d1a3c5e06369e506d42d2179296ae/jetified-tracker-3.10.1-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/e13363e591e3561d3bbe84b33ee4580a/jetified-tracker-network-3.10.1-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/afc35f0ea70392fbee07ecafa4200653/jetified-installreferrer-2.2-api.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/ff41224850c95152407d084175ac377c/jetified-disklrucache-4.8.0.jar:/Users/gagangoel/.gradle/caches/transforms-2/files-2.1/0825e1d6dde839c7c8a0fd4c540c7a25/jetified-annotations-4.8.0.jar:/Users/gagangoel/Library/Android/sdk/platforms/android-30/android.jar:/Users/gagangoel/Library/Android/sdk/build-tools/30.0.3/core-lambda-stubs.jar" />
+          <option name="noStdlib" value="true" />
+          <option name="noReflect" value="true" />
+          <option name="moduleName" value="app_debug" />
+          <option name="languageVersion" value="1.5" />
+          <option name="apiVersion" value="1.5" />
+          <option name="pluginOptions">
+            <array />
+          </option>
+          <option name="pluginClasspaths">
+            <array />
+          </option>
+          <option name="errors">
+            <ArgumentParseErrors />
+          </option>
+        </compilerArguments>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/../../../app/build/intermediates/javac/debug/classes" />
+    <output-test url="file://$MODULE_DIR$/../../../app/build/intermediates/javac/debugUnitTest/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../app">
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/src/androidTest/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/src/main/assets" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/src/main/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/ap_generated_sources/debug/out" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/source/buildConfig/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/crashlytics/res/debug" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/res/google-services/debug" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/res/resValues/debug" type="java-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../app/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../app/build" />
+    </content>
+    <orderEntry type="jdk" jdkName="Android API 30 Platform" jdkType="Android SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="TEST" name="Gradle: junit:junit:4.13.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.hamcrest:hamcrest-core:1.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: junit:junit:4.12" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.hamcrest:hamcrest-integration:1.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.hamcrest:hamcrest-library:1.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.code.findbugs:jsr305:2.0.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.squareup:javawriter:2.1.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test.ext:junit:1.1.3@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test.espresso:espresso-core:3.4.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test:runner:1.4.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test:core:1.4.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test.services:storage:1.4.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test:monitor:1.4.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.sqlite:sqlite-framework:2.0.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.sqlite:sqlite:2.0.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test.espresso:espresso-idling-resource:3.4.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.databinding:databinding-common:4.1.2" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.collection:collection-ktx:1.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.collection:collection:1.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-encoders:16.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-common:2.3.1" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.arch.core:core-common:2.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.room:room-common:2.2.5" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.annotation:annotation:1.2.0" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.constraintlayout:constraintlayout-solver:2.0.4" level="project" />
+    <orderEntry type="library" name="Gradle: com.squareup.retrofit2:converter-gson:2.9.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.squareup.retrofit2:adapter-rxjava2:2.9.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.squareup.retrofit2:retrofit:2.9.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.squareup.okhttp3:logging-interceptor:4.6.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.squareup.okhttp3:okhttp-urlconnection:4.6.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.squareup.okhttp3:okhttp:4.6.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.4.30" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.30" level="project" />
+    <orderEntry type="library" name="Gradle: com.squareup.okio:okio:2.6.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.4.30" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-reflect:1.4.30" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.4.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.5.10" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.5.10" level="project" />
+    <orderEntry type="library" name="Gradle: com.squareup.picasso:picasso:2.5.2" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-annotations:16.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.8.6" level="project" />
+    <orderEntry type="library" name="Gradle: com.uber.autodispose:autodispose-lifecycle:1.4.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.uber.autodispose:autodispose:1.4.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.reactivex.rxjava2:rxkotlin:2.4.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.jakewharton.rxrelay2:rxrelay:2.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: io.reactivex.rxjava2:rxjava:2.2.10" level="project" />
+    <orderEntry type="library" name="Gradle: org.reactivestreams:reactive-streams:1.0.3" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.dagger:dagger:2.29.1" level="project" />
+    <orderEntry type="library" name="Gradle: javax.inject:javax.inject:1" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.guava:listenablefuture:1.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.protobuf:protobuf-javalite:3.14.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.bumptech.glide:disklrucache:4.8.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.bumptech.glide:annotations:4.8.0" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.databinding:databinding-adapters:4.1.2@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.databinding:databinding-runtime:4.1.2@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.skydoves:powerspinner:1.1.7@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.databinding:viewbinding:4.1.2@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.karumi:dexter:6.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.plaid.link:sdk-core:3.2.4@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.material:material:1.4.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.constraintlayout:constraintlayout:2.0.4@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.SubhrajyotiSen:library:1.1.2@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.kaushikthedeveloper:squarelayout:0.0.3@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.adhishlal:gifloader:1.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-perf:19.1.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.appcompat:appcompat:1.3.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-dynamic-links-ktx:20.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.legacy:legacy-support-v4:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-messaging:21.0.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.legacy:legacy-support-core-ui:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.coordinatorlayout:coordinatorlayout:1.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.dynamicanimation:dynamicanimation:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-auth:20.0.3@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-auth:19.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.bumptech.glide:glide:4.8.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.viewpager2:viewpager2:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-analytics:17.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-tagmanager:17.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-tagmanager-v4-impl:17.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-tagmanager-api:17.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-analytics-impl:17.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-dynamic-links:20.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-auth-api-phone:17.4.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-safetynet:17.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-auth-interop:19.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-auth-base:17.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-iid:21.0.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-iid-interop:17.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-base:17.5.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-core:19.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-analytics:19.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-measurement:19.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-measurement-api:19.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-measurement-sdk:19.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-measurement-impl:19.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-ads-identifier:17.0.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-stats:17.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-crashlytics:17.3.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-common-ktx:20.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-config:20.0.4@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-installations:17.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-datatransport:17.0.11@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-abt:20.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-common:20.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-installations-interop:17.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-cloud-messaging:16.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-tasks:17.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-measurement-connector:19.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-measurement-sdk-api:19.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-measurement-base:19.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-basement:17.5.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.fragment:fragment-ktx:1.3.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-extensions:2.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.fragment:fragment:1.3.4@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.recyclerview:recyclerview:1.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.transition:transition:1.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.appcompat:appcompat-resources:1.3.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.vectordrawable:vectordrawable-animated:1.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.vectordrawable:vectordrawable:1.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.activity:activity-ktx:1.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.activity:activity:1.2.3@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.drawerlayout:drawerlayout:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.media:media:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.legacy:legacy-support-core-utils:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.percentlayout:percentlayout:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.loader:loader:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.viewpager:viewpager:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.slidingpanelayout:slidingpanelayout:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.customview:customview:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.swiperefreshlayout:swiperefreshlayout:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.asynclayoutinflater:asynclayoutinflater:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.core:core-ktx:1.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.core:core:1.5.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-process:2.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-service:2.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-runtime-ktx:2.3.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-runtime:2.3.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.versionedparcelable:versionedparcelable:1.1.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.cardview:cardview:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.cursoradapter:cursoradapter:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.savedstate:savedstate-ktx:1.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.savedstate:savedstate:1.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-components:17.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.dagger:dagger-android:2.29.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.datatransport:transport-backend-cct:2.3.3@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-encoders-json:17.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.datatransport:transport-runtime:2.2.6@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.datatransport:transport-api:2.2.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.localbroadcastmanager:localbroadcastmanager:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.bumptech.glide:gifdecoder:4.8.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.work:work-runtime-ktx:2.4.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.work:work-rxjava2:2.4.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.work:work-runtime:2.4.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-livedata:2.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-livedata-core:2.3.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.room:room-ktx:2.2.5@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.room:room-runtime:2.2.5@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.arch.core:core-runtime:2.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-viewmodel:2.3.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.documentfile:documentfile:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.print:print:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.interpolator:interpolator:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.sqlite:sqlite-framework:2.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.sqlite:sqlite:2.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.annotation:annotation-experimental:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.clans:fab:1.6.4@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.sabujak-sabujak:RoundedButton:v0.1.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.f0ris.sweetalert:library:1.6.2@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.pnikosis:materialish-progress:1.7@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.xwray:passwordview:1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.PhilJay:MPAndroidChart:v3.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: io.reactivex.rxjava2:rxandroid:2.1.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.levitnudi:LegacyTableView:1.4@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.dagger:dagger-lint-aar:2.29.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.firebase:protolite-well-known-types:17.1.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.dhaval2404:imagepicker-support:1.7.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.kochava.base:tracker:3.10.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.kochava.base:tracker-network:3.10.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.installreferrer:installreferrer:2.2@aar" level="project" />
+  </component>
+</module>

@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_backbutton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp" />
+
+    <ScrollView
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/background_color">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:background="@color/background_color">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fullUpload"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_marginLeft="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_50sdp"
+                android:background="@color/white"
+                app:cardCornerRadius="@dimen/_10sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/plus"
+                        app:tint="@color/teal_700" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imageView"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Upload Logo"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_12sdp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/recpText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fullUpload"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Receipt Details"
+                android:textColor="@color/text_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recpText"
+                android:layout_margin="@dimen/_10sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:background="@color/white">
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayoutMerchant"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/textViewMerchant"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="Merchant*"
+                            android:textColor="@color/dark_grey" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewMerchant">
+
+                            <com.skydoves.powerspinner.PowerSpinnerView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:background="@color/white"
+                                android:fontFamily="@font/poppins_bold"
+                                android:hint="All clients"
+                                android:padding="10dp"
+                                android:textColor="@color/text_color"
+                                android:textColorHint="@color/text_color"
+                                android:textSize="@dimen/_12sdp"
+                                app:spinner_arrow_gravity="end"
+                                app:spinner_arrow_padding="8dp"
+                                app:spinner_arrow_tint="@color/teal_700"
+                                app:spinner_divider_color="@color/dark_grey"
+                                app:spinner_divider_show="true"
+                                app:spinner_divider_size="0.4dp"
+                                app:spinner_item_array="@array/merchant"
+                                app:spinner_popup_animation="bounce"
+                                app:spinner_popup_background="@color/white"
+                                app:spinner_popup_elevation="14dp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayoutPaymentMode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relativeLayoutMerchant"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginRight="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/textViewPaymentMode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="Date"
+                            android:textColor="@color/dark_grey" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewPaymentMode"
+                            android:layout_marginRight="@dimen/_60sdp">
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/transparent"
+                                android:padding="@dimen/_10sdp" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_35sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_alignParentEnd="true"
+                                android:background="@color/teal_700"
+                                android:padding="@dimen/_10sdp"
+                                android:src="@drawable/ic_calendar_black_24dp"
+                                app:tint="@color/white" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayoutRcptNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relativeLayoutPaymentMode"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginRight="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/textViewRcptNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="Notes"
+                            android:textColor="@color/dark_grey" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewRcptNo"
+                            android:layout_marginRight="@dimen/_60sdp">
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_100sdp"
+                                android:background="@color/transparent"
+                                android:padding="@dimen/_10sdp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayoutCurrency"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relativeLayoutRcptNo"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginRight="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/textViewCurrency"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="Payment Account"
+                            android:textColor="@color/dark_grey" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewCurrency">
+
+                            <com.skydoves.powerspinner.PowerSpinnerView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:background="@color/white"
+                                android:fontFamily="@font/poppins_bold"
+                                android:hint="Select Payment Options"
+                                android:padding="10dp"
+                                android:textColor="@color/text_color"
+                                android:textColorHint="@color/text_color"
+                                android:textSize="@dimen/_12sdp"
+                                app:spinner_arrow_gravity="start"
+                                app:spinner_arrow_padding="8dp"
+                                app:spinner_arrow_tint="@color/teal_700"
+                                app:spinner_divider_color="@color/dark_grey"
+                                app:spinner_divider_show="true"
+                                app:spinner_divider_size="0.4dp"
+                                app:spinner_item_array="@array/merchant"
+                                app:spinner_popup_animation="bounce"
+                                app:spinner_popup_background="@color/white"
+                                app:spinner_popup_elevation="14dp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayoutDateRange"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relativeLayoutCurrency"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginRight="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/textViewDateRange"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="Category"
+                            android:textColor="@color/dark_grey" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewDateRange">
+
+                            <com.skydoves.powerspinner.PowerSpinnerView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:background="@color/white"
+                                android:fontFamily="@font/poppins_bold"
+                                android:hint="Select Category"
+                                android:padding="10dp"
+                                android:textColor="@color/text_color"
+                                android:textColorHint="@color/text_color"
+                                android:textSize="@dimen/_12sdp"
+                                app:spinner_arrow_gravity="bottom"
+                                app:spinner_arrow_padding="8dp"
+                                app:spinner_arrow_tint="@color/teal_700"
+                                app:spinner_divider_color="@color/dark_grey"
+                                app:spinner_divider_show="true"
+                                app:spinner_divider_size="0.4dp"
+                                app:spinner_item_array="@array/merchant"
+                                app:spinner_popup_animation="bounce"
+                                app:spinner_popup_background="@color/white"
+                                app:spinner_popup_elevation="14dp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayoutExpCat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relativeLayoutDateRange"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginRight="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/textViewExpcat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="Currency"
+                            android:textColor="@color/dark_grey" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewExpcat">
+
+                            <com.skydoves.powerspinner.PowerSpinnerView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:background="@color/white"
+                                android:fontFamily="@font/poppins_bold"
+                                android:hint="Select your Currency"
+                                android:padding="10dp"
+                                android:textColor="@color/text_color"
+                                android:textColorHint="@color/text_color"
+                                android:textSize="@dimen/_12sdp"
+                                app:spinner_arrow_gravity="end"
+                                app:spinner_arrow_padding="8dp"
+                                app:spinner_arrow_tint="@color/teal_700"
+                                app:spinner_divider_color="@color/dark_grey"
+                                app:spinner_divider_show="true"
+                                app:spinner_divider_size="0.4dp"
+                                app:spinner_item_array="@array/merchant"
+                                app:spinner_popup_animation="bounce"
+                                app:spinner_popup_background="@color/white"
+                                app:spinner_popup_elevation="14dp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayoutAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relativeLayoutExpCat"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginRight="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/textViewAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="Amount"
+                            android:textColor="@color/dark_grey" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewAmount">
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/transparent"
+                                android:padding="@dimen/_10sdp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayoutTax"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relativeLayoutAmount"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginRight="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/textViewTax"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="Tax"
+                            android:textColor="@color/dark_grey" />
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewTax"
+                            android:layout_marginRight="@dimen/_50sdp"
+                            android:layout_toLeftOf="@+id/imageViewTax">
+
+                            <com.skydoves.powerspinner.PowerSpinnerView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:background="@color/white"
+                                android:fontFamily="@font/poppins_bold"
+                                android:hint="Select Tax"
+                                android:padding="10dp"
+                                android:textColor="@color/text_color"
+                                android:textColorHint="@color/text_color"
+                                android:textSize="@dimen/_12sdp"
+                                app:spinner_arrow_gravity="start"
+                                app:spinner_arrow_padding="8dp"
+                                app:spinner_arrow_tint="@color/teal_700"
+                                app:spinner_divider_color="@color/dark_grey"
+                                app:spinner_divider_show="true"
+                                app:spinner_divider_size="0.4dp"
+                                app:spinner_item_array="@array/merchant"
+                                app:spinner_popup_animation="bounce"
+                                app:spinner_popup_background="@color/white"
+                                app:spinner_popup_elevation="14dp" />
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/imageViewTax"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_below="@+id/textViewTax"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/plus"
+                            app:tint="@color/teal_700" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/applyButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relativeLayoutTax"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:background="@drawable/rounded_corner_button_blue"
+                        android:fontFamily="@font/poppins_regular"
+                        android:paddingLeft="@dimen/_30sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_30sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:text="Post to Accounting"
+                        android:textColor="@color/white"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/loginText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/applyButton"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/_30sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Back"
+                        android:textColor="@color/text_color_blue"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

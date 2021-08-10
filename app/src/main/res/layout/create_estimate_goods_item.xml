@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp">
+
+        <RelativeLayout
+            android:id="@+id/buttonLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/upButton"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/up_arrow" />
+
+            <ImageView
+                android:id="@+id/dropDownButton"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/down_arrow" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/itemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/buttonLayout"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Lays 100 grm"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/addCategoryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/itemName"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_toRightOf="@+id/buttonLayout"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Add Category"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="$ 241000.21"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_12sdp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/buttonLayout"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/dark_grey" />
+
+        <RelativeLayout
+            android:id="@+id/quantityLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view">
+
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Quantity"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/quantityValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="27K"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/taxLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/quantityLayout">
+
+            <TextView
+                android:id="@+id/tax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Tax"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_12sdp" />
+
+            <ImageView
+                android:id="@+id/plusButton"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_toLeftOf="@+id/deleteButton"
+                android:src="@drawable/plus" />
+
+            <ImageView
+                android:id="@+id/deleteButton"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/gstText"
+                android:src="@drawable/delete_tax" />
+
+            <TextView
+                android:id="@+id/gstText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/taxValue"
+                android:fontFamily="@font/poppins_regular"
+                android:text="GST"
+                android:textColor="@color/teal_700"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/taxValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="5%"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/actionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/taxLayout">
+
+            <TextView
+                android:id="@+id/action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Action"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_12sdp" />
+
+            <ImageView
+                android:id="@+id/plusButtonAtion"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_toLeftOf="@+id/deleteButtonAction"
+                android:src="@drawable/delete_tax" />
+
+            <ImageView
+                android:id="@+id/deleteButtonAction"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_edit_black_24dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

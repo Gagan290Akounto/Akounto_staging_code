@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+
+    <RelativeLayout
+        android:id="@+id/relRecentActivities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/tvRecentActivityTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_regular"
+            android:singleLine="true"
+            android:textColor="@color/heading_color"
+            android:textSize="14sp"
+            tools:text="Recent Activities" />
+
+        <!--<TextView
+            android:id="@+id/tvRecentActivitySubText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvRecentActivityTitle"
+            android:layout_alignParentLeft="true"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="List of recent activities in your account."
+            android:textColor="#9c9c9c"
+            android:textSize="14sp"
+            android:visibility="gone" />-->
+
+        <TextView
+            android:id="@+id/tvRecentActivityDateTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvRecentActivityTitle"
+            android:layout_alignParentEnd="true"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_regular"
+            android:singleLine="true"
+            android:textColor="@color/grey_text"
+            android:textSize="14sp"
+            tools:text="16 May 2021 11.30AM" />
+    </RelativeLayout>
+
+    <!--<include
+        layout="@layout/include_divider_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relBankTransaction" />-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/relRecentActivities"
+        android:background="#f3f3f3" />
+</RelativeLayout>

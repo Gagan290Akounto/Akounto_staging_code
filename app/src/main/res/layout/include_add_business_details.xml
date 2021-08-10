@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:text="Add business information"
+            android:textColor="@color/heading_color"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Your company details appear on invoices, estimates and more."
+            android:textColor="#757D8A"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/etBusinessName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/input_bg_grey"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Business Name"
+            android:textColor="#333333"
+            android:textColorHint="#9C9C9C"
+            android:textSize="16sp" />
+
+        <!--Upload Logo layout-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnUploadLogo"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_bg_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:shadowColor="@color/white"
+                android:text="Upload your logo"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_color"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <!--Uploaded image display-->
+            <LinearLayout
+                android:id="@+id/linLogoUploaded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvUploadLogoHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:text="Upload your logo"
+                    android:textColor="@color/heading_color"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:id="@+id/imgUploadedLogo"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:scaleType="fitXY" />
+                    <!--android:background="@color/text_blue"
+                    android:src="@drawable/logo2"-->
+
+                    <LinearLayout
+                        android:id="@+id/linChangeLogo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@+id/imgUploadedLogo"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:text="Change logo"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/text_blue"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/text_blue" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--Business Address-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="Business Address"
+                android:textColor="@color/heading_color"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/etAddress1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Address 1"
+                android:textColor="#333333"
+                android:textColorHint="#9C9C9C"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etAddress2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_bg_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Address 2"
+                android:textColor="#333333"
+                android:textColorHint="#9C9C9C"
+                android:textSize="16sp" />
+
+            <!--Country spinner-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_spinner"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/spCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <!--State spinner-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_spinner"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/spState"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_bg_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="City"
+                android:textColor="#333333"
+                android:textColorHint="#9C9C9C"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etPostcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_bg_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Postcode"
+                android:inputType="number"
+                android:textColor="#333333"
+                android:textColorHint="#9C9C9C"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!--Business Info-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="Business Info"
+                android:textColor="@color/heading_color"
+                android:textSize="14sp" />
+
+            <!--spinner-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_spinner"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <Spinner
+                    android:id="@+id/spBusinessPhone"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/bg_spinner" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/grey_40" />
+
+                <EditText
+                    android:id="@+id/etBusinessPhone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:background="@null"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Business Phone"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingStart="16dp"
+                    android:paddingTop="15dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="15dp"
+                    android:textColorHint="#9C9C9C"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="**Number must contain 10 digit without prefixing 0 and 1."
+                android:textColor="@color/grey_text"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="**Landline number must need area code."
+                android:textColor="@color/grey_text"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etMobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_bg_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Mobile Number"
+                android:inputType="number"
+                android:textColorHint="#9C9C9C"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etFax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_bg_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Fax"
+                android:textColorHint="#9C9C9C"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etTollFree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_bg_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Toll free"
+                android:textColorHint="#9C9C9C"
+                android:textSize="16sp" />
+
+            <!--TimeZone Spinner-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_spinner"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/spTimeZone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <!--Currency spinner-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_spinner"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/spCurrency"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!--Fiscal Month and Days spinner-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="7"
+                    android:background="@drawable/bg_spinner"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/spFiscalMonth"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/bg_spinner"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/spFiscalDays"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSave"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/action_primary_btn"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>

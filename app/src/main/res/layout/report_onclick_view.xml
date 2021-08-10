@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/background_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:id="@+id/linearLayout2" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="@color/light_grey" android:padding="@dimen/_10sdp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/_10sdp">
+                <TextView android:textSize="@dimen/_15sdp" android:id="@+id/title1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Get the big picture" android:fontFamily="@font/poppins_regular"/>
+                <RelativeLayout android:id="@+id/relativeLayoutRL" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp">
+                    <ImageView android:id="@+id/smallarrows" android:layout_width="@dimen/_10sdp" android:layout_height="@dimen/_10sdp" android:src="@drawable/ic_baseline_arrow_forward" android:layout_centerVertical="true"/>
+                    <TextView android:textColor="@color/text_color" android:id="@+id/textview" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_12sdp" android:text="Profit and loss(Income Statement)" android:layout_toRightOf="@+id/smallarrows" android:layout_centerVertical="true" android:fontFamily="@font/poppins_extrabold"/>
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/relativeLayoutRL1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp">
+                    <ImageView android:id="@+id/smallarrowss" android:layout_width="@dimen/_10sdp" android:layout_height="@dimen/_10sdp" android:src="@drawable/ic_baseline_arrow_forward" android:layout_centerVertical="true"/>
+                    <TextView android:textColor="@color/text_color" android:id="@+id/textView01" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_12sdp" android:text="Balance Sheet" android:layout_toRightOf="@+id/smallarrowss" android:layout_centerVertical="true" android:fontFamily="@font/poppins_regular"/>
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/relativeLayoutRL2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp">
+                    <ImageView android:id="@+id/smallarrow3" android:layout_width="@dimen/_10sdp" android:layout_height="@dimen/_10sdp" android:src="@drawable/ic_baseline_arrow_forward" android:layout_centerVertical="true"/>
+                    <TextView android:textColor="@color/text_color" android:id="@+id/textView3" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_12sdp" android:text="Cash flow" android:layout_toRightOf="@+id/smallarrow3" android:layout_centerVertical="true" android:fontFamily="@font/poppins_regular"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/transparent" android:padding="@dimen/_10sdp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/_10sdp">
+                <TextView android:textSize="@dimen/_15sdp" android:id="@+id/title3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Stay on top of taxes" android:fontFamily="@font/poppins_regular"/>
+                <RelativeLayout android:id="@+id/relativeLayoutRL3" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp">
+                    <ImageView android:id="@+id/smallarroww" android:layout_width="@dimen/_10sdp" android:layout_height="@dimen/_10sdp" android:src="@drawable/ic_baseline_arrow_forward" android:layout_centerVertical="true"/>
+                    <TextView android:textColor="@color/text_color" android:id="@+id/textviewtv" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_12sdp" android:text="Sales Tax" android:layout_toRightOf="@+id/smallarroww" android:layout_centerVertical="true" android:fontFamily="@font/poppins_regular"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/transparent" android:padding="@dimen/_10sdp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/_10sdp">
+                <TextView android:textSize="@dimen/_15sdp" android:id="@+id/title4" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Focus on customers" android:fontFamily="@font/poppins_regular"/>
+                <RelativeLayout android:id="@+id/relativeLayoutR" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp">
+                    <ImageView android:id="@+id/smallarroow" android:layout_width="@dimen/_10sdp" android:layout_height="@dimen/_10sdp" android:src="@drawable/ic_baseline_arrow_forward" android:layout_centerVertical="true"/>
+                    <TextView android:textColor="@color/text_color" android:id="@+id/textviewt" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_12sdp" android:text="Income by customer" android:layout_toRightOf="@+id/smallarroow" android:layout_centerVertical="true" android:fontFamily="@font/poppins_regular"/>
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/relativeLayoutRL5" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp">
+                    <ImageView android:id="@+id/smallarroow1" android:layout_width="@dimen/_10sdp" android:layout_height="@dimen/_10sdp" android:src="@drawable/ic_baseline_arrow_forward" android:layout_centerVertical="true"/>
+                    <TextView android:textColor="@color/text_color" android:id="@+id/textViewt1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_12sdp" android:text="Aged Receivables" android:layout_toRightOf="@+id/smallarroow1" android:layout_centerVertical="true" android:fontFamily="@font/poppins_regular"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/transparent" android:padding="@dimen/_10sdp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/_10sdp">
+                <TextView android:textSize="@dimen/_15sdp" android:id="@+id/titlee" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Focus on customers" android:fontFamily="@font/poppins_regular"/>
+                <RelativeLayout android:id="@+id/relativeLayout12" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp">
+                    <ImageView android:id="@+id/smallarrow11" android:layout_width="@dimen/_10sdp" android:layout_height="@dimen/_10sdp" android:src="@drawable/ic_baseline_arrow_forward" android:layout_centerVertical="true"/>
+                    <TextView android:textColor="@color/text_color" android:id="@+id/textView11" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_12sdp" android:text="Purchases by Vendor" android:layout_toRightOf="@+id/smallarrow11" android:layout_centerVertical="true" android:fontFamily="@font/poppins_regular"/>
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/relativeLayout33" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp">
+                    <ImageView android:id="@+id/smallarrow22" android:layout_width="@dimen/_10sdp" android:layout_height="@dimen/_10sdp" android:src="@drawable/ic_baseline_arrow_forward" android:layout_centerVertical="true"/>
+                    <TextView android:textColor="@color/text_color" android:id="@+id/textView22" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_12sdp" android:text="Aged Payables" android:layout_toRightOf="@+id/smallarrow22" android:layout_centerVertical="true" android:fontFamily="@font/poppins_regular"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/transparent" android:padding="@dimen/_10sdp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/_10sdp">
+                <TextView android:textSize="@dimen/_15sdp" android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Dig deeper" android:fontFamily="@font/poppins_regular"/>
+                <RelativeLayout android:id="@+id/relativeLayout1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp">
+                    <ImageView android:id="@+id/smallarrow" android:layout_width="@dimen/_10sdp" android:layout_height="@dimen/_10sdp" android:src="@drawable/ic_baseline_arrow_forward" android:layout_centerVertical="true"/>
+                    <TextView android:textColor="@color/text_color" android:id="@+id/ttsb" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_12sdp" android:text="Account balances" android:layout_toRightOf="@+id/smallarrow" android:layout_centerVertical="true" android:fontFamily="@font/poppins_regular"/>
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/relativeLayout2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp">
+                    <ImageView android:id="@+id/smallarrow1" android:layout_width="@dimen/_10sdp" android:layout_height="@dimen/_10sdp" android:src="@drawable/ic_baseline_arrow_forward" android:layout_centerVertical="true"/>
+                    <TextView android:textColor="@color/text_color" android:id="@+id/textView1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_12sdp" android:text="Trial Balance" android:layout_toRightOf="@+id/smallarrow1" android:layout_centerVertical="true" android:fontFamily="@font/poppins_regular"/>
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/relativeLayout3" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp">
+                    <ImageView android:id="@+id/smallarrow2" android:layout_width="@dimen/_10sdp" android:layout_height="@dimen/_10sdp" android:src="@drawable/ic_baseline_arrow_forward" android:layout_centerVertical="true"/>
+                    <TextView android:textColor="@color/text_color" android:id="@+id/textView2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_12sdp" android:text="Account Transactions (General Ledger)" android:layout_toRightOf="@+id/smallarrow2" android:layout_centerVertical="true" android:fontFamily="@font/poppins_regular"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

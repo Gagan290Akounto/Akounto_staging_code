@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="#ffffff"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/iv_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/abc_ic_ab_back_material"
+                            app:tint="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/_7ssp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:gravity="center_vertical"
+                            android:lineSpacingExtra="6.7sp"
+                            android:text="Customize Invoice"
+                            android:textColor="#333333"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|right"
+                        android:orientation="horizontal"
+                        tools:ignore="RtlHardcoded">
+
+                        <ImageView
+                            android:id="@+id/ivSave"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/save" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_7sdp">
+
+                        <TextView
+                            android:id="@+id/btn_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rounded_corner_button"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/_7ssp"
+                            android:paddingBottom="@dimen/_7ssp"
+                            android:text="Style"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_7sdp">
+
+                        <TextView
+                            android:id="@+id/btn_information"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/_7ssp"
+                            android:paddingBottom="@dimen/_7ssp"
+                            android:text="Information"
+                            android:textColor="#333333" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_7sdp">
+
+                        <TextView
+                            android:id="@+id/btn_columns"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/_7ssp"
+                            android:paddingBottom="@dimen/_7ssp"
+                            android:text="Columns"
+                            android:textColor="#333333" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#333333" />
+
+                <LinearLayout
+                    android:id="@+id/layout_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_7ssp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:lineSpacingExtra="9.3sp"
+                            android:text="Templates"
+                            android:textColor="#333333"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/preview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_7ssp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center_vertical|right"
+                            android:lineSpacingExtra="9.3sp"
+                            android:text="Preview"
+                            android:textColor="#5a53fd"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:id="@+id/layout_one"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/text_blue"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_1sdp">
+
+                            <ImageView
+                                android:id="@+id/iv_one"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/classical_1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_two"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_1sdp">
+
+                            <ImageView
+                                android:id="@+id/iv_two"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/default_1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_three"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_1sdp">
+
+                            <ImageView
+                                android:id="@+id/iv_three"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/minimal_1" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="?actionBarSize"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center_vertical"
+                        android:lineSpacingExtra="9.3sp"
+                        android:text="Colors"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_1sdp">
+
+                            <LinearLayout
+                                android:id="@+id/layout_blue"
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:background="@drawable/circle_blue"
+                                android:gravity="center">
+
+                                <LinearLayout
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:background="@drawable/circle_blue" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_1sdp">
+
+                            <LinearLayout
+                                android:id="@+id/layout_green"
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:background="@drawable/circle"
+                                android:gravity="center">
+
+                                <LinearLayout
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:background="@drawable/circle_green" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_1sdp">
+
+                            <LinearLayout
+                                android:id="@+id/layout_purple"
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:background="@drawable/circle"
+                                android:gravity="center">
+
+                                <LinearLayout
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:background="@drawable/circle_purple" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_1sdp">
+
+                            <LinearLayout
+                                android:id="@+id/layout_red"
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:background="@drawable/circle"
+                                android:gravity="center">
+
+                                <LinearLayout
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:background="@drawable/circle_red" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_1sdp">
+
+                            <LinearLayout
+                                android:id="@+id/layout_yellow"
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:background="@drawable/circle"
+                                android:gravity="center">
+
+                                <LinearLayout
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:background="@drawable/circle_yellow" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="?actionBarSize"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center_vertical"
+                        android:lineSpacingExtra="9.3sp"
+                        android:text="Add Logo"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+                    <LinearLayout
+                        android:id="@+id/logo_upload"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_logo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="90dp"
+                            android:src="@drawable/upload_logo" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:lineSpacingExtra="9.3sp"
+                            android:text="Click here to upload"
+                            android:textColor="#8890a6"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_light"
+                            android:lineSpacingExtra="10.7sp"
+                            android:text="Select an image less than 5MB in size"
+                            android:textColor="#8890a6"
+                            android:textSize="14sp"
+                            android:textStyle="normal" />
+
+                        <CheckBox
+                            android:id="@+id/cbLogo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="Is Logo Display"
+                            android:textColor="#8890a6"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:lineSpacingExtra="9.3sp"
+                        android:text="Default payment terms*"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:background="@drawable/general"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/due_days"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_9ssp"
+                            android:layout_marginBottom="@dimen/_9ssp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:lineSpacingExtra="9.3sp"
+                        android:text="Default Invoice title*"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+                    <EditText
+                        android:id="@+id/et_invoice_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:background="@drawable/general"
+                        android:hint="Default Invoice title"
+                        android:padding="@dimen/_10sdp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:lineSpacingExtra="9.3sp"
+                        android:text="Default subheading"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+                    <EditText
+                        android:id="@+id/et_invoice_subheading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:background="@drawable/general"
+                        android:hint="subheading"
+                        android:inputType="number"
+                        android:padding="@dimen/_10sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:lineSpacingExtra="9.3sp"
+                        android:text="Set invoice no *"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+                    <EditText
+                        android:id="@+id/et_invoice_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:background="@drawable/general"
+                        android:hint="0"
+                        android:inputType="number"
+                        android:padding="@dimen/_10sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:lineSpacingExtra="9.3sp"
+                        android:text="Set invoice prefix"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+                    <EditText
+                        android:id="@+id/et_invoice_prefix"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:background="@drawable/general"
+                        android:hint="Prefix"
+                        android:padding="@dimen/_10sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:lineSpacingExtra="9.3sp"
+                        android:text="Set invoice suffix"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+                    <EditText
+                        android:id="@+id/et_invoice_suffix"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:background="@drawable/general"
+                        android:hint="suffix"
+                        android:padding="@dimen/_10sdp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_coloum"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:lineSpacingExtra="9.3sp"
+                        android:text="Items"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupItemtype"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp">
+
+                        <RadioButton
+                            android:id="@+id/radioItems"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Items"
+                            android:textColor="#333333" />
+
+                        <RadioButton
+                            android:id="@+id/radioProducts"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Products"
+                            android:textColor="#333333" />
+
+                        <RadioButton
+                            android:id="@+id/radioServices"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Services"
+                            android:textColor="#333333" />
+
+                        <RadioButton
+                            android:id="@+id/radioItemtypeCustom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Custom"
+                            android:textColor="#333333" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/et_item_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:background="@drawable/general"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="Item"
+                        android:padding="@dimen/_10sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:lineSpacingExtra="9.3sp"
+                        android:text="Quantity"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupUnittype"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp">
+
+                        <RadioButton
+                            android:id="@+id/radioQuantity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Quantity"
+                            android:textColor="#333333" />
+
+                        <RadioButton
+                            android:id="@+id/radioHours"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Hours"
+                            android:textColor="#333333" />
+
+                        <RadioButton
+                            android:id="@+id/radioUnitCustome"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Custom"
+                            android:textColor="#333333" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/et_unit_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:background="@drawable/general"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="Quantity"
+                        android:padding="@dimen/_10sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:lineSpacingExtra="9.3sp"
+                        android:text="Price"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupPricetype"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp">
+
+                        <RadioButton
+                            android:id="@+id/radioPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Price"
+                            android:textColor="#333333" />
+
+                        <RadioButton
+                            android:id="@+id/radioRate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Rate"
+                            android:textColor="#333333" />
+
+                        <RadioButton
+                            android:id="@+id/radioPricetypeCustome"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Custom"
+                            android:textColor="#333333" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/et_pricetype"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:background="@drawable/general"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="Price"
+                        android:padding="@dimen/_10sdp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="export">
+        <item>@string/exportpdf</item>
+        <item>@string/exportcsv</item>
+    </array>
+    <array name="merchant">
+        <item>@string/nav_header_desc</item>
+        <item>@string/action_settings</item>
+    </array>
+    <array name="paymentDue">
+        <item>On Receipt</item>
+        <item>Within 7 days</item>
+        <item>Within 14 days</item>
+        <item>Within 30 days</item>
+        <item>Within 45 days</item>
+        <item>Within 60 days</item>
+        <item>Within 90 days</item>
+    </array>
+    <array name="paymentDueDays">
+        <item>@null</item>
+        <item>7</item>
+        <item>14</item>
+        <item>30</item>
+        <item>45</item>
+        <item>60</item>
+        <item>90</item>
+    </array>
+    <array name="recurringInvoiceRepeat">
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>Yearly</item>
+        <item>Custom</item>
+    </array>
+    <array name="report">
+        <item>@string/report_2018</item>
+        <item>@string/report_2019</item>
+        <item>@string/report_2020</item>
+        <item>@string/report_Q12018</item>
+        <item>@string/report_Q22018</item>
+        <item>@string/report_Q32018</item>
+        <item>@string/report_Q42018</item>
+        <item>@string/report_Q12019</item>
+        <item>@string/report_Q22019</item>
+        <item>@string/report_Q32019</item>
+        <item>@string/report_Q42019</item>
+        <item>@string/report_Q12020</item>
+        <item>@string/report_Q22020</item>
+        <item>@string/report_Q32020</item>
+        <item>@string/report_Q42020</item>
+    </array>
+    <array name="transactionFilterStatus">
+        <item>Under Review</item>
+        <item>Not Under Review</item>
+    </array>
+    <array name="transactionFilterTypes">
+        <item>Deposit</item>
+        <item>Withdrawal</item>
+        <item>Journal Transaction</item>
+    </array>
+</resources>

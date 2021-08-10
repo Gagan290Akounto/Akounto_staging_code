@@ -1,0 +1,145 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2021-05-31 17:39:17",
+    "containerVersion": {
+        "path": "accounts/6004053732/containers/46198745/versions/1",
+        "accountId": "6004053732",
+        "containerId": "46198745",
+        "containerVersionId": "1",
+        "name": "first verssion",
+        "container": {
+            "path": "accounts/6004053732/containers/46198745",
+            "accountId": "6004053732",
+            "containerId": "46198745",
+            "name": "akounto.android",
+            "publicId": "GTM-P58PZVT",
+            "usageContext": [
+                "ANDROID_SDK_5"
+            ],
+            "fingerprint": "1622481653021",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6004053732/containers/46198745/workspaces?apiLink=container"
+        },
+        "tag": [
+            {
+                "accountId": "6004053732",
+                "containerId": "46198745",
+                "tagId": "4",
+                "name": "All Event",
+                "type": "ua",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "nonInteraction",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "overrideGaSettings",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventCategory",
+                        "value": "android_app"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackType",
+                        "value": "TRACK_EVENT"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendFirebaseCampaignData",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventAction",
+                        "value": "{{action}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "UA-272384537-1"
+                    }
+                ],
+                "fingerprint": "1622481955068",
+                "firingTriggerId": [
+                    "2147479556"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6004053732",
+                "containerId": "46198745",
+                "variableId": "3",
+                "name": "action",
+                "type": "md",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "allEventParam",
+                        "value": "item_id"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "checkEcommerceValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "suggestedEvent",
+                        "value": "All Events"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventType",
+                        "value": "SUGGESTED"
+                    }
+                ],
+                "fingerprint": "1622481812064"
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6004053732",
+                "containerId": "46198745",
+                "type": "APP_ID",
+                "name": "App ID"
+            },
+            {
+                "accountId": "6004053732",
+                "containerId": "46198745",
+                "type": "APP_NAME",
+                "name": "App Name"
+            },
+            {
+                "accountId": "6004053732",
+                "containerId": "46198745",
+                "type": "APP_VERSION_CODE",
+                "name": "App Version Code"
+            },
+            {
+                "accountId": "6004053732",
+                "containerId": "46198745",
+                "type": "APP_VERSION_NAME",
+                "name": "App Version Name"
+            },
+            {
+                "accountId": "6004053732",
+                "containerId": "46198745",
+                "type": "EVENT_NAME",
+                "name": "Event Name"
+            }
+        ],
+        "fingerprint": "1622482123828",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6004053732/containers/46198745/versions/1?apiLink=version"
+    }
+}

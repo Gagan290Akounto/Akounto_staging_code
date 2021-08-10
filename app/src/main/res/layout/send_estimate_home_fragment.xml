@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/background_color">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@color/background_color"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="From"
+                android:textSize="@dimen/_16sdp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_toLeftOf="@+id/imageViewInfo"
+                    android:background="@drawable/rounded_corner_dark_holo">
+
+                    <EditText
+                        android:id="@+id/from"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_3sdp"
+                        android:background="@color/white"
+                        android:hint="Choose"
+                        android:padding="@dimen/_8sdp"
+                        android:textColor="@color/text_color"
+                        android:textColorHint="@color/text_color"
+                        android:textSize="@dimen/_16sdp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/imageViewInfo"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="end"
+                    android:padding="@dimen/_3sdp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_info_icon"
+                    app:tint="@color/dark_grey" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="To"
+                android:textSize="@dimen/_16sdp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_toLeftOf="@+id/addButton"
+                    android:background="@drawable/rounded_corner_dark_holo">
+
+                    <EditText
+                        android:id="@+id/toEstimateEDTTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_3sdp"
+                        android:background="@color/white"
+                        android:padding="@dimen/_8sdp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/addButton"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="end"
+                    android:padding="@dimen/_3sdp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_rounded_plus"
+                    app:tint="@color/dark_grey" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Subject"
+                android:textSize="@dimen/_16sdp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_dark_holo">
+
+                <EditText
+                    android:id="@+id/subjectEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:background="@color/white"
+                    android:padding="@dimen/_8sdp"
+                    android:text="Invoice #1015" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Message"
+                android:textSize="@dimen/_16sdp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:background="@drawable/rounded_corner_dark_holo">
+
+                <EditText
+                    android:id="@+id/messageEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:background="@color/white"
+                    android:padding="@dimen/_8sdp"
+                    android:text="Here&apos;s your invoice! We appreciate your prompt payment." />
+            </RelativeLayout>
+
+            <CheckBox
+                android:id="@+id/send_copy_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send a copy to myself" />
+
+            <CheckBox
+                android:id="@+id/attach_pdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Attach the invoice as a PDF" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/cancelTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/rounded_corner_approve_draft"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingLeft="@dimen/_30sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_30sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="Cancel"
+                    android:textSize="@dimen/_16sdp" />
+
+                <TextView
+                    android:id="@+id/sendTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/rounded_corner_button"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingLeft="@dimen/_30sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_30sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="Send"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sdp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+</layout>

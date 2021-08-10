@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_12sdp"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:lineSpacingExtra="9.3sp"
+        android:text="Template Preview"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        android:textStyle="normal" />
+
+    <ImageView
+        android:id="@+id/iv_preview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/classical_1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_7ssp"
+        android:layout_marginBottom="@dimen/_7ssp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner_button"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Close"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>

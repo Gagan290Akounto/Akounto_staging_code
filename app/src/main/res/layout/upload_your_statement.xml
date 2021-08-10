@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" app:cardCornerRadius="@dimen/_5sdp" app:cardElevation="@dimen/_10sdp">
+        <LinearLayout android:orientation="vertical" android:id="@+id/linearLayout" android:padding="@dimen/_10sdp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/_14sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2. Upload your statement to Akounto" android:fontFamily="@font/poppins_bold"/>
+            <TextView android:textSize="@dimen/_12sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp" android:text="Once you have your electronic statement downloaded to your computer, upload it to Akounto using the form below." android:fontFamily="@font/poppins_regular"/>
+            <View android:background="@color/light_grey" android:layout_width="match_parent" android:layout_height="@dimen/_2sdp"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="@dimen/_100sdp"/>
+            <RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <View android:background="@color/light_grey" android:layout_width="match_parent" android:layout_height="@dimen/_2sdp"/>
+                <TextView android:textSize="@dimen/_12sdp" android:id="@+id/textview" android:paddingTop="@dimen/_10sdp" android:paddingBottom="@dimen/_10sdp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:layout_marginRight="@dimen/_5sdp" android:text="Can?t find the account you?re looking for? Create an account using the instructions below:" android:layout_toLeftOf="@+id/goButton" android:fontFamily="@font/poppins_medium"/>
+                <TextView android:textSize="@dimen/_12sdp" android:paddingTop="@dimen/_10sdp" android:paddingBottom="@dimen/_10sdp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:layout_marginRight="@dimen/_5sdp" android:text="Find savings and checking accounts under Asset &gt; Bank &gt; Bank and Cash; you may create a custom account by selecting Other Bank Account Find credit cards and lines of credit under Liability/Credit Card &gt; Current Liability; you may create a custom account by selecting Other Current Bank Debt" android:layout_toLeftOf="@+id/goButton" android:layout_below="@+id/textview" android:fontFamily="@font/poppins_medium"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

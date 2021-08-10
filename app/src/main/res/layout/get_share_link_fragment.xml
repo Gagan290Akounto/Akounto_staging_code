@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_10sdp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Your customer can view the estimate at this link:"
+            android:textSize="@dimen/_14sdp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner_dark_holo">
+
+            <EditText
+                android:id="@+id/shareLinkEDTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_3sdp"
+                android:background="@color/white"
+                android:padding="@dimen/_8sdp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Copy the link and share it with your customer."
+            android:textSize="@dimen/_14sdp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cancelEstimateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/rounded_corner_approve_draft"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingLeft="@dimen/_30sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_30sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="Cancel"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/copyLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/rounded_corner_button"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingLeft="@dimen/_30sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_30sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="Copy Link"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

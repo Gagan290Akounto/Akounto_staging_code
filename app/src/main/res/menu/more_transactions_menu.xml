@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:id="@+id/journalTransaction" android:title="Add journal transaction"/>
+    <item android:id="@+id/connectYourBank" android:title="Connect your bank"/>
+    <item android:enabled="false" android:id="@+id/uploadStatement" android:title="Upload a bank statement"/>
+</menu>

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentTop="true"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                app:tint="@color/black"
+                app:srcCompat="@drawable/abc_ic_ab_back_material" />
+            <TextView
+                android:id="@+id/pageTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/poppins_medium"
+                android:lineSpacingExtra="6.7sp"
+                android:text="Title"
+                android:layout_toRightOf="@+id/backButton"
+                android:layout_marginLeft="@dimen/_7ssp"
+                android:textColor="#333333"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/rightTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Reset"
+                android:textColor="@color/dark_grey"
+                android:textSize="16dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:background="@color/background_color">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Name*"
+                        android:textColor="@color/dark_grey" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewName"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:background="@drawable/corner_tale_white_holo">
+
+                        <EditText
+                            android:id="@+id/et_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent"
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="@color/blackTextColor" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Description"
+                        android:textColor="@color/dark_grey" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewDescription"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:background="@drawable/corner_tale_white_holo">
+
+                        <EditText
+                            android:id="@+id/et_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent"
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="@color/blackTextColor" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Price*"
+                        android:textColor="@color/dark_grey" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewPrice"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:background="@drawable/corner_tale_white_holo">
+
+                        <EditText
+                            android:id="@+id/et_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent"
+                            android:inputType="number"
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="@color/blackTextColor" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutIncomeAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewIncomeAccount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Income account*"
+                        android:textColor="@color/dark_grey" />
+
+                    <RelativeLayout
+                        android:id="@+id/expenseRL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewIncomeAccount"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:background="@drawable/corner_tale_white_holo">
+
+                        <com.skydoves.powerspinner.PowerSpinnerView
+                            android:id="@+id/incomeAccountSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="Please select income account"
+                            android:padding="10dp"
+                            android:textColor="@color/blackTextColor"
+                            android:textColorHint="@color/blackTextColor"
+                            android:textSize="@dimen/_12sdp"
+                            app:spinner_arrow_gravity="end"
+                            app:spinner_arrow_padding="8dp"
+                            app:spinner_arrow_tint="@color/teal_700"
+                            app:spinner_divider_color="@color/dark_grey"
+                            app:spinner_divider_show="true"
+                            app:spinner_divider_size="0.4dp"
+                            app:spinner_item_array="@array/merchant"
+                            app:spinner_popup_animation="bounce"
+                            app:spinner_popup_background="@color/white"
+                            app:spinner_popup_elevation="14dp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/selectExpenbseError"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/expenseRL"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Please select expense account!"
+                        android:textColor="@color/red_btn_bg_color"
+                        android:textSize="@dimen/_10sdp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutSalesTax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textViewSalesTax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Sales Tax"
+                        android:textColor="@color/dark_grey" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewSalesTax"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:background="@drawable/corner_tale_white_holo">
+
+                        <com.skydoves.powerspinner.PowerSpinnerView
+                            android:id="@+id/salesTaxSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toStartOf="@+id/addSalesTax"
+                            android:background="@color/transparent"
+                            android:fontFamily="@font/poppins_regular"
+                            android:padding="10dp"
+                            android:textColor="@color/blackTextColor"
+                            android:textColorHint="@color/blackTextColor"
+                            android:textSize="@dimen/_12sdp"
+                            app:spinner_arrow_gravity="end"
+                            app:spinner_arrow_padding="8dp"
+                            app:spinner_arrow_tint="@color/teal_700"
+                            app:spinner_divider_color="@color/dark_grey"
+                            app:spinner_divider_show="true"
+                            app:spinner_divider_size="0.4dp"
+                            app:spinner_item_array="@array/merchant"
+                            app:spinner_popup_animation="bounce"
+                            app:spinner_popup_background="@color/white"
+                            app:spinner_popup_elevation="14dp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/taxRecycler"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginRight="@dimen/_22sdp" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:layout_toLeftOf="@+id/addSalesTax"
+                            android:background="@color/dark_grey" />
+
+                        <ImageView
+                            android:id="@+id/addSalesTax"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:src="@drawable/ic_only_plus_icon"
+                            app:tint="@color/teal_700" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/saveProductButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:background="@drawable/rounded_corner_button"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingLeft="@dimen/_30sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_30sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="Save"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</layout>

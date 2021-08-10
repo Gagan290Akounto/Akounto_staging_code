@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/general"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:fontFamily="@font/poppins_semibold"
+        android:paddingLeft="@dimen/_20sdp"
+        android:paddingRight="@dimen/_20sdp"
+        android:text="Oops! something went wrong!"
+        android:textColor="@color/main_blue_color"
+        android:textSize="@dimen/_16sdp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listItemRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/_20sdp"
+        android:paddingRight="@dimen/_20sdp"
+        android:layout_above="@+id/addNewItem" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_above="@+id/addNewItem"
+        android:background="@color/light_grey" />
+
+    <TextView
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/_10ssp"
+        android:background="@drawable/invalid_ok"
+        android:gravity="center"
+        android:paddingLeft="@dimen/_35sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingRight="@dimen/_35sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:text="OK"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+</LinearLayout>
