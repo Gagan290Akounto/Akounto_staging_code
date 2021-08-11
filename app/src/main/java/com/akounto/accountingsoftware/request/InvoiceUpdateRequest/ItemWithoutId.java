@@ -25,6 +25,10 @@ public class ItemWithoutId {
     @SerializedName("ProductTransactionHeadId")
     @Expose
     private Integer productTransactionHeadId;
+    @SerializedName("DiscountType")
+    private int discountType;
+    @SerializedName("Discount")
+    private int discount;
     @SerializedName("Taxes")
     @Expose
     private List<Object> taxes = null;
@@ -38,7 +42,17 @@ public class ItemWithoutId {
         this.productTransactionHeadId = productTransactionHeadId;
         this.taxes = taxes;
     }
-
+    public ItemWithoutId(Integer productId, String productName, String description, Integer quantity, Double price, Integer productTransactionHeadId, List<Object> taxes,int discountType,int discount) {
+        this.productId = productId;
+        this.productName = productName;
+        this.description = description;
+        this.quantity = quantity;
+        this.price = price;
+        this.productTransactionHeadId = productTransactionHeadId;
+        this.taxes = taxes;
+        this.discountType=discountType;
+        this.discount=discount;
+    }
     public Integer getProductId() {
         return productId;
     }

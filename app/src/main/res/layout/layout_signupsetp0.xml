@@ -1,377 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/path" />
-
+    <!--header-->
     <LinearLayout
+        android:id="@+id/sign_in_header"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="18dp"
-        android:layout_marginEnd="18dp"
-        android:orientation="vertical"
-        android:weightSum="1450">
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:padding="16dp">
 
+        <ImageView
+            android:id="@+id/ic_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_black" />
+
+    </LinearLayout>
+
+    <!--body-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Details-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="120"
-            android:gravity="bottom"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/back"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="@dimen/_7sdp"
-                android:background="@drawable/circle_back"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/new_back" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="360"
-            android:gravity="bottom"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imageView8"
-                android:layout_width="170dp"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/logo3" />
+            android:layout_height="match_parent"
+            android:layout_above="@+id/linSignIn"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="20dp">
 
             <TextView
+                android:id="@+id/textView17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="26.7dp"
-                android:autoSizeTextType="uniform"
                 android:fontFamily="@font/poppins_semibold"
-                android:letterSpacing="0.02"
-                android:lineSpacingExtra="8sp"
-                android:text="Create your Account"
-                android:textColor="#3a3a3a"
-                android:textSize="28sp"
-                android:textStyle="normal" />
+                android:text="@string/create"
+                android:textColor="@color/heading_color"
+                android:textSize="20sp" />
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/create_sub"
+                android:textAlignment="center"
+                android:textColor="@color/heading_color"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/sign_in_input"
+                android:ems="10"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Your Business Email"
+                android:textColor="@color/heading_color"
+                android:textColorHint="@color/grey_20"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/tv_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Something went wrong please try again."
+                android:textColor="#ff2a2a"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:visibility="gone" />
+            <RelativeLayout
+                android:id="@+id/password_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/sign_in_input"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <EditText
+                    android:id="@+id/passwordET"
+                    android:layout_width="match_parent"
+                    android:layout_toStartOf="@+id/tvShow"
                     android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:layout_centerVertical="true"
                     android:fontFamily="@font/poppins_regular"
-                    android:lineSpacingExtra="4sp"
-                    android:text="Scale your business with "
-                    android:textColor="#3a3a3a"
-                    android:textSize="18sp"
-                    android:textStyle="normal" />
+                    android:layout_marginEnd="10dp"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/heading_color"
+                    android:textColorHint="@color/grey_20"
+                    android:textSize="16sp" />
 
                 <TextView
+                    android:id="@+id/tvShow"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_regular"
-                    android:lineSpacingExtra="4sp"
-                    android:text="Akounto"
-                    android:textColor="#5a53fd"
-                    android:textSize="20sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Show"
+                    android:textColor="#5DB075"
+                    android:textSize="16sp"
                     android:textStyle="normal" />
-            </LinearLayout>
 
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/password_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="left"
+                android:lineSpacingExtra="4sp"
+                android:text=" Please enter valid password."
+                android:textColor="#ff2a2a"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:visibility="gone" />
+            <Button
+                android:id="@+id/signUpButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/action_primary_btn"
+                android:text="Create account"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <!--<TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/forget_pass"
+                android:textAlignment="center"
+                android:textColor="@color/primary_color"
+                android:textSize="12sp" />-->
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:buttonTint="@color/primary_color"
+                android:paddingStart="10dp"
+                android:text="@string/promo"
+                android:textColor="@color/heading_color"
+                android:textSize="14sp"
+                tools:ignore="RtlSymmetry" />
         </LinearLayout>
 
+        <!--Already Have an account Sign In-->
         <LinearLayout
+            android:id="@+id/linSignIn"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="580"
-            android:gravity="center_vertical"
-            android:orientation="vertical"
-            android:weightSum="500">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="220"
-                android:gravity="bottom"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_7sdp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:lineSpacingExtra="7sp"
-                    android:text="Your email"
-                    android:textColor="#3a3a3a"
-                    android:textSize="14sp"
-                    android:textStyle="normal" />
-
-                <RelativeLayout
-                    android:id="@+id/email_ll"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/new_light_blue"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:padding="12dp"
-                    android:textSize="12sp">
-
-                    <EditText
-                        android:id="@+id/emailET"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:fontFamily="@font/poppins_regular"
-                        android:hint="Email"
-                        android:imeOptions="actionNext"
-                        android:inputType="textEmailAddress"
-                        android:singleLine="true"
-                        android:textSize="14dp" />
-
-                    <ImageView
-                        android:id="@+id/mail_ckeck"
-                        android:layout_width="22dp"
-                        android:layout_height="17dp"
-                        android:layout_alignParentEnd="true"
-                        android:src="@drawable/icon_material_check"
-                        android:visibility="gone" />
-                </RelativeLayout>
-
-                <TextView
-                    android:id="@+id/tv_error"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_light"
-                    android:lineSpacingExtra="4sp"
-                    android:text=" Email already exist!"
-                    android:textColor="#ff2a2a"
-                    android:textSize="12sp"
-                    android:textStyle="normal"
-                    android:visibility="gone" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="270"
-                android:gravity="bottom"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="7dp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:lineSpacingExtra="7sp"
-                    android:text="Password"
-                    android:textColor="#3a3a3a"
-                    android:textSize="14sp"
-                    android:textStyle="normal" />
-
-                <LinearLayout
-                    android:id="@+id/password_ll"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/new_light_blue"
-                    android:orientation="horizontal"
-                    android:padding="12dp">
-
-                    <com.subhrajyoti.passwordview.PasswordView
-                        android:id="@+id/passwordET"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:fontFamily="@font/poppins_regular"
-                        android:hint="Password"
-                        android:imeOptions="actionDone"
-                        android:textSize="14dp"
-                        app:eyeTint="#5a53fd"
-                        app:strikeThrough="true" />
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/password_error"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_light"
-                    android:lineSpacingExtra="4sp"
-                    android:text=" Please enter valid password"
-                    android:textColor="#ff2a2a"
-                    android:textSize="12sp"
-                    android:textStyle="normal"
-                    android:visibility="gone" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:orientation="horizontal">
-
-                    <CheckBox
-                        android:id="@+id/checkBox_tnc"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:checked="true"
-                        android:fontFamily="@font/poppins_regular"
-                        android:text=""
-                        android:textColor="#3a3a3a"
-                        android:textSize="12sp"
-                        android:textStyle="normal" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_regular"
-                                android:text="I agree to the"
-                                android:textColor="#3a3a3a"
-                                android:textSize="12sp"
-                                android:textStyle="normal" />
-
-                            <TextView
-                                android:id="@+id/tnc"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_regular"
-                                android:text=" Terms &amp; Conditions"
-                                android:textColor="#5a53fd"
-                                android:textSize="12sp"
-                                android:textStyle="normal" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_regular"
-                                android:text=" and"
-                                android:textColor="#3a3a3a"
-                                android:textSize="12sp"
-                                android:textStyle="normal" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:id="@+id/pp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="Privacy Policy."
-                            android:textColor="#5a53fd"
-                            android:textSize="11sp"
-                            android:textStyle="normal" />
-                    </LinearLayout>
-                </LinearLayout>
-
-
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="390"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            android:paddingTop="15dp"
             android:gravity="center"
-            android:orientation="vertical"
-            android:weightSum="10">
+            android:paddingEnd="20dp"
+            android:paddingBottom="15dp">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="4"
-                android:orientation="horizontal">
+            <TextView
+                android:id="@+id/text_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Already have an account."
+                android:textColor="@color/heading_color"
+                android:textSize="16sp"
+                android:textStyle="normal" />
 
-                <Button
-                    android:id="@+id/signUpButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/rounded_corner_button"
-                    android:fontFamily="@font/poppins_regular"
-                    android:gravity="center"
-                    android:layout_centerInParent="true"
-                    android:lineSpacingExtra="9sp"
-                    android:text="Create Account"
-                    android:textAllCaps="false"
-                    android:textColor="#ffffff"
-                    android:textSize="16sp"
-                    android:textStyle="normal" />
-            </RelativeLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:layout_marginLeft="118dp"
-                android:layout_marginRight="118dp"
-                android:layout_marginTop="@dimen/_2sdp"
-                android:layout_marginBottom="@dimen/_2sdp"
-                android:background="#c1d5fa" />
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="4"
-                android:orientation="horizontal">
-
-                <com.google.android.gms.common.SignInButton
-                    android:id="@+id/sign_up_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true" />
-            </RelativeLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_weight="2"
+            <TextView
+                android:id="@+id/loginText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/poppins_medium"
                 android:gravity="center_horizontal"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_regular"
-                    android:lineSpacingExtra="7sp"
-                    android:text="Already have an account?  "
-                    android:textColor="#3a3a3a"
-                    android:textSize="14sp"
-                    android:textStyle="normal" />
-
-                <TextView
-                    android:id="@+id/loginText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_medium"
-                    android:gravity="center_horizontal"
-                    android:lineSpacingExtra="9sp"
-                    android:text="Sign in"
-                    android:textColor="#5a53fd"
-                    android:textSize="16sp"
-                    android:textStyle="normal" />
-            </LinearLayout>
+                android:text="@string/sign_in_f"
+                android:textColor="@color/primary_color"
+                android:textSize="16sp" />
         </LinearLayout>
-    </LinearLayout>
-</RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

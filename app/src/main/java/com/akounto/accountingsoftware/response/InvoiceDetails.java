@@ -64,6 +64,10 @@ public class InvoiceDetails implements Serializable {
     private int status;
     @SerializedName("TotalNoOfInvoice")
     private int totalNoOfInvoice;
+    @SerializedName("DiscountType")
+    private int discountType;
+    @SerializedName("Discount")
+    private double discount;
 
     public double getCustExchangeRate() {
         return this.custExchangeRate;
@@ -179,5 +183,21 @@ public class InvoiceDetails implements Serializable {
 
     public void setCustCurrencySymbol(String custCurrencySymbol) {
         CustCurrencySymbol = custCurrencySymbol;
+    }
+
+    public int getDiscountType() {
+        return discountType;
+    }
+
+    public void setDiscountType(int discountType) {
+        this.discountType = discountType;
+    }
+
+    public double getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(double discount) {
+        this.discount = discount;
     }
 }

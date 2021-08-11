@@ -119,8 +119,8 @@ public class SignUpDetails extends AppCompatActivity {
             p_n = findViewById(R.id.edt_phone_number);
             b_name = findViewById(R.id.business_name);
             c_care = findViewById(R.id.cusmoter_care);
-            f_n_error = findViewById(R.id.first_name_error);
             phone_code_tv = findViewById(R.id.phone_code_tv);
+            f_n_error = findViewById(R.id.first_name_error);
             l_n_error = findViewById(R.id.last_name_error);
             p_n_error = findViewById(R.id.edt_phone_number_error);
             b_name_error = findViewById(R.id.business_name_error);

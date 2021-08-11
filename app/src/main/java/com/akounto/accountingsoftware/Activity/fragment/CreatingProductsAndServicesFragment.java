@@ -14,6 +14,7 @@ import android.widget.PopupWindow;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -42,8 +43,10 @@ import com.akounto.accountingsoftware.util.UiUtil;
 import com.google.gson.Gson;
 import com.skydoves.powerspinner.OnSpinnerItemSelectedListener;
 import com.skydoves.powerspinner.PowerSpinnerView;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Response;
@@ -155,7 +158,15 @@ public class CreatingProductsAndServicesFragment extends Fragment implements Del
             int incomeAccountId = getIncomeAccountByName((String) this.incomeAccountSpinner.getText()).getId();
             String str = (String) this.salesTaxSpinner.getText();
             String mName = binding.etName.getText().toString().trim();
+            try {
+                mName = String.valueOf(mName.charAt(0)).toUpperCase() + mName.substring(1, mName.length()).toLowerCase();
+            } catch (Exception e) {
+            }
             String mDesc = binding.etDesc.getText().toString().trim();
+            try {
+                mDesc = String.valueOf(mDesc.charAt(0)).toUpperCase() + mDesc.substring(1, mDesc.length()).toLowerCase();
+            } catch (Exception e) {
+            }
             String mPrice = binding.etPrice.getText().toString().trim();
             ArrayList<ProductServiceTaxesItem> productServiceTaxesItems = new ArrayList<>();
             List<SaleTax> list = this.saleTaxList;
@@ -190,10 +201,10 @@ public class CreatingProductsAndServicesFragment extends Fragment implements Del
                 public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                     super.onResponse(call, response);
                     if (response.isSuccessful()) {
-                        Bundle b=new Bundle();
-                        b.putString(Constant.CATEGORY,"invoicing");
-                        b.putString(Constant.ACTION,"add_item");
-                        SplashScreenActivity.sendEvent("invoice_add_item",b);
+                        Bundle b = new Bundle();
+                        b.putString(Constant.CATEGORY, "invoicing");
+                        b.putString(Constant.ACTION, "add_item");
+                        SplashScreenActivity.sendEvent("invoice_add_item", b);
                         UiUtil.showToast(getContext(), "Product Added");
                         //finish();
                     }
@@ -277,9 +288,13 @@ public class CreatingProductsAndServicesFragment extends Fragment implements Del
         RestClient.getInstance(getContext()).getIncomeAccounts(Constant.X_SIGNATURE, "Bearer " + UiUtil.getAcccessToken(getContext()), UiUtil.getComp_Id(getContext())).enqueue(new CustomCallBack<IncomeAccountsResponse>(getContext(), null) {
             public void onResponse(Call<IncomeAccountsResponse> call, Response<IncomeAccountsResponse> response) {
                 super.onResponse(call, response);
-                if (response.isSuccessful()) {
-                    incomeAccountList = response.body().getData();
-                    setUpIncomeAccountSpinner(incomeAccountList);
+                try {
+                    if (response.body() != null)
+                        if (response.isSuccessful()) {
+                            incomeAccountList = response.body().getData();
+                            setUpIncomeAccountSpinner(incomeAccountList);
+                        }
+                } catch (Exception e) {
                 }
             }
 
@@ -331,12 +346,12 @@ public class CreatingProductsAndServicesFragment extends Fragment implements Del
         popUp.setTouchable(true);
         popUp.setFocusable(true);
         popUp.setOutsideTouchable(true);
-        //popUp.showAtLocation(getContext().getWindow().getDecorView(), 17, 50, 50);
+        popUp.showAtLocation(getActivity().getWindow().getDecorView(), 17, 50, 50);
         View container = (View) popUp.getContentView().getParent();
         WindowManager.LayoutParams p = (WindowManager.LayoutParams) container.getLayoutParams();
         p.flags |= 2;
         p.dimAmount = 0.3f;
-        ((WindowManager)getContext().getSystemService(Context.WINDOW_SERVICE)).updateViewLayout(container, p);
+        ((WindowManager) getActivity().getSystemService(Context.WINDOW_SERVICE)).updateViewLayout(container, p);
         mView.findViewById(R.id.cancel_button).setOnClickListener(view -> popUp.dismiss());
         mView.findViewById(R.id.saveButton).setOnClickListener(view -> lambda$showPopUpWindow$3$CreatingProductsAndServices(mView, popUp, view));
     }

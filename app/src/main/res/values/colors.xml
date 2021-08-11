@@ -6,6 +6,10 @@
     <color name="abc_search_url_text_pressed">@android:color/black</color>
     <color name="abc_search_url_text_selected">@android:color/black</color>
     <color name="accent_material_dark">#5A53FD</color>
+    <color name="primary_color">#5a53fd</color>
+    <color name="sign_bg">#f6f6f6</color>
+    <color name="heading_color">#333333</color>
+    <color name="grey_20">#BDBDBD</color>
     <color name="accent_material_light">#5A53FD</color>
     <color name="androidx_core_ripple_material_light">#1f000000</color>
     <color name="androidx_core_secondary_text_default_material_light">#8a000000</color>
@@ -197,20 +201,16 @@
 
 
     <color name="body_grey_bg">#FAFAFA</color>
-    <color name="heading_color">#333333</color>
-    <color name="primary_color">#5a53fd</color>
     <color name="orange_200">#FFE4CF</color>
     <color name="black_600">#666666</color>
-    <color name="grey_text">#9c9c9c</color>
+    <!--<color name="grey_text">#9c9c9c</color>-->
     <color name="grey_text_nav">#bdbdbd</color>
     <color name="green">#53A966</color>
     <color name="red_orange">#F68477</color>
     <color name="sky_blue">#CFEDFF</color>
-    <color name="grey_20">#BDBDBD</color>
     <color name="grey_40">#6F6F84</color>
     <color name="purple_light">#DEDDFF</color>
     <color name="parrot_green">#5DB075</color>
-    <color name="sign_bg">#f6f6f6</color>
     <color name="fb_color">#2553B4</color>
-    <color name="grey04">#757D8A</color>
+    <!--<color name="grey04">#757D8A</color>-->
 </resources>

@@ -157,6 +157,25 @@
                     android:textStyle="normal"
                     android:text="" />
             </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|left"
+            android:orientation="horizontal"
+            tools:ignore="RtlHardcoded">
+
+            <TextView
+                android:id="@+id/tv_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="end"
+                android:textColor="#727d8a"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:text="" />
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

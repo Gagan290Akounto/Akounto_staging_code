@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="create">Create an account</string>
+    <string name="terms">By clicking ‘Continuing’, you agree to Akount\'s</string>
+    <string name="conditions"><u>terms of use</u> and <u>privacy policy</u>.</string>
+    <string name="create_sub">We just need a couple quick details to sign up lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="promo">Receive exclusive offers and promotions from Akounto</string>
+    <string name="sign_in_f"><u>Sign In</u></string>
+    <string name="info">Personal info</string>
+    <string name="info2">Business info</string>
+    <string name="info3">Schedule a demo</string>
+    <string name="info4">Connect Bank</string>
+    <string name="info_sub5">Schedule demo with us. Our team contact us within 24hrs.</string>
+    <string name="info_sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis ipsum bibendum eget dictum felis.</string>
+    <string name="info_sub2">Great, lets see what Akounto can do for you! dipisc elit Feugiat amet, accumsan in enim. Fames.</string>
+    <string name="skip"><u>Skip for now</u></string>
+    <string name="welcome_to">Welcome to <font color = "#5a53fd">Akounto</font></string>
+    <string name="info5">Forgot Password?</string>
+    <string name="emailid">Email id</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="forget_pass"><u>Forgot password?</u></string>
+    <color name="grey_text">#9c9c9c</color>
+    <color name="grey04">#757D8A</color>
     <!--<string name="LOADING">Loading...</string>
     <string name="P_BLACK">poppins_black.ttf</string>
     <string name="P_BLACK_ITALIC">poppins_blackitalic.ttf</string>
@@ -231,29 +253,13 @@
     <string name="sub_total">Subtotal</string>
     <string name="add_disc">Add a Discount</string>
     <string name="tax">Tax</string>
-    <string name="emailid">Email id</string>
-    <string name="password">Password</string>
     <string name="total">Total</string>
-    <string name="sign_in">Sign In</string>
     <string name="sign_in_google">Sign in with Google</string>
     <string name="sign_in_fb">Sign in with Facebook</string>
     <string name="bottom_txt">Dont have an account</string>
     <string name="Sign_up_now"><u>Sign up now</u></string>
     <string name="sign_in_sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu tincidunt posuere a, sit senectus.</string>
     <string name="amt_paid">Amount Paid</string>
-    <string name="forget_pass"><u>Forgot password?</u></string>
-    <string name="terms">By clicking ‘Continuing’, you agree to Akount\'s</string>
-    <string name="conditions"><u>terms of use</u> and <u>privacy policy</u>.</string>
-    <string name="create">Create an account</string>
-    <string name="create_sub">We just need a couple quick details to sign up lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
-    <string name="promo">Receive exclusive offers and promotions from Akounto</string>
-    <string name="sign_in_f"><u>Sign In</u></string>
-    <string name="info">Personal info</string>
-    <string name="info2">Business info</string>
-    <string name="info3">Schedule a demo</string>
-    <string name="info_sub5">Schedule demo with us. Our team contact us within 24hrs.</string>
-    <string name="info_sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis ipsum bibendum eget dictum felis.</string>
-    <string name="info_sub2">Great, let\'s see what Akounto can do for you! dipisc elit Feugiat amet, accumsan in enim. Fames.</string>
 
     <string name="save_add_new_services"><![CDATA[Save & Add New Services]]></string>
     <string name="save_services">Save Services</string>

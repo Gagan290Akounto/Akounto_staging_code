@@ -35,7 +35,12 @@ public class TaxtAdapter extends RecyclerView.Adapter<TaxtAdapter.TaxtHolder> {
     public void onBindViewHolder(@NonNull TaxtHolder holder, int position) {
 
         final ProductServiceTaxesItem item = list.get(position);
-        holder.tv_name.setText(item.getTaxName());
+        String name=item.getTaxName();
+        try {
+            name = String.valueOf(name.charAt(0)).toUpperCase() + name.substring(1, name.length()).toLowerCase();
+        } catch (Exception e) {
+        }
+        holder.tv_name.setText(name+" ( "+item.getRate()+" % )");
         holder.checkBox.setChecked(item.isSelected());
         holder.checkBox.setTag(list.get(position));
 

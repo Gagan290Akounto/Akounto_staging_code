@@ -11,6 +11,7 @@ public class UiConstants {
     public static final String FIRST_NAME = "first_name";
     public static final String LAST_NAME = "last_name";
     public static final String PHONE_NUMBER = "phone_name";
+    public static final String PHONE_CODE = "phone_code";
     public static final String LOGIN = "token";
     public static final String FIRST_LOGIN = "first_login";
     //public static final String PREF_NAME = "com.akounto.android";

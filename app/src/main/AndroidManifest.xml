@@ -26,236 +26,193 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-
-        <activity
-            android:name=".ui.dashboard.activity.DashboardProfileSetupActivity"
+         <activity android:name=".ui.dashboard.activity.DashboardProfileSetupActivity"
             android:screenOrientation="portrait" />
-
         <activity android:name=".ui.base.activity.BaseActivity" />
-
         <activity
             android:name=".ui.dashboard.activity.DashboardMainActivity"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.SalesInvoiceActivity"
+            android:name="com.akounto.accountingsoftware.Activity.SalesInvoiceActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.Invoice.CreateInvoice"
+            android:name="com.akounto.accountingsoftware.Activity.Invoice.CreateInvoice"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.Invoice.CustomerList"
+            android:name="com.akounto.accountingsoftware.Activity.Invoice.EditInvoice"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.Accounting.TransactionsActivity"
+            android:name="com.akounto.accountingsoftware.Activity.Invoice.CustomerList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.akounto.accountingsoftware.Activity.Accounting.TransactionsActivity"
             android:noHistory="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.Invoice.AddCustomers"
+            android:name="com.akounto.accountingsoftware.Activity.Invoice.AddCustomers"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.Invoice.ItemList"
+            android:name="com.akounto.accountingsoftware.Activity.Invoice.ItemList"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.Invoice.InvoiceList"
+            android:name="com.akounto.accountingsoftware.Activity.Invoice.InvoiceList"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.Invoice.AddItem"
+            android:name="com.akounto.accountingsoftware.Activity.Invoice.AddItem"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.Invoice.EditItem"
+            android:name="com.akounto.accountingsoftware.Activity.Invoice.EditItem"
             android:screenOrientation="portrait" />
+        <activity android:name="com.akounto.accountingsoftware.Activity.Bill.CreateBill"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.Bill.BillList"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.Bill.ListVendor"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.Bill.ListPurchaseItem"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.Bill.AddBillItem"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.WelcomeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.Bill.EditBillItem"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.Bank.BankListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.Bill.ViewBill"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.SettingActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.SignUpDetails"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.AddJournalTransactionActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.SendEstimateActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.ViewRecurringInvoiceActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.EditChatOfAccount"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.TnCActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.CreateInvoiceActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.CreateEstimateActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.AddCustomersActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.AddVendorActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.CreatingProductsAndServices"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.NotifcationActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.CompanyProfileActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.HangTightActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.GetStartedActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.SignUpActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.ForgotPassword"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.AddTransactionActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.SIgnUpStep0"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.SignUpStep1"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.SignUpStep2"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.SignUpStep3"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.SocialSignUp1"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.SocialSignUp2"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.SocialSignUp3"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.SignupOptions"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.UploadBankStatementActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.Invoice.ViewInvoice"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.Bill.EditBill"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".Activity.Bill.CreateBill"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.Bill.BillList"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.Bill.ListVendor"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.Bill.ListPurchaseItem"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.Bill.AddBillItem"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.WelcomeActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.Bill.EditBillItem"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.Bank.BankListActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.Bill.ViewBill"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.SettingActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.SignUpDetails"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.AddJournalTransactionActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.SendEstimateActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.ViewRecurringInvoiceActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.EditChatOfAccount"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.TnCActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.CreateInvoiceActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.CreateEstimateActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.AddCustomersActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.AddVendorActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.CreatingProductsAndServices"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.NotifcationActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.CompanyProfileActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.HangTightActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.GetStartedActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.SignUpActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.ForgotPassword"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.AddTransactionActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.SIgnUpStep0"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.SignUpStep1"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.SignUpStep2"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.SignUpStep3"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.Invoice.EditInvoice"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.UploadBankStatementActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.Invoice.ViewInvoice"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.Bill.EditBill"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.ProductAndCreateActivity"
+            android:name="com.akounto.accountingsoftware.Activity.ProductAndCreateActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoTitle" />
         <activity
-            android:name=".Activity.CreateProductsAndServicesPurchase"
+            android:name="com.akounto.accountingsoftware.Activity.CreateProductsAndServicesPurchase"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoTitle" />
+        <activity android:name="com.akounto.accountingsoftware.Activity.AddChatOfAccountActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.akounto.accountingsoftware.Activity.EstimateDetailsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoTitle" />
         <activity
-            android:name=".Activity.AddChatOfAccountActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.EstimateDetailsActivity"
+            android:name="com.akounto.accountingsoftware.Activity.InvoiceDetailsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoTitle" />
         <activity
-            android:name=".Activity.InvoiceDetailsActivity"
+            android:name="com.akounto.accountingsoftware.Activity.ViewPdfActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoTitle" />
         <activity
-            android:name=".Activity.ViewPdfActivity"
+            android:name="com.akounto.accountingsoftware.Activity.BillDetailsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoTitle" />
         <activity
-            android:name=".Activity.BillDetailsActivity"
+            android:name="com.akounto.accountingsoftware.Activity.EditBillActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoTitle" />
         <activity
-            android:name=".Activity.EditBillActivity"
+            android:name="com.akounto.accountingsoftware.Activity.UploadSecondActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoTitle" />
+        <activity android:name="com.akounto.accountingsoftware.Activity.AdvancedFilterActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.akounto.accountingsoftware.Activity.UploadReceipt"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.akounto.accountingsoftware.Activity.CreateBillActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoTitle" />
         <activity
-            android:name=".Activity.UploadSecondActivity"
+            android:name="com.akounto.accountingsoftware.Activity.DashboardActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoTitle" />
+            android:launchMode="singleInstance" />
         <activity
-            android:name=".Activity.AdvancedFilterActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.UploadReceipt"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.CreateBillActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoTitle" />
-        <activity
-            android:name=".Activity.DashboardActivity"
+            android:name="com.akounto.accountingsoftware.Activity.ExternalSignUp"
             android:launchMode="singleInstance"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:noHistory="true" />
         <activity
-            android:name=".Activity.ExternalSignUp"
+            android:name="com.akounto.accountingsoftware.util.ActivityImagePicker"
             android:launchMode="singleInstance"
-            android:noHistory="true"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:noHistory="true" />
         <activity
-            android:name=".util.ActivityImagePicker"
-            android:launchMode="singleInstance"
-            android:noHistory="true"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.SignInActivity"
-            android:launchMode="singleInstance"
-            android:screenOrientation="portrait" />
-        <activity android:name=".Activity.VideoAfterSplashActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:name="com.akounto.accountingsoftware.Activity.SignInActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance" />
 
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".Activity.SplashScreenActivity"
+        <activity android:name="com.akounto.accountingsoftware.Activity.SplashScreenActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.MainActivity">
+        <activity android:name="com.akounto.accountingsoftware.Activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -269,11 +226,9 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths" />
         </provider>
-
         <activity
             android:name="com.karumi.dexter.DexterActivity"
             android:theme="@style/Dexter.Internal.Theme.Transparent" />
-
         <meta-data
             android:name="firebase_performance_logcat_enabled"
             android:value="true" />
@@ -295,6 +250,7 @@
                 android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
         </service>
+
         <service
             android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
             android:exported="false">
@@ -306,6 +262,7 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
     </application>
 
 </manifest>

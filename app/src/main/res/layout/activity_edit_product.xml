@@ -72,7 +72,6 @@
                         android:padding="@dimen/_7sdp"
                         android:src="@drawable/save" />
 
-
                 </LinearLayout>
             </LinearLayout>
 
@@ -129,7 +128,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/general"
                     android:fontFamily="@font/poppins_medium"
-                    android:hint="Payment due"
+                    android:hint="Price"
                     android:inputType="numberDecimal"
                     android:padding="10dp"
                     android:textColor="#333333"
@@ -158,7 +157,55 @@
                     tools:ignore="NestedWeights" />
 
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_7sdp"
+                    android:background="@drawable/general"
+                    android:padding="10dp">
+
+                    <Spinner
+                        android:id="@+id/discount_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/poppins_regular"
+                        />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/discount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:layout_weight="0.75"
+                    android:background="@drawable/general"
+                    android:fontFamily="@font/poppins_medium"
+                    android:hint="Discount Value"
+                    android:digits="0123456789"
+                    android:inputType="number"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/discount_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Item discount cannot be applied more than amount!"
+                android:fontFamily="@font/poppins_light"
+                android:textStyle="normal"
+                android:textSize="12sp"
+                android:textColor="#ff2a2a"
+                android:lineSpacingExtra="4sp"
+                android:visibility="gone" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -212,13 +259,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_regular"
-                        android:maxLength="5"
                         android:padding="10dp"
-                        android:text="GST "
+                        android:text="Price After Discount "
                         android:textSize="14sp"
                         tools:ignore="NestedWeights" />
 
                     <TextView
+                        android:id="@+id/after_discount_price"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"

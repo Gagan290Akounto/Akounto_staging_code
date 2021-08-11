@@ -86,6 +86,7 @@ import java.util.Locale;
 
 import static com.akounto.accountingsoftware.util.UiUtil.isPieChartDataEmpty;
 
+
 public class DashboardFragment extends BaseFragment {
 
     String isoDatePattern = "yyyy-MM-dd'T'HH:mm:ss'Z'";

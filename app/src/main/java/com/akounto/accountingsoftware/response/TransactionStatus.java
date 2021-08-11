@@ -6,23 +6,22 @@ import com.google.gson.annotations.SerializedName;
 public class TransactionStatus {
     @SerializedName("Error")
     private TransactionError error;
-
     @SerializedName("IsSuccess")
     private boolean isSuccess;
-
-    public boolean isIsSuccess() {
-        return this.isSuccess;
-    }
 
     public void setIsSuccess(boolean isSuccess2) {
         this.isSuccess = isSuccess2;
     }
 
-    public TransactionError getError() {
-        return this.error;
+    public boolean isIsSuccess() {
+        return this.isSuccess;
     }
 
     public void setError(TransactionError error2) {
         this.error = error2;
+    }
+
+    public TransactionError getError() {
+        return this.error;
     }
 }

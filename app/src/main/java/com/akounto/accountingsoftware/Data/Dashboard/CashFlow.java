@@ -9,19 +9,15 @@ public class CashFlow {
     @SerializedName("Order")
     @Expose
     private Integer order;
-
     @SerializedName("Label")
     @Expose
     private String label;
-
     @SerializedName("Credit")
     @Expose
     private Double credit;
-
     @SerializedName("Dredit")
     @Expose
     private Double dredit;
-
     @SerializedName("IsDummyData")
     @Expose
     private Boolean isDummyData;

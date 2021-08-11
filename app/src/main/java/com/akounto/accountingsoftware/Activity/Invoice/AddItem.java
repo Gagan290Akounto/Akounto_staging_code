@@ -8,13 +8,18 @@ import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.InputFilter;
+import android.text.Spanned;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +27,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.akounto.accountingsoftware.util.DecimalDigitsInputFilter;
 import com.google.gson.Gson;
 import com.akounto.accountingsoftware.Constants.Constant;
 import com.akounto.accountingsoftware.R;
@@ -38,17 +44,22 @@ import com.akounto.accountingsoftware.util.UiUtil;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import retrofit2.Call;
 import retrofit2.Response;
 
 public class AddItem extends AppCompatActivity {
 
-    private EditText name, description, qty, price;
-    private TextView adds_item_price, adds_item_name, spinner_taxtes;
+    private EditText name, description, qty, price, discount;
+    private TextView adds_item_price, adds_item_name, spinner_taxtes,discount_error;
     private Context mContext;
     public List<TaxResponse> taxReceivedList = new ArrayList<>();
     List<ProductServiceTaxesItem> taxs;
+    Spinner discount_spi;
+    int discount_index = 0;
+    String[] discount_type_data = {"Please select type", "Percent discount", "Flat discount"};
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -59,13 +70,46 @@ public class AddItem extends AppCompatActivity {
         mContext = this;
         name = findViewById(R.id.item_name);
         UiUtil.disableEditText(name);
+        EditInvoice.start=true;
+        discount_error= findViewById(R.id.discount_error);
         description = findViewById(R.id.item_description);
         adds_item_price = findViewById(R.id.edit_item_price);
+        discount = findViewById(R.id.discount);
+        discount.setFilters(new InputFilter[]{new DecimalDigitsInputFilter(25, 2)});
+        discount_spi = findViewById(R.id.discount_type);
         qty = findViewById(R.id.ed_qty);
         price = findViewById(R.id.ed_price);
         spinner_taxtes = findViewById(R.id.spinner_taxtes);
         adds_item_name = findViewById(R.id.edit_item_name);
         spinner_taxtes.setText("Taxs + " + ItemList.adds_item.getProductServiceTaxes().size());
+        ArrayAdapter aa = new ArrayAdapter(this, android.R.layout.simple_spinner_item, discount_type_data);
+        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //Setting the ArrayAdapter data on the Spinner
+        discount_spi.setAdapter(aa);
+        discount_spi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                discount_index = position;
+                discount.setText("");
+                discount_error.setVisibility(View.GONE);
+                if (position == 1) {
+                    discount.setHint("Percent");
+                    ItemList.adds_item.setDiscountType(2);
+                } else if (position == 2) {
+                    discount.setHint("Flat");
+                    ItemList.adds_item.setDiscountType(1);
+                } else {
+                    discount.setHint("discount");
+                    ItemList.adds_item.setDiscountType(0);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
         try {
             name.setText(ItemList.adds_item.getName());
             adds_item_name.setText(ItemList.adds_item.getName());
@@ -86,6 +130,7 @@ public class AddItem extends AppCompatActivity {
                 finish();
             }
         });
+
         findViewById(R.id.iv_save).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -102,7 +147,22 @@ public class AddItem extends AppCompatActivity {
                 if (ItemList.adds_item.getProductId() == 0) {
                     ItemList.adds_item.setProductId(ItemList.adds_item.getId());
                 }
-                lunch();
+                if (ItemList.adds_item.getDiscountType() != 0) {
+                    if (!discount.getText().toString().isEmpty()) {
+                        try {
+                            ItemList.adds_item.setDiscount(Integer.parseInt(discount.getText().toString()));
+                            //setDiscountedPrice(ItemList.adds_item.getDiscountType(), discount.getText().toString(), price.getText().toString());
+                            lunch();
+                        } catch (Exception e) {
+                            Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_LONG).show();
+                        }
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Discount value is empty", Toast.LENGTH_LONG).show();
+                    }
+                } else {
+                    ItemList.adds_item.setPriceAfterDiscount(Float.parseFloat(price.getText().toString()));
+                    lunch();
+                }
             }
         });
         spinner_taxtes.setOnClickListener(new View.OnClickListener() {
@@ -120,6 +180,24 @@ public class AddItem extends AppCompatActivity {
         intent.putExtra("MESSAGE", "AddCustomers.result_add.getData().getName()");
         setResult(4, intent);
         finish();//finishing activity
+    }
+
+    private void setDiscountedPrice(int type, String value, String amount) {
+        if (type == 2) {
+            try {
+                float am = Float.parseFloat(amount);
+                float val = Float.parseFloat(value);
+                ItemList.adds_item.setPriceAfterDiscount(am - ((am * val) / 100f));
+            } catch (Exception e) {
+            }
+        } else if(type==1){
+            float am = Float.parseFloat(amount);
+            float val = Float.parseFloat(value);
+            ItemList.adds_item.setPriceAfterDiscount(am - val);
+        }else{
+            float am = Float.parseFloat(amount);
+            ItemList.adds_item.setPriceAfterDiscount(am);
+        }
     }
 
     private void calPriceWithPrice() {
@@ -169,6 +247,44 @@ public class AddItem extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
 
+            }
+        });
+        discount.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                try {
+                    if (s.toString().length() == 1 && s.toString().startsWith("0")) {
+                        s.clear();
+                    }
+                    if (discount.getHint().toString().equalsIgnoreCase("Percent")) {
+                        if (Double.parseDouble(discount.getText().toString()) > 100) {
+                            discount.setText("");
+                            discount_error.setVisibility(View.VISIBLE);
+                            //Toast.makeText(AddItem.this, " Item discount cannot be applied more than amount!", Toast.LENGTH_SHORT).show();
+                        }else{
+                            discount_error.setVisibility(View.GONE);
+                        }
+                    } else if (discount.getHint().toString().equalsIgnoreCase("Flat")) {
+                        if (Double.parseDouble(discount.getText().toString()) > Double.parseDouble(price.getText().toString())) {
+                            discount.setText("");
+                            discount_error.setVisibility(View.VISIBLE);
+                            //Toast.makeText(AddItem.this, " Item discount cannot be applied more than amount!", Toast.LENGTH_SHORT).show();
+                        }else{
+                            discount_error.setVisibility(View.GONE);
+                        }
+                    }
+                } catch (Exception e) {
+                }
             }
         });
         price.addTextChangedListener(new TextWatcher() {
@@ -305,6 +421,10 @@ public class AddItem extends AppCompatActivity {
         dialog2.findViewById(R.id.saveButton).setOnClickListener(new View.OnClickListener() {
             public final void onClick(View view) {
                 String taxName = ((EditText) dialog2.findViewById(R.id.et_taxName)).getText().toString().trim();
+                try {
+                    taxName = String.valueOf(taxName.charAt(0)).toUpperCase() + taxName.substring(1, taxName.length()).toLowerCase();
+                } catch (Exception e) {
+                }
                 String taxDesc = ((EditText) dialog2.findViewById(R.id.et_taxDesc)).getText().toString().trim();
                 String taxNumber = ((EditText) dialog2.findViewById(R.id.et_taxNumber)).getText().toString().trim();
                 String taxRate = ((EditText) dialog2.findViewById(R.id.et_taxRate)).getText().toString().trim();

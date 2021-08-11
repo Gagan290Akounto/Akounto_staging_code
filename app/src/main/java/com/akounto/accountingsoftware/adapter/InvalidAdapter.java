@@ -10,8 +10,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.akounto.accountingsoftware.R;
 import com.akounto.accountingsoftware.Activity.fragment.UpdateProduct;
+
 import java.util.List;
 
 public class InvalidAdapter extends RecyclerView.Adapter<InvalidAdapter.MyViewHolder> {
@@ -29,12 +31,16 @@ public class InvalidAdapter extends RecyclerView.Adapter<InvalidAdapter.MyViewHo
     }
 
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        CharSequence charSequence;
+        CharSequence charSequence = null;
         TextView textView = holder.textViewPrice;
         if (TextUtils.isEmpty(this.productList.get(position))) {
             charSequence = "--";
         } else {
-            charSequence = (productList.size()-(position))+" . "+this.productList.get(position);
+            if (productList.size() == 1) {
+                charSequence = this.productList.get(position);
+            } else {
+                charSequence = (productList.size() - (position)) + " . " + this.productList.get(position);
+            }
         }
         textView.setText(charSequence);
     }

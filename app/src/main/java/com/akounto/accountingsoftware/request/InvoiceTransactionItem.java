@@ -18,6 +18,10 @@ public class InvoiceTransactionItem {
     private int productTransactionHeadId;
     @SerializedName("Quantity")
     private int quantity;
+    @SerializedName("DiscountType")
+    private int discountType;
+    @SerializedName("Discount")
+    private int discount;
     @SerializedName("Taxes")
     private final List<RecurringInvoiceSalesTaxItem> taxes;
 
@@ -52,6 +56,17 @@ public class InvoiceTransactionItem {
         this.quantity = quantity2;
         this.productId = productId2;
         this.productTransactionHeadId = productTransactionHeadId2;
+    }
+    public InvoiceTransactionItem(String description2, String productName2, List<RecurringInvoiceSalesTaxItem> taxes2, int price2, int quantity2, int productId2, int productTransactionHeadId2,int discountType,int discount) {
+        this.description = description2;
+        this.productName = productName2;
+        this.taxes = taxes2;
+        this.price = price2;
+        this.quantity = quantity2;
+        this.productId = productId2;
+        this.productTransactionHeadId = productTransactionHeadId2;
+        this.discountType=discountType;
+        this.discount=discount;
     }
     public InvoiceTransactionItem(String Id,String description2, String productName2, List<RecurringInvoiceSalesTaxItem> taxes2, int price2, int quantity2, int productId2, int productTransactionHeadId2) {
         this.Id=Id;

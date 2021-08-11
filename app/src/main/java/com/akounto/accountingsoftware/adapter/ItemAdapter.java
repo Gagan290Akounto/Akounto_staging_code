@@ -67,6 +67,16 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                 holder.tv_qyt.setText(item_list.get(position).getQty() + " x " + item_list.get(position).getPrice() + " each");
             else
                 holder.tv_qyt.setText("1 x " + item_list.get(position).getPrice() + " each");
+
+            if (item_list.get(position).getDiscountType() != 0) {
+                if (item_list.get(position).getDiscountType() == 1) {
+                    holder.tv_discount.setText("Discount "+cur + " " + item_list.get(position).getDiscount());
+                } else {
+                    holder.tv_discount.setText("Discount "+item_list.get(position).getDiscount()+" %");
+                }
+            } else {
+                holder.tv_discount.setVisibility(View.GONE);
+            }
         } catch (Exception e) {
         }
 
@@ -90,7 +100,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView item_name, item_price, product_decription, taxtes, no_taxs, tv_qyt;
+        public TextView item_name, item_price, product_decription, taxtes, no_taxs, tv_qyt, tv_discount;
         public LinearLayout item_main;
 
         public ViewHolder(View itemView) {
@@ -102,6 +112,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
             this.item_main = itemView.findViewById(R.id.item_main);
             this.no_taxs = itemView.findViewById(R.id.tv_no_tax);
             this.tv_qyt = itemView.findViewById(R.id.tv_qty);
+            this.tv_discount = itemView.findViewById(R.id.tv_discount);
         }
     }
 }

@@ -171,8 +171,17 @@ public class CreatingProductsAndServices extends AppCompatActivity implements De
         if (isValid()) {
             int incomeAccountId = getIncomeAccountByName((String) this.incomeAccountSpinner.getText()).getId();
             String str = (String) this.salesTaxSpinner.getText();
+
             String mName = ((EditText) findViewById(R.id.et_name)).getText().toString().trim();
+            try {
+                mName = String.valueOf(mName.charAt(0)).toUpperCase() + mName.substring(1, mName.length()).toLowerCase();
+            } catch (Exception e) {
+            }
             String mDesc = ((EditText) findViewById(R.id.et_desc)).getText().toString().trim();
+            try {
+                mDesc = String.valueOf(mDesc.charAt(0)).toUpperCase() + mDesc.substring(1, mDesc.length()).toLowerCase();
+            } catch (Exception e) {
+            }
             String mPrice = ((EditText) findViewById(R.id.et_price)).getText().toString().trim();
             ArrayList<ProductServiceTaxesItem> productServiceTaxesItems = new ArrayList<>();
             List<SaleTax> list = this.saleTaxList;
@@ -207,10 +216,10 @@ public class CreatingProductsAndServices extends AppCompatActivity implements De
                 public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                     super.onResponse(call, response);
                     if (response.isSuccessful()) {
-                        Bundle b=new Bundle();
-                        b.putString(Constant.CATEGORY,"invoicing");
-                        b.putString(Constant.ACTION,"add_item");
-                        SplashScreenActivity.sendEvent("invoice_add_item",b);
+                        Bundle b = new Bundle();
+                        b.putString(Constant.CATEGORY, "invoicing");
+                        b.putString(Constant.ACTION, "add_item");
+                        SplashScreenActivity.sendEvent("invoice_add_item", b);
                         UiUtil.showToast(CreatingProductsAndServices.this, "Product Added");
                         CreatingProductsAndServices.this.finish();
                     }

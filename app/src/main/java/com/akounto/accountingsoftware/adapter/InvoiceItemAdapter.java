@@ -36,14 +36,23 @@ public class InvoiceItemAdapter  extends RecyclerView.Adapter<InvoiceItemAdapter
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         try {
-
+            String name=item_list.get(position).getName().trim();
+            try {
+                name = String.valueOf(name.charAt(0)).toUpperCase() + name.substring(1, name.length()).toLowerCase();
+            } catch (Exception e) {
+            }
             if (item_list.get(position).getQty() == null)
-                holder.item_name.setText(item_list.get(position).getName().trim());
+                holder.item_name.setText(name);
             else
-                holder.item_name.setText(item_list.get(position).getName().trim() + " +" + item_list.get(position).getQty());
+                holder.item_name.setText(name + " +" + item_list.get(position).getQty());
 
             holder.item_price.setText(cur + " " + String.valueOf(item_list.get(position).getPrice()));
-            holder.product_decription.setText(item_list.get(position).getDescription().trim());
+            String desc=item_list.get(position).getDescription().trim();
+            try {
+                desc = String.valueOf(desc.charAt(0)).toUpperCase() + desc.substring(1, desc.length()).toLowerCase();
+            } catch (Exception e) {
+            }
+            holder.product_decription.setText(desc);
             if (item_list.get(position).getProductServiceTaxes().get(0).getTaxName() == null) {
                 if (item_list.get(position).getProductServiceTaxes().size() != 1)
                     holder.taxtes.setText(item_list.get(position).getProductServiceTaxes().get(0).getName().trim() + "+" + item_list.get(position).getProductServiceTaxes().size());

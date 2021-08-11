@@ -6,11 +6,7 @@
     android:layout_height="match_parent"
     android:background="#ffffff"
     android:orientation="vertical"
-    android:weightSum="813"
-    tools:showIn="@layout/activity_welcome">
-
-
-
+    android:weightSum="813">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -45,35 +41,34 @@
         android:gravity="center">
 
         <TextView
-            android:id="@+id/btn_signup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="18dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:background="@drawable/rounded_corner_button"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:text="Sign up"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white"
-            android:textSize="20sp" />
-
-        <TextView
             android:id="@+id/btn_signin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="18dp"
+            android:layout_marginEnd="16dp"
             android:layout_weight="1"
-            android:background="@drawable/general2"
+            android:gravity="center"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="Sign in"
+            android:text="Sign In"
+            android:fontFamily="@font/poppins_semibold"
             android:textAllCaps="false"
-            android:textColor="#5a53fd"
-            android:textSize="20sp" />
+            android:textColor="@color/primary_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/btn_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginStart="18dp"
+            android:layout_weight="1"
+            android:background="@drawable/action_primary_btn"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Sign Up"
+            android:fontFamily="@font/poppins_semibold"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
     </LinearLayout>
 </LinearLayout>

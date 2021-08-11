@@ -32,6 +32,10 @@ public class CreateRecurringInvoiceRequest {
     private final String poNumber;
     @SerializedName("InvoiceNoPS")
     private String invoiceNoPS;
+    @SerializedName("DiscountType")
+    private int discountType;
+    @SerializedName("Discount")
+    private double discount;
 
     public CreateRecurringInvoiceRequest(int id,int invoiceNo,double custExchangeRate2, double exchangeRate2, int headTransactionCustomerId2, int paymentDueDays2, String paymentDue2, String invoiceDate2, List<InvoiceTransactionItem> invoiceTransaction2, String custCurrency2, String notes2, String poNumber2, String name2,String invoiceNoPS) {
         this.id=id;
@@ -91,7 +95,21 @@ public class CreateRecurringInvoiceRequest {
         this.poNumber = poNumber2;
         this.name = name2;
     }
-
+    public CreateRecurringInvoiceRequest(double custExchangeRate2, double exchangeRate2, int headTransactionCustomerId2, int paymentDueDays2, String paymentDue2, String invoiceDate2, List<InvoiceTransactionItem> invoiceTransaction2, String custCurrency2, String notes2, String poNumber2, String name2,int discountType,double discount) {
+        this.custExchangeRate = custExchangeRate2;
+        this.exchangeRate = exchangeRate2;
+        this.headTransactionCustomerId = headTransactionCustomerId2;
+        this.paymentDueDays = paymentDueDays2;
+        this.paymentDue = paymentDue2;
+        this.invoiceDate = invoiceDate2;
+        this.invoiceTransaction = invoiceTransaction2;
+        this.custCurrency = custCurrency2;
+        this.notes = notes2;
+        this.poNumber = poNumber2;
+        this.name = name2;
+        this.discountType=discountType;
+        this.discount=discount;
+    }
     public int getId() {
         return id;
     }

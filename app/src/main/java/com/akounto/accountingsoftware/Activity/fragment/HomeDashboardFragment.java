@@ -22,6 +22,8 @@ import androidx.fragment.app.Fragment;
 
 import com.akounto.accountingsoftware.Activity.Bill.BillList;
 import com.akounto.accountingsoftware.Activity.Invoice.InvoiceList;
+import com.google.gson.Gson;
+import com.google.gson.internal.LinkedTreeMap;
 import com.akounto.accountingsoftware.Constants.Constant;
 import com.akounto.accountingsoftware.Data.Dashboard.DashboardData;
 import com.akounto.accountingsoftware.Data.Dashboard.InvoicePurchaseOverdue;
@@ -37,8 +39,6 @@ import com.akounto.accountingsoftware.util.AddFragments;
 import com.akounto.accountingsoftware.util.UiUtil;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.PieChart;
-import com.google.gson.Gson;
-import com.google.gson.internal.LinkedTreeMap;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
@@ -55,7 +55,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class HomeDashboardFragment extends Fragment {
-    public static List<String> filter;
+
+
     BarChart cashFlowChart;
     SearchDashboardData ud;
     AppCompatTextView hint_text;
@@ -67,15 +68,16 @@ public class HomeDashboardFragment extends Fragment {
     TextView cashflow, expbrak, noPiaData, noBarData;
     Typeface poppins_regular;
     Typeface poppins_semibold;
+    private String textViewDate = "";
+    private String toDate = "";
     Spinner spinner;
     String fromDate;
+    private ArrayAdapter<String> dataAdapter = null;
     View view;
+    public static List<String> filter;
     TextView invoiceNotDueAmount, invoiceOverdueAmount, billNotDueAmount, billOverdueAmount;
     boolean start = true;
     LinearLayout circle_invoice, circle_bill;
-    private String textViewDate = "";
-    private String toDate = "";
-    private ArrayAdapter<String> dataAdapter = null;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -135,7 +137,6 @@ public class HomeDashboardFragment extends Fragment {
         this.expenseBreakdownChart = this.view.findViewById(R.id.expenseBreakdownChart);
         cashflow = this.view.findViewById(R.id.cashFlowTv);
         expbrak = this.view.findViewById(R.id.expenseBreakdownTv);
-
         if (UiUtil.getAccountingType(getContext()) == 2) {
             hint_text.setVisibility(View.GONE);
             cashflow.setText("Income and Expense");
@@ -157,21 +158,16 @@ public class HomeDashboardFragment extends Fragment {
     private void setSpiner() {
         dataAdapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_item, filter);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(dataAdapter);
 
+        spinner.setAdapter(dataAdapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
                 if (start) {
-                    getHomeDashBoardData(new GetDashboardRequest(fromDate, ud.getData().get(0).getStart(),
-                            ud.getData().get(0).getEnd(), UiUtil.getAccountingType(getContext()),
-                            0), false);
-                } else {
-                    getHomeDashBoardData(new GetDashboardRequest(fromDate, ud.getData().get(position).getStart(),
-                            ud.getData().get(position).getEnd(), UiUtil.getAccountingType(getContext()),
-                            1), false);
-                }
+                    getHomeDashBoardData(new GetDashboardRequest(fromDate, ud.getData().get(0).getStart(), ud.getData().get(0).getEnd(), UiUtil.getAccountingType(getContext()), 0), false);
+                } else
+                    getHomeDashBoardData(new GetDashboardRequest(fromDate, ud.getData().get(position).getStart(), ud.getData().get(position).getEnd(), UiUtil.getAccountingType(getContext()), 1), false);
             }
 
             @Override
@@ -204,10 +200,7 @@ public class HomeDashboardFragment extends Fragment {
 
     private void getHomeDashBoardData(GetDashboardRequest getDashboardRequest, boolean refreshWithDates) {
         start = false;
-        RestClient.getInstance(getActivity())
-                .getDashboard(Constant.X_SIGNATURE,
-                        "Bearer " + UiUtil.getAcccessToken(getContext()), UiUtil.getComp_Id(getContext()),
-                        getDashboardRequest).enqueue(new CustomCallBack<DashboardData>(getContext(), null) {
+        RestClient.getInstance(getActivity()).getDashboard(Constant.X_SIGNATURE, "Bearer " + UiUtil.getAcccessToken(getContext()), UiUtil.getComp_Id(getContext()), getDashboardRequest).enqueue(new CustomCallBack<DashboardData>(getContext(), null) {
             public void onResponse(Call<DashboardData> call, Response<DashboardData> response) {
                 super.onResponse(call, response);
                 dashboardResponse = response.body();
@@ -285,64 +278,62 @@ public class HomeDashboardFragment extends Fragment {
     public void loadSearch(Context mContext) {
         UiUtil.showProgressDialogue(mContext, "", "Please wait..");
         Api api = ApiUtils.getAPIService();
-        api.searchDashboard(Constant.X_SIGNATURE, "Bearer "
-                + UiUtil.getAcccessToken(getContext()), UiUtil.getComp_Id(getContext()))
-                .enqueue(new Callback<SearchDashboardData>() {
-                    @Override
-                    public void onResponse(Call<SearchDashboardData> call, Response<SearchDashboardData> response) {
-                        UiUtil.cancelProgressDialogue();
-                        ud = new SearchDashboardData();
-                        ud.setStatus(response.code());
-                        try {
-                            if (response.code() == 401) {
-                                //UiUtil.showToast(mContext, "Session time out");
-                                UiUtil.addLoginToSharedPref(mContext, false);
-                                UiUtil.moveToSignUp(mContext);
-                                ((Activity) mContext).finish();
-                                return;
+        api.searchDashboard(Constant.X_SIGNATURE, "Bearer " + UiUtil.getAcccessToken(getContext()), UiUtil.getComp_Id(getContext())).enqueue(new Callback<SearchDashboardData>() {
+            @Override
+            public void onResponse(Call<SearchDashboardData> call, Response<SearchDashboardData> response) {
+                UiUtil.cancelProgressDialogue();
+                ud = new SearchDashboardData();
+                ud.setStatus(response.code());
+                try {
+                    if (response.code() == 401) {
+                        //UiUtil.showToast(mContext, "Session time out");
+                        UiUtil.addLoginToSharedPref(mContext, false);
+                        UiUtil.moveToSignUp(mContext);
+                        ((Activity) mContext).finish();
+                        return;
+                    }
+                    if (response.code() == 200) {
+                        if (response.body().getTransactionStatus().getIsSuccess()) {
+                            ud.setStatusMessage("Success");
+                            ud = response.body();
+                            if (ud != null) {
+                                filter = SearchDashboardData.setFilter(ud.getData());
+                                setSpiner();
                             }
-                            if (response.code() == 200) {
-                                if (response.body().getTransactionStatus().getIsSuccess()) {
-                                    ud.setStatusMessage("Success");
-                                    ud = response.body();
-                                    if (ud != null) {
-                                        filter = SearchDashboardData.setFilter(ud.getData());
-                                        setSpiner();
-                                    }
-                                } else {
-                                    ud.setStatus(444);
-                                    Toast.makeText(getContext(), ((LinkedTreeMap) (response.body().getTransactionStatus().getError())).get("Description").toString(), Toast.LENGTH_SHORT).show();
-                                    ud.setStatusMessage(((LinkedTreeMap) (response.body().getTransactionStatus().getError())).get("Description").toString());
-                                }
-                            } else {
-                                ErrorData error = new Gson().fromJson(response.errorBody().string(), ErrorData.class);
-                                ud.setStatus(444);
-                                if (error.getError_description() == null) {
-                                    ud.setStatusMessage("Something went wrong");
-                                    //Toast.makeText(getContext(), "Something went wrong", Toast.LENGTH_LONG).show();
-                                } else {
-                                    ud.setStatusMessage(error.getError_description());
-                                    Log.d("ERROR :: ", error.getError_description());
-                                    Toast.makeText(getContext(), error.getError_description(), Toast.LENGTH_LONG).show();
-                                }
-                            }
-                        } catch (Exception e) {
-                            Log.d("TEG :: ", e.getLocalizedMessage());
+                        } else {
                             ud.setStatus(444);
+                            Toast.makeText(getContext(), ((LinkedTreeMap) (response.body().getTransactionStatus().getError())).get("Description").toString(), Toast.LENGTH_SHORT).show();
+                            ud.setStatusMessage(((LinkedTreeMap) (response.body().getTransactionStatus().getError())).get("Description").toString());
+                        }
+                    } else {
+                        ErrorData error = new Gson().fromJson(response.errorBody().string(), ErrorData.class);
+                        ud.setStatus(444);
+                        if (error.getError_description() == null) {
                             ud.setStatusMessage("Something went wrong");
-//                    Toast.makeText(getContext(), "Something went wrong", Toast.LENGTH_LONG).show();
+                            //Toast.makeText(getContext(), "Something went wrong", Toast.LENGTH_LONG).show();
+                        } else {
+                            ud.setStatusMessage(error.getError_description());
+                            Log.d("ERROR :: ", error.getError_description());
+                            Toast.makeText(getContext(), error.getError_description(), Toast.LENGTH_LONG).show();
                         }
                     }
+                } catch (Exception e) {
+                    Log.d("TEG :: ", e.getLocalizedMessage());
+                    ud.setStatus(444);
+                    ud.setStatusMessage("Something went wrong");
+//                    Toast.makeText(getContext(), "Something went wrong", Toast.LENGTH_LONG).show();
+                }
+            }
 
-                    @Override
-                    public void onFailure(Call<SearchDashboardData> call, Throwable t) {
-                        UiUtil.cancelProgressDialogue();
-                        Log.d("TEG :: ", t.getLocalizedMessage());
-                        SearchDashboardData ud = new SearchDashboardData();
-                        ud.setStatus(444);
-                        ud.setStatusMessage("Something went wrong");
-                        Toast.makeText(getContext(), "Something went wrong", Toast.LENGTH_LONG).show();
-                    }
-                });
+            @Override
+            public void onFailure(Call<SearchDashboardData> call, Throwable t) {
+                UiUtil.cancelProgressDialogue();
+                Log.d("TEG :: ", t.getLocalizedMessage());
+                SearchDashboardData ud = new SearchDashboardData();
+                ud.setStatus(444);
+                ud.setStatusMessage("Something went wrong");
+                Toast.makeText(getContext(), "Something went wrong", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 }

@@ -46,11 +46,11 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/_7ssp"
                             android:fontFamily="@font/poppins_semibold"
                             android:gravity="center_vertical"
                             android:lineSpacingExtra="6.7sp"
                             android:text="Invoice preview"
-                            android:layout_marginLeft="@dimen/_7ssp"
                             android:textColor="#333333"
                             android:textSize="17sp" />
                     </LinearLayout>
@@ -344,6 +344,39 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/discount_ll_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_7sdp"
+                        android:layout_marginRight="@dimen/_7sdp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:lineSpacingExtra="6sp"
+                            android:text="Applied discount at invoice:"
+                            android:textColor="#333333"
+                            android:textSize="14sp"
+                            android:textStyle="normal"
+                            tools:ignore="RtlHardcoded" />
+
+                        <TextView
+                            android:id="@+id/tv_dicount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center_vertical|right"
+                            android:lineSpacingExtra="6sp"
+                            android:text="$0.00"
+                            android:textColor="#333333"
+                            android:textSize="14sp"
+                            android:textStyle="normal"
+                            tools:ignore="RtlHardcoded" />
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_8sdp"
@@ -438,9 +471,9 @@
                             android:layout_marginTop="@dimen/_4ssp"
                             android:layout_marginBottom="@dimen/_4ssp"
                             android:fontFamily="@font/poppins_medium"
-                            android:textSize="14sp"
                             android:gravity="center_vertical|left"
                             android:textColor="#333333"
+                            android:textSize="14sp"
                             tools:ignore="RtlHardcoded" />
 
                         <TextView
@@ -567,29 +600,31 @@
                             android:text="Send Invoice"
                             android:textColor="@color/white"
                             android:visibility="gone" />
+
                         <Button
                             android:id="@+id/editDraft"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_7sdp"
                             android:layout_weight="1"
                             android:background="@drawable/rounded_corner_button"
                             android:fontFamily="@font/poppins_regular"
-                            android:layout_marginLeft="@dimen/_7sdp"
                             android:paddingLeft="@dimen/_12sdp"
                             android:paddingTop="@dimen/_7sdp"
                             android:paddingRight="@dimen/_12sdp"
                             android:paddingBottom="@dimen/_7sdp"
                             android:text="Edit draft"
                             android:textColor="@color/white"
-                            android:visibility="gone"/>
+                            android:visibility="gone" />
+
                         <Button
                             android:id="@+id/approveTv"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_7sdp"
                             android:layout_weight="1"
                             android:background="@drawable/rounded_corner_button"
                             android:fontFamily="@font/poppins_regular"
-                            android:layout_marginLeft="@dimen/_7sdp"
                             android:paddingLeft="@dimen/_12sdp"
                             android:paddingTop="@dimen/_7sdp"
                             android:paddingRight="@dimen/_12sdp"

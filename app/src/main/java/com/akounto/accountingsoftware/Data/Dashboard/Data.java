@@ -1,50 +1,40 @@
 
 package com.akounto.accountingsoftware.Data.Dashboard;
 
-import com.akounto.accountingsoftware.response.ProfitLossItem;
+import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
-import java.util.List;
+import com.akounto.accountingsoftware.response.ProfitLossItem;
 
 public class Data {
 
     @SerializedName("CreationTime")
     @Expose
     private String creationTime;
-
     @SerializedName("CashFlow")
     @Expose
     private List<CashFlow> cashFlow = null;
-
     @SerializedName("ProfitLoss")
     @Expose
     private ProfitLossItem profitLoss;
-
     @SerializedName("InvoicePurchaseOverdues")
     @Expose
     private List<InvoicePurchaseOverdue> invoicePurchaseOverdues = null;
-
     @SerializedName("LastBankTransactions")
     @Expose
     private List<LastBankTransaction> lastBankTransactions = null;
-
     @SerializedName("LastActivities")
     @Expose
     private List<LastActivity> lastActivities = null;
-
     @SerializedName("BankBalance")
     @Expose
     private List<BankBalance> bankBalance = null;
-
     @SerializedName("ExpenseBreakdown")
     @Expose
     private List<ExpenseBreakdown> expenseBreakdown = null;
-
     @SerializedName("ProjectedProfits")
     @Expose
     private List<ProjectedProfit> projectedProfits = null;
-
 
     public String getCreationTime() {
         return creationTime;

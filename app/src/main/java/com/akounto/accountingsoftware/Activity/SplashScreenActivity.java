@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.akounto.accountingsoftware.Constants.Constant;
 import com.akounto.accountingsoftware.R;
 import com.akounto.accountingsoftware.Repository.LoginRepo;
+import com.akounto.accountingsoftware.util.LogsPrint;
 import com.akounto.accountingsoftware.util.UiUtil;
 import com.android.installreferrer.api.InstallReferrerClient;
 import com.android.installreferrer.api.InstallReferrerStateListener;
@@ -51,7 +52,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                             long referrerClickTime = response.getReferrerClickTimestampSeconds();
                             long appInstallTime = response.getInstallBeginTimestampSeconds();
                             boolean instantExperienceLaunched = response.getGooglePlayInstantParam();
-                            LoginRepo.prinLogs(referrerUrl + "\n" + referrerClickTime + "\n" + appInstallTime + instantExperienceLaunched, 5, "SplashScreenActivity GOOGLE API referrer");
+                            LoginRepo.prinLogs(referrerUrl+"\n"+referrerClickTime+"\n"+appInstallTime+instantExperienceLaunched, 5, "SplashScreenActivity GOOGLE API referrer");
                             break;
                         case InstallReferrerClient.InstallReferrerResponse.FEATURE_NOT_SUPPORTED:
                             LoginRepo.prinLogs("FEATURE_NOT_SUPPORTED", 5, "SplashScreenActivity GOOGLE API referrer");

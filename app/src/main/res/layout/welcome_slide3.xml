@@ -1,99 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff">
-    <LinearLayout
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:gravity="center_horizontal">
+    <ImageView
+        android:id="@+id/imageView11"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="@dimen/_32sdp"
-        android:weightSum="10">
+        android:adjustViewBounds="true"
+        android:src="@drawable/slide137" />
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_weight="4">
-
-            <ImageView
-                android:id="@+id/iv"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/logo3" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_weight="6">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
+    <TextView
+        android:id="@+id/textView4"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="Get instant updates"
+        android:textAlignment="center"
+        android:textColor="#333333"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/poppins_regular"
         android:gravity="center_horizontal"
-        android:weightSum="607"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="470"
-            android:gravity="top"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleType="centerCrop"
-                android:src="@drawable/w1" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="vertical"
-            android:layout_weight="30" />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="107"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Automated financial reports"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:layout_alignParentTop="true"
-                android:fontFamily="@font/poppins_semibold"
-                android:textStyle="normal"
-                android:textColor="#2f2f2f"
-                android:textSize="18sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/desc_padding"
-                android:paddingRight="@dimen/desc_padding"
-                android:layout_marginTop="10dp"
-                android:autoSizeTextType="uniform"
-                android:text="Rely on automated financial reports and take better decisions for your business."
-                android:textAlignment="center"
-                android:fontFamily="@font/poppins_regular"
-                android:textStyle="normal"
-                android:textSize="16sp"
-                android:textColor="#949494" />
-        </LinearLayout>
-    </LinearLayout>
-
-</RelativeLayout>
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="Access your data anytime, anywhere"
+        android:textAlignment="center"
+        android:textColor="#333333"
+        android:textSize="14sp" />
+</LinearLayout>

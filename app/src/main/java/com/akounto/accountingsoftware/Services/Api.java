@@ -80,21 +80,11 @@ public interface Api {
     @GET("api/profile/native-app-social-login")
     Call<SoclData> extLogin(@Header("X-Signature") String signature, @Query("provider") String provider, @Query("idToken") String externalAccessToken);
 
-    /*@POST("api/accounting/dashboad")
-    Call<DashboardData> getDashboard(@Header("X-Signature") String signature,
-                                     @Header("X-Company") String company,
-                                     @Header("Authorization") String authHeader,
-                                     @Body JSONObject request);*/
     @POST("api/accounting/dashboad")
-    Call<DashboardData> getDashboard(@Header("X-Signature") String signature,
-                                     @Header("X-Company") String company,
-                                     @Header("Authorization") String authHeader,
-                                     @Body GetDashboardRequest getDashboardRequest);
+    Call<DashboardData> getDashboard(@Header("X-Signature") String signature, @Header("X-Company") String company, @Header("Authorization") String authHeader, @Body JsonObject request);
 
     @GET("api/report/search-dashboard")
-    Call<SearchDashboardData> searchDashboard(@Header("X-Signature") String signature,
-                                              @Header("Authorization") String authorization,
-                                              @Header("X-Company") String x_company);
+    Call<SearchDashboardData> searchDashboard(@Header("X-Signature") String signature, @Header("Authorization") String authorization, @Header("X-Company") String x_company);
 
     @POST("api/profile/forgot-user-password")
     Call<ForgotPasswordData> fogotPasswordRequest(@Header("X-Signature") String signature, @Body JsonObject email);
@@ -102,6 +92,11 @@ public interface Api {
     @POST("api/profile/register-business-new")
     Call<SignUpResponse> register(@Header("X-Signature") String signature, @Body JsonObject request);
 
+    @POST("api/accounting/dashboad")
+    Call<DashboardData> getDashboard(@Header("X-Signature") String signature,
+                                     @Header("X-Company") String company,
+                                     @Header("Authorization") String authHeader,
+                                     @Body GetDashboardRequest getDashboardRequest);
 
     @GET("api/profile/get-company/{id}")
     Call<GetCompanyResponse> getBusinessById(@Header("X-Signature") String signature,
@@ -120,7 +115,6 @@ public interface Api {
                                         @Header("Authorization") String authorization,
                                         @Header("X-Company") String company,
                                         @Body HashMap<String, String> jsonBody);
-
     /*@POST("api/profile/edit-company")
     Call<BaseResponseModel> editCompany(@Header("X-Signature") String signature,
                                         @Header("Authorization") String authorization,

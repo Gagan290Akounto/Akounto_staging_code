@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -29,9 +30,10 @@ import retrofit2.Response;
 
 public class ForgotPassword extends AppCompatActivity {
 
-    TextView email, submit,email_error;
+    TextView email, submit,email_error,go_back,tv_success;
     String emal = "";
     Context mContext;
+    RelativeLayout success_alert;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,6 +44,9 @@ public class ForgotPassword extends AppCompatActivity {
             email = findViewById(R.id.email_forget);
             submit = findViewById(R.id.forgotButton);
             email_error = findViewById(R.id.email_error);
+            success_alert = findViewById(R.id.success_alert);
+            tv_success = findViewById(R.id.tv_success);
+            go_back = findViewById(R.id.go_back);
             email.addTextChangedListener(new TextWatcher() {
                 @Override
                 public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -60,6 +65,12 @@ public class ForgotPassword extends AppCompatActivity {
                     } else {
                         email_error.setVisibility(View.VISIBLE);
                     }
+                }
+            });
+            go_back.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finish();
                 }
             });
             findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
@@ -88,13 +99,16 @@ public class ForgotPassword extends AppCompatActivity {
                                         b.putString(Constant.CATEGORY, "profile");
                                         b.putString(Constant.ACTION, "forgot_password");
                                         SplashScreenActivity.mFirebaseAnalytics.logEvent("profile_forgot_password", b);
-                                        UiUtil.showToast(mContext, "Check your email\n" +
-                                                "If we find " + emal + " in our system, we will send\n" +
+                                        success_alert.setVisibility(View.VISIBLE);
+                                        tv_success.setText("Check your email\n" +
+                                                "If we find " + emal + " in our system, we will send" +
                                                 "you an email with a link to reset your password.\n" +
                                                 "\n" +
                                                 "If you don't receive the email, check your\n" +
                                                 "spam folder or contact us.");
+
                                     } else {
+                                        success_alert.setVisibility(View.GONE);
                                         if (!passwordData.getTransactionStatus().getIsSuccess()) {
                                            // UiUtil.showToast(mContext, ((LinkedTreeMap) (response.body().getTransactionStatus().getError())).get("Description").toString());
                                             email_error.setVisibility(View.VISIBLE);
@@ -102,6 +116,7 @@ public class ForgotPassword extends AppCompatActivity {
                                         }
                                     }
                                 } catch (Exception e) {
+                                    success_alert.setVisibility(View.GONE);
                                     email_error.setVisibility(View.VISIBLE);
                                     email_error.setText("Not able to send forgot password request");
                                 }
@@ -110,6 +125,7 @@ public class ForgotPassword extends AppCompatActivity {
                             @Override
                             public void onFailure(Call<ForgotPasswordData> call, Throwable t) {
                                 UiUtil.cancelProgressDialogue();
+                                success_alert.setVisibility(View.GONE);
                                 email_error.setVisibility(View.VISIBLE);
                                 email_error.setText("Not able to send forgot password request");
                             }

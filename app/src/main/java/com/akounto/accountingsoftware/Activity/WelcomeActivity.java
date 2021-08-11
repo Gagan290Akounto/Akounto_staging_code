@@ -1,11 +1,19 @@
 package com.akounto.accountingsoftware.Activity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.RemoteException;
+import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +23,7 @@ import com.akounto.accountingsoftware.Constants.Constant;
 import com.akounto.accountingsoftware.R;
 import com.akounto.accountingsoftware.Repository.LoginRepo;
 import com.akounto.accountingsoftware.adapter.SliderPagerAdapter;
+import com.akounto.accountingsoftware.util.LogsPrint;
 import com.akounto.accountingsoftware.util.UiUtil;
 import com.android.installreferrer.api.InstallReferrerClient;
 import com.android.installreferrer.api.InstallReferrerStateListener;
@@ -44,8 +53,7 @@ public class WelcomeActivity extends AppCompatActivity {
     final long DELAY_MS = 500;//delay in milliseconds before task is to be executed
     final long PERIOD_MS = 7000; // time in milliseconds between successive task executions.
     int current = 0;
-    Bundle b = null;
-
+    Bundle b=null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,7 +82,7 @@ public class WelcomeActivity extends AppCompatActivity {
                     b = new Bundle();
                     b.putString(Constant.CATEGORY, "welcome");
                     b.putString(Constant.ACTION, "click_sign_in");
-                    SplashScreenActivity.sendEvent("welcome_click_sign_in", b);
+                    SplashScreenActivity.sendEvent("welcome_click_sign_in",b);
                     launchHomeScreen();
                 }
             });
@@ -85,7 +93,7 @@ public class WelcomeActivity extends AppCompatActivity {
                     b.putString(Constant.CATEGORY, "welcome");
                     b.putString(Constant.ACTION, "click_sign_up");
                     SplashScreenActivity.sendEvent("welcome_click_sign_up", b);
-                    startActivity(new Intent(WelcomeActivity.this, SIgnUpStep0.class));
+                    startActivity(new Intent(WelcomeActivity.this, SignupOptions.class));
                 }
             });
             // layouts of welcome sliders
@@ -132,7 +140,7 @@ public class WelcomeActivity extends AppCompatActivity {
                             long referrerClickTime = response.getReferrerClickTimestampSeconds();
                             long appInstallTime = response.getInstallBeginTimestampSeconds();
                             boolean instantExperienceLaunched = response.getGooglePlayInstantParam();
-                            LoginRepo.prinLogs(referrerUrl, 4, "referrer_OK");
+                            LoginRepo.prinLogs(referrerUrl,4,"referrer_OK");
                             break;
                         case InstallReferrerClient.InstallReferrerResponse.FEATURE_NOT_SUPPORTED:
                             // API not available on the current Play Store app.
@@ -142,7 +150,7 @@ public class WelcomeActivity extends AppCompatActivity {
                                 e.printStackTrace();
                             }
                             String referrerUrl2 = response.getInstallReferrer();
-                            LoginRepo.prinLogs(referrerUrl2, 4, "referrer_FEATURE_NOT_SUPPORTED");
+                            LoginRepo.prinLogs(referrerUrl2,4,"referrer_FEATURE_NOT_SUPPORTED");
                             break;
                         case InstallReferrerClient.InstallReferrerResponse.SERVICE_UNAVAILABLE:
                             // Connection couldn't be established.
@@ -152,7 +160,7 @@ public class WelcomeActivity extends AppCompatActivity {
                                 e.printStackTrace();
                             }
                             String referrerUrl3 = response.getInstallReferrer();
-                            LoginRepo.prinLogs(referrerUrl3, 4, "SERVICE_UNAVAILABLE");
+                            LoginRepo.prinLogs(referrerUrl3,4,"SERVICE_UNAVAILABLE");
                             break;
                     }
                 }
@@ -173,4 +181,5 @@ public class WelcomeActivity extends AppCompatActivity {
         startActivity(new Intent(WelcomeActivity.this, SignInActivity.class));
         finish();
     }
+
 }

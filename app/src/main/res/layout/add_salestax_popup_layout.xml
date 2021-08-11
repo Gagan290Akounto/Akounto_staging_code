@@ -38,7 +38,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/_10sdp"
                     app:srcCompat="@drawable/abc_ic_ab_back_material"
-                    app:tint="@color/black"/>
+                    app:tint="@color/black" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -70,18 +70,31 @@
                     android:layout_marginTop="@dimen/_20sdp"
                     android:layout_marginRight="@dimen/_10sdp">
 
-                    <TextView
-                        android:id="@+id/textViewName"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_regular"
-                        android:text="Tax Name*"
-                        android:textColor="@color/dark_grey" />
+                        android:id="@+id/llViewName"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textViewName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Tax Name"
+                            android:textColor="@color/dark_grey" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="*"
+                            android:textColor="#ff2a2a" />
+                    </LinearLayout>
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/textViewName"
+                        android:layout_below="@+id/llViewName"
                         android:background="@drawable/corner_tale_white_holo">
 
                         <EditText
@@ -123,8 +136,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@color/transparent"
-                            android:padding="@dimen/_10sdp"
                             android:maxLength="105"
+                            android:padding="@dimen/_10sdp"
                             android:textColor="@color/blackTextColor" />
                     </RelativeLayout>
                 </RelativeLayout>
@@ -156,6 +169,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@color/transparent"
+                            android:digits="0123456789"
+                            android:inputType="number"
                             android:padding="@dimen/_10sdp"
                             android:textColor="@color/blackTextColor" />
                     </RelativeLayout>
@@ -165,10 +180,10 @@
                     android:id="@+id/relativeLayoutIncomeAccount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:visibility="gone"
                     android:layout_marginLeft="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_marginRight="@dimen/_10sdp">
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:visibility="gone">
 
                     <RadioGroup
                         android:id="@+id/radioGroup"
@@ -199,18 +214,32 @@
                     android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginRight="@dimen/_10sdp">
 
-                    <TextView
-                        android:id="@+id/textViewSalesTax"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:id="@+id/llViewSalesTax"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_regular"
-                        android:text="Recoverable tax rate (%)*"
-                        android:textColor="@color/dark_grey" />
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textViewSalesTax"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Recoverable tax rate (%)"
+                            android:textColor="@color/dark_grey" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="*"
+                            android:textColor="#ff2a2a" />
+                    </LinearLayout>
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/textViewSalesTax"
+                        android:layout_below="@+id/llViewSalesTax"
                         android:background="@drawable/corner_tale_white_holo">
 
                         <EditText
@@ -218,8 +247,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@color/transparent"
-                            android:padding="@dimen/_10sdp"
+                            android:digits="0123456789"
                             android:inputType="number"
+                            android:padding="@dimen/_10sdp"
                             android:textColor="@color/blackTextColor" />
                     </RelativeLayout>
                 </RelativeLayout>

@@ -25,6 +25,10 @@ public class GetInvoiceTransactionItem implements Serializable {
     private int subHeadId;
     @SerializedName("SubHeadName")
     private String subHeadName;
+    @SerializedName("DiscountType")
+    private int discountType;
+    @SerializedName("Discount")
+    private int Discount;
     @SerializedName("Taxes")
     private List<ProductServiceTaxesItem> taxes;
 
@@ -70,5 +74,21 @@ public class GetInvoiceTransactionItem implements Serializable {
 
     public int getSubHeadId() {
         return this.subHeadId;
+    }
+
+    public int getDiscountType() {
+        return discountType;
+    }
+
+    public void setDiscountType(int discountType) {
+        this.discountType = discountType;
+    }
+
+    public int getDiscount() {
+        return Discount;
+    }
+
+    public void setDiscount(int discount) {
+        Discount = discount;
     }
 }

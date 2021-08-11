@@ -106,11 +106,11 @@ public class ProductsAndServicesFragment extends Fragment implements View.OnClic
         }
     }
 
+    @Override
     public void onResume() {
         super.onResume();
         getSalesProductList();
     }
-
     public void editProduct(Product product) {
         startActivity(CreatingProductsAndServices.buildIntent(getContext(), product));
     }

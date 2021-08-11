@@ -2,65 +2,54 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="10">
+        android:background="@color/white">
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:gravity="center"
-            android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/relCountyList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dp"
+            android:paddingTop="16dp"
+            android:paddingRight="6dp">
 
             <ImageView
                 android:id="@+id/img_flag"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="@dimen/_4sdp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="8"
-            android:gravity="center_vertical"
-            android:orientation="vertical">
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
 
             <TextView
                 android:id="@+id/country"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_bold"
-                android:lineSpacingExtra="7sp"
-                android:textStyle="normal"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@+id/img_flag"
+                android:fontFamily="@font/poppins_regular"
+                android:text="United States of America"
                 android:textColor="#333333"
-                android:textSize="14sp"
-                android:textColorHint="#333333" />
+                android:textSize="16sp" />
+
             <TextView
                 android:id="@+id/country_code"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_toEndOf="@+id/country"
                 android:fontFamily="@font/poppins_regular"
-                android:lineSpacingExtra="7sp"
-                android:textStyle="normal"
+                android:text="+1"
                 android:textColor="#333333"
-                android:textSize="12sp"
-                android:textColorHint="#333333" />
-        </LinearLayout>
+                android:textSize="16sp" />
 
+        </RelativeLayout>
 
-    </LinearLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.25dp"
-        android:layout_marginTop="@dimen/_8ssp"
-        android:layout_marginBottom="@dimen/_8ssp"
-        android:background="#333333"/></LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/relCountyList"
+            android:layout_marginTop="16dp"
+            android:background="#f6f6f6" />
+
+    </RelativeLayout>
 </layout>

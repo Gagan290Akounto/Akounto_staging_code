@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
@@ -61,34 +63,20 @@ public class SIgnUpStep0 extends AppCompatActivity implements GoogleApiClient.On
 
     private EditText emailET;
     private EditText passwordET;
-    TextView tv_error, password_error;
-    LinearLayout password_ll;
-    RelativeLayout email_ll;
-    ImageView mail_ckeck;
+    RelativeLayout password_ll;
+    TextView tv_error, password_error,pass_show_hide;
     CheckBox checkBox_tnc;
     Context mContext;
     private LoginViewModel model;
     private LifecycleOwner owner;
     boolean success = true;
     LinearLayout back;
-    private SignInButton signInButton;
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
     private GoogleApiClient googleApiClient = null;
     private static final int RC_SIGN_IN = 1;
     private String fname, email,lname;
     private String idToken;
-
-    protected void setGooglePlusButtonText(SignInButton signInButton) {
-        for (int i = 0; i < signInButton.getChildCount(); i++) {
-            View v = signInButton.getChildAt(i);
-            if (v instanceof TextView) {
-                TextView tv = (TextView) v;
-                tv.setText("Sign up with Google");
-                return;
-            }
-        }
-    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -98,22 +86,20 @@ public class SIgnUpStep0 extends AppCompatActivity implements GoogleApiClient.On
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
             mContext = this;
             owner = this;
-            signInButton = findViewById(R.id.sign_up_button);
-            setGooglePlusButtonText(signInButton);
+            //signInButton = findViewById(R.id.sign_up_button);
+            //setGooglePlusButtonText(signInButton);
+            password_ll = findViewById(R.id.password_ll);
             Bundle b = new Bundle();
             b.putString(Constant.CATEGORY, "sign_up");
             b.putString(Constant.ACTION, "sign_up0_screen_view");
             SplashScreenActivity.sendEvent("sign_up_screen_view", b);
             tv_error = findViewById(R.id.tv_error);
             password_error = findViewById(R.id.password_error);
-            email_ll = findViewById(R.id.email_ll);
-            password_ll = findViewById(R.id.password_ll);
-            back = findViewById(R.id.back);
-            this.emailET = findViewById(R.id.emailET);
+            back = findViewById(R.id.sign_in_header);
+            this.emailET = findViewById(R.id.email);
+            pass_show_hide = findViewById(R.id.tvShow);
             this.passwordET = findViewById(R.id.passwordET);
-
-            mail_ckeck = findViewById(R.id.mail_ckeck);
-            checkBox_tnc = findViewById(R.id.checkBox_tnc);
+            checkBox_tnc = findViewById(R.id.checkBox);
             emailET.addTextChangedListener(new TextWatcher() {
                 @Override
                 public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -127,7 +113,7 @@ public class SIgnUpStep0 extends AppCompatActivity implements GoogleApiClient.On
 
                 @Override
                 public void afterTextChanged(Editable s) {
-                    if (!UiUtil.isValidEmail(emailET.getText().toString())) {
+               /*     if (!UiUtil.isValidEmail(emailET.getText().toString())) {
                         mail_ckeck.setVisibility(View.VISIBLE);
                         Log.e("Checked ::", "true" + s);
                         Bundle b = new Bundle();
@@ -138,7 +124,7 @@ public class SIgnUpStep0 extends AppCompatActivity implements GoogleApiClient.On
                     } else {
                         mail_ckeck.setVisibility(View.GONE);
                         Log.e("Checked ::", "false" + s);
-                    }
+                    }*/
                 }
             });
             back.setOnClickListener(new View.OnClickListener() {
@@ -174,7 +160,7 @@ public class SIgnUpStep0 extends AppCompatActivity implements GoogleApiClient.On
                 }
             });
 
-            findViewById(R.id.tnc).setOnClickListener(new View.OnClickListener() {
+      /*      findViewById(R.id.tnc).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(getBaseContext(), TnCActivity.class);
@@ -189,19 +175,12 @@ public class SIgnUpStep0 extends AppCompatActivity implements GoogleApiClient.On
                     intent.putExtra(Constant.LAUNCH_TYPE, "2");
                     startActivity(intent);
                 }
-            });
+            });*/
             model = new ViewModelProviders().of(this).get(LoginViewModel.class);
             firebaseAuth = com.google.firebase.auth.FirebaseAuth.getInstance();
             authStateListener = firebaseAuth -> {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
             };
-          /*  GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                    .requestIdToken(getString(R.string.web_client_id2))//you can also use R.string.default_web_client_id
-                    .requestEmail()
-                    .requestScopes(new Scope(Scopes.DRIVE_APPFOLDER))
-                    .requestServerAuthCode(getString(R.string.web_client_id2))
-                    .requestEmail()
-                    .build();*/
             GoogleSignInOptions gso =  new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                     .requestIdToken(getString(R.string.web_client_id2))//you can also use R.string.default_web_client_id
                     .requestEmail()
@@ -211,13 +190,27 @@ public class SIgnUpStep0 extends AppCompatActivity implements GoogleApiClient.On
                     .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                     .build();
 
-            signInButton.setOnClickListener(new View.OnClickListener() {
+       /*     signInButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     //UiUtil.showToast(mContext,"signInButton");
                     UiUtil.showProgressDialogue(mContext, "", "Loading..");
                     Intent intent = Auth.GoogleSignInApi.getSignInIntent(googleApiClient);
                     SIgnUpStep0.this.startActivityForResult(intent, RC_SIGN_IN);
+                }
+            });*/
+            pass_show_hide.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    if(pass_show_hide.getText().toString().equals("Show")){
+                        passwordET.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                        pass_show_hide.setText("Hide");
+                    } else{
+                        passwordET.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                        pass_show_hide.setText("Show");
+                    }
+
                 }
             });
         } catch (Exception e) {
@@ -229,8 +222,6 @@ public class SIgnUpStep0 extends AppCompatActivity implements GoogleApiClient.On
     protected void onResume() {
         super.onResume();
         success = true;
-        emailET.setText("");
-        passwordET.setText("");
     }
 
     public void checkEmail(Context mContext, String email) {
@@ -262,12 +253,12 @@ public class SIgnUpStep0 extends AppCompatActivity implements GoogleApiClient.On
                                     user.setRole("Admin");
                                     registerBusiness.setUser(user);
                                     LocalManager.getInstance().setRegisterBusiness(registerBusiness);
-                                    startActivity(new Intent(SIgnUpStep0.this, SignUpDetails.class));
+                                    startActivity(new Intent(SIgnUpStep0.this, SignUpStep1.class));
                                 }
                             } else {
                                 tv_error.setVisibility(View.VISIBLE);
                                 tv_error.setText("Email already exists.");
-                                email_ll.setBackgroundResource(R.drawable.error);
+                                emailET.setBackgroundResource(R.drawable.error);
                                 Bundle b = new Bundle();
                                 b.putString(Constant.CATEGORY, "sign_up");
                                 b.putString(Constant.ACTION, "email_verify_fail");
@@ -284,14 +275,14 @@ public class SIgnUpStep0 extends AppCompatActivity implements GoogleApiClient.On
                             SplashScreenActivity.sendEvent("sign_up0_verify_email_fail", b);
                             tv_error.setVisibility(View.VISIBLE);
                             tv_error.setText("Email already exists.");
-                            email_ll.setBackgroundResource(R.drawable.error);
+                            emailET.setBackgroundResource(R.drawable.error);
                             //Toast.makeText(SIgnUpStep0.this, response.body().getTransactionStatus().getError().getDescription(), Toast.LENGTH_SHORT).show();
 
                         }
                     } else {
                         tv_error.setVisibility(View.VISIBLE);
                         tv_error.setText("Email is not valid.");
-                        email_ll.setBackgroundResource(R.drawable.error);
+                        emailET.setBackgroundResource(R.drawable.error);
                         Bundle b = new Bundle();
                         b.putString(Constant.CATEGORY, "sign_up");
                         b.putString(Constant.ACTION, "email_verify_fail");
@@ -308,7 +299,7 @@ public class SIgnUpStep0 extends AppCompatActivity implements GoogleApiClient.On
                     SplashScreenActivity.sendEvent("sign_up0_verify_email_fail", b);
                     tv_error.setVisibility(View.VISIBLE);
                     tv_error.setText(e.getMessage());
-                    email_ll.setBackgroundResource(R.drawable.error);
+                    emailET.setBackgroundResource(R.drawable.error);
                     LoginRepo.prinLogs("" + Log.getStackTraceString(e), 5, "Sign Up virfy Email");
                 }
             }
@@ -323,7 +314,7 @@ public class SIgnUpStep0 extends AppCompatActivity implements GoogleApiClient.On
                 SplashScreenActivity.sendEvent("sign_up0_verify_email_fail", b);
                 tv_error.setVisibility(View.VISIBLE);
                 tv_error.setText(t.getMessage());
-                email_ll.setBackgroundResource(R.drawable.error);
+                emailET.setBackgroundResource(R.drawable.error);
             }
         });
     }
@@ -334,7 +325,7 @@ public class SIgnUpStep0 extends AppCompatActivity implements GoogleApiClient.On
             emailET.requestFocus();
             tv_error.setText("Please enter valid email");
             tv_error.setVisibility(View.VISIBLE);
-            email_ll.setBackgroundResource(R.drawable.error);
+            emailET.setBackgroundResource(R.drawable.error);
             return false;
         } else if (this.passwordET.getText().toString().length() == 0) {
             //UiUtil.showToast(this, "Please enter valid password");
@@ -350,10 +341,10 @@ public class SIgnUpStep0 extends AppCompatActivity implements GoogleApiClient.On
             password_error.setVisibility(View.VISIBLE);
             password_ll.setBackgroundResource(R.drawable.error);
             return false;
-        } else if (!checkBox_tnc.isChecked()) {
+        } /*else if (!checkBox_tnc.isChecked()) {
             UiUtil.showToast(this, "Please check Terms & Conditions");
             return false;
-        } else {
+        } */else {
             return true;
         }
     }
@@ -525,8 +516,8 @@ public class SIgnUpStep0 extends AppCompatActivity implements GoogleApiClient.On
 */
 
     private void reset() {
-        email_ll.setBackgroundResource(R.drawable.new_light_blue);
-        password_ll.setBackgroundResource(R.drawable.new_light_blue);
+        emailET.setBackgroundResource(R.drawable.sign_in_input);
+        password_ll.setBackgroundResource(R.drawable.sign_in_input);
 
         tv_error.setVisibility(View.GONE);
         password_error.setVisibility(View.GONE);

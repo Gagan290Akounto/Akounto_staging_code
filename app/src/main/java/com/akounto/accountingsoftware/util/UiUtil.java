@@ -24,7 +24,7 @@ import com.akounto.accountingsoftware.Data.LoginData;
 import com.akounto.accountingsoftware.Data.SoclData;
 import com.akounto.accountingsoftware.Data.UserDetails;
 import com.akounto.accountingsoftware.R;
-import com.akounto.accountingsoftware.model.Currency;
+import com.akounto.accountingsoftware.response.Product;
 import com.akounto.accountingsoftware.request.AddBillTax;
 import com.akounto.accountingsoftware.request.RegisterBusiness;
 import com.akounto.accountingsoftware.response.ProductServiceTaxesItem;
@@ -51,8 +51,24 @@ import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
 import com.github.mikephil.charting.utils.ColorTemplate;
 import com.github.mikephil.charting.utils.Utils;
 import com.google.android.gms.common.ConnectionResult;
+import com.akounto.accountingsoftware.Data.Dashboard.CashFlow;
+import com.akounto.accountingsoftware.Data.Dashboard.DashboardData;
+import com.akounto.accountingsoftware.Data.Dashboard.ExpenseBreakdown;
+import com.akounto.accountingsoftware.Data.LoginData;
+import com.akounto.accountingsoftware.Data.SoclData;
+import com.akounto.accountingsoftware.Data.UserDetails;
+import com.akounto.accountingsoftware.R;
+import com.akounto.accountingsoftware.Activity.SignInActivity;
+import com.akounto.accountingsoftware.model.Currency;
+import com.akounto.accountingsoftware.request.AddBillTax;
+import com.akounto.accountingsoftware.request.RegisterBusiness;
+import com.akounto.accountingsoftware.response.ProductServiceTaxesItem;
+import com.akounto.accountingsoftware.response.SignInResponse;
+import com.akounto.accountingsoftware.response.SignUp.SignUpResponse;
+import com.github.mikephil.charting.utils.Utils;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import com.akounto.accountingsoftware.response.TaxResponse;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -66,8 +82,6 @@ import java.util.List;
 
 public class UiUtil {
     private static final int PRIVATE_MODE = 0;
-
-    /* renamed from: c */
     public static final char[] f142c = {'k', 'm', 'b', 't'};
     private static SharedPreferences.Editor editor;
     public static ProgressDialog pDialogue;
@@ -80,6 +94,90 @@ public class UiUtil {
         editText.setCursorVisible(false);
         editText.setKeyListener(null);
         //editText.setBackgroundColor(Color.TRANSPARENT);
+    }
+    public static List<Product> reset_list(List<Product> list) {
+        List<Product> temp = list;
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getDiscountType() != 0) {
+                if (list.get(i).getDiscount() != 0) {
+                    try {
+                        temp.set(i, setDiscountedPrice(list.get(i), list.get(i).getDiscountType(), "" + list.get(i).getDiscount(), "" + list.get(i).getPrice()));
+                    } catch (Exception e) {
+                        // Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_LONG).show();
+                    }
+                } else {
+                    // Toast.makeText(getApplicationContext(), "Discount value is empty", Toast.LENGTH_LONG).show();
+                    temp.get(i).setPriceAfterDiscount(list.get(i).getPrice());
+                }
+            } else {
+                temp.get(i).setPriceAfterDiscount(list.get(i).getPrice());
+            }
+        }
+        return temp;
+    }
+
+    public static Product setDiscountedPrice(Product temp, int type, String value, String amount) {
+        Product item = temp;
+        float am = 0;
+        float val = 0;
+        try {
+            am = Float.parseFloat(amount);
+            val = Float.parseFloat(value);
+        } catch (Exception e) {
+            item.setPriceAfterDiscount(am);
+        }
+        if (type == 2) {
+            item.setPriceAfterDiscount(am - ((am * val) / 100f));
+        } else if (type == 1) {
+            item.setPriceAfterDiscount(am - val);
+        } else {
+            item.setPriceAfterDiscount(am);
+        }
+        return item;
+    }
+
+    public static List<Product> priceAfterDiscount(List<Product> list, int dis_type, double dis_value) {
+        List<Product> temp = list;
+        if (dis_type == 1) {
+            for (int i = 0; i < list.size(); i++) {
+                try {
+                    double am = list.get(i).getPrice();
+                    double pad = list.get(i).getPriceAfterDiscount();
+                    double price_after_discount = (pad - ((pad * dis_value) / 100f));
+                    temp.get(i).setPriceAfterDiscount(price_after_discount);
+                } catch (Exception e) {
+                }
+            }
+        } else if (dis_type == 2) {
+            for (int i = 0; i < list.size(); i++) {
+                temp.get(0).setPriceAfterDiscount(list.get(i).getPriceAfterDiscount() - dis_value);
+            }
+        } else {
+            for (int i = 0; i < list.size(); i++) {
+                temp.get(0).setPriceAfterDiscount(list.get(i).getPrice());
+            }
+        }
+        return temp;
+    }
+
+    public static int getDisType(int i) {
+        if (i == 1) {
+            return 2;
+        } else if (i == 2) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+    public static int getDisTypeRe(int i) {
+        if (i == 1) {
+            return 1;
+        } else if (i == 2) {
+            return 2;
+        } else {
+            return 0;
+        }
     }
 
     public static void disableEditText2(EditText editText, Activity activity) {
@@ -571,7 +669,7 @@ public class UiUtil {
         return !isPieChartDataEmpty;
     }
 
-    public static class PercentageValueFormatter extends ValueFormatter {
+    private static class PercentageValueFormatter extends ValueFormatter {
         private final DecimalFormat mFormat = new DecimalFormat("###,###,##0.0");
 
         public String getPieLabel(float value, PieEntry pieEntry) {

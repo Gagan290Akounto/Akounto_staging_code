@@ -15,6 +15,7 @@ public class PriceCal {
     double sub_totel = 0.0;
     double totel = 0.0;
     double tax_totel = 0.0;
+    double discount = 0.0;
     HashMap<String, Double> taxamount = new HashMap<String, Double>();
     List<ProductServiceTaxesItem> taxs = new ArrayList<>();
     List<ProductServiceTaxesItem> taxes = new ArrayList<>();
@@ -54,6 +55,18 @@ public class PriceCal {
         }
     }
 
+    private double calSubPriceAfterDiscount() {
+        double tot = 0.0;
+        try {
+            for (int i = 0; i < items.size(); i++) {
+                tot = tot + (Integer.parseInt(items.get(i).getQty()) * items.get(i).getPriceAfterDiscount());
+            }
+        } catch (Exception e) {
+        }
+        discount = sub_totel - tot;
+        return tot;
+    }
+
     private void calTaxPrice() {
         try {
             for (int i = 0; i < items.size(); i++) {
@@ -61,9 +74,9 @@ public class PriceCal {
                 ProductServiceTaxesItem temp;
                 if (items.get(i).getProductServiceTaxes() != null) {
                     for (int j = 0; j < items.get(i).getProductServiceTaxes().size(); j++) {
-                        amount = amount + (((items.get(i).getPrice() * Double.parseDouble(items.get(i).getQty())) / 100.0f) * items.get(i).getProductServiceTaxes().get(j).getRate());
+                        amount = amount + (((items.get(i).getPriceAfterDiscount() * Double.parseDouble(items.get(i).getQty())) / 100.0f) * items.get(i).getProductServiceTaxes().get(j).getRate());
                         temp = items.get(i).getProductServiceTaxes().get(j);
-                        temp.setAmount(((items.get(i).getPrice() * Double.parseDouble(items.get(i).getQty())) / 100.0f) * items.get(i).getProductServiceTaxes().get(j).getRate());
+                        temp.setAmount(((items.get(i).getPriceAfterDiscount() * Double.parseDouble(items.get(i).getQty())) / 100.0f) * items.get(i).getProductServiceTaxes().get(j).getRate());
                         taxs.add(temp);
                     }
                     taxamount.put(items.get(i).getName(), amount);
@@ -81,7 +94,7 @@ public class PriceCal {
             }
         } catch (Exception e) {
         }
-        totel = sub_totel + tax_totel;
+        totel = calSubPriceAfterDiscount() + tax_totel;
     }
 
     public double getSub_totel() {
@@ -122,6 +135,14 @@ public class PriceCal {
 
     public void setTaxes(List<ProductServiceTaxesItem> taxes) {
         this.taxes = taxes;
+    }
+
+    public double getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(double discount) {
+        this.discount = discount;
     }
 }
 

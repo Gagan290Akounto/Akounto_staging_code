@@ -5,6 +5,7 @@ import java.io.Serializable;
 import java.util.List;
 
 public class Product implements Serializable {
+
     @SerializedName("ProductId")
     private int ProductId;
     @SerializedName("CompanyId")
@@ -37,7 +38,12 @@ public class Product implements Serializable {
     private List<ProductServiceTaxesItem> taxes;
     @SerializedName("ProductTransactionHeadId")
     private String productTransactionHeadId;
-
+    @SerializedName("DiscountType")
+    private int discountType;
+    @SerializedName("Discount")
+    private int Discount;
+    @SerializedName("PriceAfterDiscount")
+    private double priceAfterDiscount;
     public void setId(int id) {
         this.id = id;
     }
@@ -141,5 +147,29 @@ public class Product implements Serializable {
 
     public void setProductTransactionHeadId(String productTransactionHeadId) {
         this.productTransactionHeadId = productTransactionHeadId;
+    }
+
+    public int getDiscountType() {
+        return discountType;
+    }
+
+    public void setDiscountType(int discountType) {
+        this.discountType = discountType;
+    }
+
+    public int getDiscount() {
+        return Discount;
+    }
+
+    public void setDiscount(int discount) {
+        Discount = discount;
+    }
+
+    public double getPriceAfterDiscount() {
+        return priceAfterDiscount;
+    }
+
+    public void setPriceAfterDiscount(double priceAfterDiscount) {
+        this.priceAfterDiscount = priceAfterDiscount;
     }
 }

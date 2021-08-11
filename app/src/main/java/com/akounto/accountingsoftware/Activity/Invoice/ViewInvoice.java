@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -48,6 +49,7 @@ import com.akounto.accountingsoftware.util.UiUtil;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -73,6 +75,8 @@ public class ViewInvoice extends AppCompatActivity {
     private List<Currency> currencyList = new ArrayList<>();
     private Currency corency = new Currency();
     public static String guid;
+    private int discount_index = 0;
+    private TextView tv_dicount;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -133,6 +137,24 @@ public class ViewInvoice extends AppCompatActivity {
                 }
             } catch (Exception e) {
                 Log.e("Error :: ", e.getMessage());
+            }
+            items = UiUtil.reset_list(items);
+
+            if (receivedData.getDiscountType() != 0) {
+                items = UiUtil.priceAfterDiscount(items, UiUtil.getDisType(receivedData.getDiscountType()), receivedData.getDiscount());
+            } else {
+                items = items;
+            }
+            discount_index = UiUtil.getDisType(receivedData.getDiscountType());
+            if (receivedData.getDiscount() != 0.0) {
+                binding.discountLlView.setVisibility(View.VISIBLE);
+                if (discount_index == 2) {
+                    binding.tvDicount.setText(UiUtil.getBussinessCurrenSymbul(mContext) + " " + receivedData.getDiscount() + "");
+                } else {
+                    binding.tvDicount.setText(receivedData.getDiscount() + "" + " %");
+                }
+            } else {
+                binding.discountLlView.setVisibility(View.GONE);
             }
         }
         try {
@@ -211,6 +233,25 @@ public class ViewInvoice extends AppCompatActivity {
                     temp.setProductServiceTaxes(UiUtil.trasforme(temp.getTaxes()));
                 }
                 items.add(temp);
+            }
+            items = UiUtil.reset_list(items);
+
+            if (receivedData.getDiscountType() != 0) {
+                items = UiUtil.priceAfterDiscount(items, UiUtil.getDisType(receivedData.getDiscountType()), receivedData.getDiscount());
+            } else {
+                items = items;
+            }
+
+            discount_index = UiUtil.getDisType(receivedData.getDiscountType());
+            if (receivedData.getDiscount() != 0.0) {
+                binding.discountLlView.setVisibility(View.VISIBLE);
+                if (discount_index == 2) {
+                    binding.tvDicount.setText(UiUtil.getBussinessCurrenSymbul(mContext) + " " + receivedData.getDiscount() + "");
+                } else {
+                    binding.tvDicount.setText(receivedData.getDiscount() + "" + " %");
+                }
+            } else {
+                binding.discountLlView.setVisibility(View.GONE);
             }
         } catch (Exception e) {
             Log.e("Error :: ", e.getMessage());
@@ -348,6 +389,16 @@ public class ViewInvoice extends AppCompatActivity {
         try {
             binding.taxsNameList.removeAllViews();
             binding.taxsAmountList.removeAllViews();
+            TextView lable = new TextView(mContext);
+            TextView discount = new TextView(mContext);
+            lable.setText("Total discount:");
+            discount.setText(selectedCurrencyId + " " + String.format("%.2f", priceCal.getDiscount()));
+            discount.setWidth(ViewGroup.LayoutParams.MATCH_PARENT);
+            discount.setGravity(Gravity.RIGHT);
+            if (priceCal.getDiscount() != 0) {
+                binding.taxsNameList.addView(lable);
+                binding.taxsAmountList.addView(discount);
+            }
             for (int i = 0; i < priceCal.getTaxes().size(); i++) {
                 TextView name = new TextView(mContext);
                 TextView amount = new TextView(mContext);

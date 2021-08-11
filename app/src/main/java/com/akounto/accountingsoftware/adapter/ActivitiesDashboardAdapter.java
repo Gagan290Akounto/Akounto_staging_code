@@ -56,7 +56,6 @@ public class ActivitiesDashboardAdapter extends RecyclerView.Adapter<ActivitiesD
                 str3 = this.activitiesItems.get(position).getTransactionHeadName();
             }
             textView.setText(str3);
-
             TextView textView2 = holder.desc;
             if (TextUtils.isEmpty(this.activitiesItems.get(position).getRemarks())) {
                 str4 = "--";
@@ -64,12 +63,10 @@ public class ActivitiesDashboardAdapter extends RecyclerView.Adapter<ActivitiesD
                 str4 = this.activitiesItems.get(position).getRemarks();
             }
             textView2.setText(str4);
-
             if (!TextUtils.isEmpty(this.activitiesItems.get(position).getCreated())) {
                 amount = this.activitiesItems.get(position).getCreated();
             }
             try {
-               /* 2021-07-29T08:50:07.68Z*/
                 Date inputDate = new SimpleDateFormat(this.isoDatePattern, Locale.US).parse(amount);
                 SimpleDateFormat outPutFormat = new SimpleDateFormat("dd MMM yyyy hh:mm aa", Locale.US);
                 TextView textView3 = holder.date;
@@ -78,7 +75,6 @@ public class ActivitiesDashboardAdapter extends RecyclerView.Adapter<ActivitiesD
                 e.printStackTrace();
             }
             holder.amount.setVisibility(View.GONE);
-
         } else if (i == this.TYPE_TRANSACTION) {
             TextView textView4 = holder.title;
             if (TextUtils.isEmpty(this.transactionsItems.get(position).getTransactionHeadName())) {

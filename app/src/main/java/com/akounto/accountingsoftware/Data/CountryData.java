@@ -8,23 +8,18 @@ public class CountryData {
     @SerializedName("Id")
     @Expose
     private String id;
-
     @SerializedName("Name")
     @Expose
     private String name;
-
     @SerializedName("Currency")
     @Expose
     private String currency;
-
     @SerializedName("PhoneCode")
     @Expose
     private String phoneCode;
-
     @SerializedName("CountryCode")
     @Expose
     private String countryCode;
-
 
     public String getId() {
         return id;
